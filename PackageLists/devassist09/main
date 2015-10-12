@@ -1,0 +1,9 @@
+devassist09
+devassist09-devassistant
+devassist09-devassistant-assistants-dts
+devassist09-PyYAML                        rhel-6
+devassist09-python-argparse               rhel-6
+devassist09-python-jinja2                 rhel-6
+devassist09-python-progress
+devassist09-python-six                    rhel-6
+devassist09-runtime

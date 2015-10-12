@@ -1,0 +1,23 @@
+httpd24
+httpd24-apr                     rhel-6
+httpd24-apr-devel               rhel-6
+httpd24-apr-util                rhel-6
+httpd24-apr-util-devel          rhel-6
+httpd24-apr-util-ldap           rhel-6
+httpd24-apr-util-mysql          rhel-6
+httpd24-apr-util-nss            rhel-6
+httpd24-apr-util-odbc           rhel-6
+httpd24-apr-util-openssl        rhel-6
+httpd24-apr-util-pgsql          rhel-6
+httpd24-apr-util-sqlite         rhel-6
+httpd24-httpd
+httpd24-httpd-devel
+httpd24-httpd-manual
+httpd24-httpd-tools
+httpd24-mod_auth_kerb
+httpd24-mod_ldap
+httpd24-mod_proxy_html
+httpd24-mod_session
+httpd24-mod_ssl
+httpd24-runtime
+httpd24-scldevel

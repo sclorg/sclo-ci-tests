@@ -1,0 +1,14 @@
+mongodb24
+mongodb24-gperftools-libs
+mongodb24-libmongodb
+mongodb24-libmongodb-devel
+mongodb24-libunwind
+mongodb24-mongo-java-driver
+mongodb24-mongo-java-driver-bson
+mongodb24-mongo-java-driver-bson-javadoc
+mongodb24-mongo-java-driver-javadoc
+mongodb24-mongodb
+mongodb24-mongodb-server
+mongodb24-runtime
+mongodb24-scldevel
+mongodb24-snappy                            rhel-6

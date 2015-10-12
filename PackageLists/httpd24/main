@@ -1,0 +1,6 @@
+httpd24
+httpd24-apr                     rhel-6
+httpd24-apr-util                rhel-6
+httpd24-httpd
+httpd24-httpd-tools
+httpd24-runtime

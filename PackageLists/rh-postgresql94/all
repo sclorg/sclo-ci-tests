@@ -1,0 +1,14 @@
+rh-postgresql94
+rh-postgresql94-postgresql
+rh-postgresql94-postgresql-contrib
+rh-postgresql94-postgresql-devel
+rh-postgresql94-postgresql-docs
+rh-postgresql94-postgresql-libs
+rh-postgresql94-postgresql-plperl
+rh-postgresql94-postgresql-plpython
+rh-postgresql94-postgresql-pltcl
+rh-postgresql94-postgresql-server
+rh-postgresql94-postgresql-test
+rh-postgresql94-postgresql-upgrade
+rh-postgresql94-runtime
+rh-postgresql94-scldevel

@@ -1,0 +1,18 @@
+rh-mongodb26
+rh-mongodb26-gperftools-libs
+rh-mongodb26-libunwind
+rh-mongodb26-mongo-java-driver
+rh-mongodb26-mongo-java-driver-bson
+rh-mongodb26-mongo-java-driver-bson-javadoc
+rh-mongodb26-mongo-java-driver-javadoc
+rh-mongodb26-mongodb
+rh-mongodb26-mongodb-server
+rh-mongodb26-mongodb-test
+rh-mongodb26-runtime
+rh-mongodb26-scldevel
+rh-mongodb26-yaml-cpp
+rh-mongodb26-libstemmer
+rh-mongodb26-boost-filesystem                 rhel-6
+rh-mongodb26-boost-program-options            rhel-6
+rh-mongodb26-boost-system                     rhel-6
+rh-mongodb26-boost-thread                     rhel-6

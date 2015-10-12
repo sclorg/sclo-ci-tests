@@ -1,0 +1,16 @@
+rh-python34
+rh-python34-python
+rh-python34-python-devel
+rh-python34-python-docutils
+rh-python34-python-jinja2
+rh-python34-python-libs
+rh-python34-python-markupsafe
+rh-python34-python-nose
+rh-python34-python-pip
+rh-python34-python-pygments
+rh-python34-python-setuptools
+rh-python34-python-simplejson
+rh-python34-python-sphinx
+rh-python34-python-sqlalchemy
+rh-python34-python-virtualenv
+rh-python34-runtime

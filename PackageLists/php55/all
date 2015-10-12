@@ -1,0 +1,35 @@
+php55
+php55-php
+php55-php-bcmath
+php55-php-cli
+php55-php-common
+php55-php-dba
+php55-php-devel
+php55-php-enchant
+php55-php-fpm
+php55-php-gd
+php55-php-gmp
+php55-php-imap                  rhel-6
+php55-php-intl
+php55-php-ldap
+php55-php-mbstring
+php55-php-mysqlnd
+php55-php-odbc
+php55-php-opcache
+php55-php-pdo
+php55-php-pear
+php55-php-pecl-jsonc
+php55-php-pecl-jsonc-devel
+php55-php-pecl-memcache
+php55-php-pecl-mongo
+php55-php-pgsql
+php55-php-process
+php55-php-pspell
+php55-php-recode
+php55-php-snmp
+php55-php-soap
+php55-php-tidy                 rhel-6
+php55-php-xml
+php55-php-xmlrpc
+php55-runtime
+php55-scldevel

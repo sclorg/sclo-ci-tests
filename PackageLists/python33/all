@@ -1,0 +1,40 @@
+python33
+python33-mod_wsgi
+python33-numpy
+python33-numpy-f2py
+python33-python
+python33-python-bson
+python33-python-coverage
+python33-python-debug
+python33-python-devel
+python33-python-docutils
+python33-python-jinja2
+python33-python-libs
+python33-python-markupsafe
+python33-python-nose
+python33-python-nose-docs
+python33-python-psycopg2
+python33-python-psycopg2-doc
+python33-python-pygments
+python33-python-pymongo
+python33-python-pymongo-gridfs
+python33-python-setuptools
+python33-python-simplejson
+python33-python-six
+python33-python-sphinx
+python33-python-sphinx-doc
+python33-python-sqlalchemy
+python33-python-test
+python33-python-tkinter
+python33-python-tools
+python33-python-virtualenv
+python33-runtime
+python33-scipy
+python33-scldevel
+python33-suitesparse                rhel-6
+python33-suitesparse-devel          rhel-6
+python33-suitesparse-doc            rhel-6
+python33-suitesparse-static         rhel-6
+python33-tbb                        rhel-6
+python33-tbb-devel                  rhel-6
+python33-tbb-doc                    rhel-6
