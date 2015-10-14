@@ -22,23 +22,12 @@ repofile=/etc/yum.repos.d/sclo-ci-test.repo
 rm -f "$repofile"
 touch "$repofile"
 
-for c in `get_depended_collections $collection` ; do
-  echo "$namespace"
-  namespace=$(get_scl_namespace "$c" "$el_version")
-  cat >> "$repofile" <<- EOM
-[sclo${el_version}-${c}-${namespace}-candidate]
-name=sclo${el_version}-${c}-${namespace}-candidate
-baseurl=http://cbs.centos.org/repos/sclo${el_version}-${c}-${namespace}-candidate/${arch}/os/
-gpgcheck=0
-enabled=1
-
-EOM
-done
+generate_repo_file "$collection" "$el_version" "$arch" >"$repofile"
 
 yum -y update
-
 yum -y install "$collection" || retval=1
 
 rm -f "$repofile"
+
 exit $retval
 

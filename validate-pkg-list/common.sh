@@ -23,4 +23,26 @@ get_scl_namespace() {
   return 1
 }
 
+# generate a yum repo file for specified collection and write it to stdout
+# accepts these possitional arguments:
+# * collection
+# * el_version (6, 7, ...)
+# * arch (x86_64, ppc64, ...)
+generate_repo_file() {
+  collection="$1"
+  el_version="$2"
+  arch="$3"
+  for c in `get_depended_collections $collection` ; do
+    namespace=$(get_scl_namespace "$c" "$el_version")
+    cat >> "$repofile" <<- EOM
+[sclo${el_version}-${c}-${namespace}-candidate]
+name=sclo${el_version}-${c}-${namespace}-candidate
+baseurl=http://cbs.centos.org/repos/sclo${el_version}-${c}-${namespace}-candidate/${arch}/os/
+gpgcheck=0
+enabled=1
+
+EOM
+  done
+}
+
 
