@@ -4,12 +4,12 @@ git19-emacs-git
 git19-emacs-git-el
 git19-git
 git19-git-all
-git19-git-bzr
+git19-git-bzr	rhel-7
 git19-git-cvs
 git19-git-daemon
 git19-git-email
 git19-git-gui
-git19-git-hg
+git19-git-hg	rhel-7
 git19-git-svn
 git19-gitk
 git19-gitweb
