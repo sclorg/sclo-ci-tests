@@ -13,6 +13,8 @@ if [ $# -lt 2 ] ; then
   exit 1
 fi
 
+repotype=${REPOTYPE-candidate}
+
 collection="$1"
 el_version="$2"
 arch=${3-x86_64}
@@ -20,11 +22,8 @@ retval=0
 
 # construct repoquery arguments
 namespace=$(get_scl_namespace "$collection" "$el_version")
-repo="sclo${el_version}-${collection}-${namespace}-candidate"
+repo="sclo${el_version}-${collection}-${namespace}-$repotype"
 rq_args="--disablerepo=* --repofrompath=$collection,http://cbs.centos.org/repos/${repo}/${arch}/os/ --enablerepo=$collection"
-#for c in `get_depended_collections "$collection"` ; do
-#  rq_args="$rq_args --repofrompath=$c,http://cbs.centos.org/repos/sclo${el_version}-${c}-${namespace}-candidate/${arch}/os/ --enablerepo=$c"
-#done
 
 # check that all packages use expected arch or noarch
 bad_arch=$(repoquery $rq_args --qf '%{ARCH} %{NVR}' -a 2>/dev/null | grep -v -e '^noarch ' -e "$arch " &>/dev/null) || :
