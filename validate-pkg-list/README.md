@@ -21,11 +21,3 @@ For checking package lists for all collections (for el7), run:
 ```
 ./run-all.sh 7
 ```
-
-## Experimental
-
-For checking whether the collection (e.g. mariadb55) may be installed, run:
-
-```
-./run-install.sh mariadb55 7
-```
