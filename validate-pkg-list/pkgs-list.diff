@@ -1,8 +1,0 @@
---- a	2015-10-14 18:51:16.875454840 +0200
-+++ b	2015-10-14 18:51:16.877454843 +0200
-@@ -1,5 +1,4 @@
- mariadb55
--mariadb55-build
- mariadb55-mariadb
- mariadb55-mariadb-bench
- mariadb55-mariadb-devel
