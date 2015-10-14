@@ -19,13 +19,18 @@ arch=${3-x86_64}
 retval=0
 
 repofile=/etc/yum.repos.d/sclo-ci-test.repo
-rm -f "$repofile"
-touch "$repofile"
 
 generate_repo_file "$collection" "$el_version" "$arch" >"$repofile"
 
 yum -y update
 yum -y install "$collection" || retval=1
+
+if [ $retval -eq 0 ] && [ -d "$collection" ] ; then
+  pushd "$collection"
+  ./run.sh
+  retval=$?
+  popd
+fi
 
 rm -f "$repofile"
 
