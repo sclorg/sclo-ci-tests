@@ -6,7 +6,7 @@
 
 set -x
 
-source common.sh
+source ../common/functions.sh
 
 if [ $# -lt 2 ] ; then
   echo "Usage: `basename $0` <collection> <el_version{6|7|..}>" >&2

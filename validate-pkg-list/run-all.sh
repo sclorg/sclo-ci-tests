@@ -3,7 +3,7 @@
 # Loop through all collections repos and check whether they include all
 # packages that are expected
 
-source ./common.sh
+source ../common/functions.sh
 
 if [ $# -lt 1 ] ; then
   echo "Usage: `basename $0` <el_version{6|7|..}>" >&2
