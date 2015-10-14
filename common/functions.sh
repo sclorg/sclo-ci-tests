@@ -8,7 +8,7 @@ strip_comments() {
 # accepts one option (collection) and returns list of collections that need to be enabled to be able to install this one
 get_depended_collections() {
   echo -n "$1 "
-  cat ../PackageLists/collections-dependencies | strip_comments | grep -e "^$1:" | head -n 1 | cut -d':' -f2
+  cat "`dirname ${BASH_SOURCE[0]}`"/../PackageLists/collections-dependencies | strip_comments | grep -e "^$1:" | head -n 1 | cut -d':' -f2
 }
 
 # returns `rh` or `sclo` as output or exits if collections does not exists in the list
@@ -17,7 +17,7 @@ get_depended_collections() {
 # * el_version (6, 7, ...)
 get_scl_namespace() {
   for namespace in rh sclo ; do
-    grep -e "^[[:space:]]*$1[[:space:]]*$" ../PackageLists/collections-list-$namespace-el$2 >/dev/null
+    grep -e "^[[:space:]]*$1[[:space:]]*$" "`dirname ${BASH_SOURCE[0]}`"/../PackageLists/collections-list-$namespace-el$2 >/dev/null
     [ $? -eq 0 ] && echo "$namespace" && return 0
   done
   return 1
