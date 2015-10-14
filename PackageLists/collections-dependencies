@@ -1,0 +1,19 @@
+# This is a list of collections and their dependencies on other collections
+# For example line `rh-ror41: rh-ruby22 v8314` means that rh-ror41 collection
+# depends on packages from collections `rh-ruby22` and `v8314`.
+
+devtoolset-3: rh-java-common maven30
+maven30: rh-java-common
+mongodb24: v8314 rh-java-common maven30
+nodejs010: v8314
+php54: httpd24
+php55: httpd24
+rh-java-common: maven30
+rh-mongodb26: v8314 rh-java-common maven30
+rh-passenger40: ruby193 ror40 ruby200 rh-ror41 rh-ruby22
+rh-php56: httpd24
+rh-ror41: rh-ruby22 v8314
+ror40: ruby200 v8314
+thermostat1: rh-java-common maven30 rh-mongodb26 v8314
+sclo-vagrant1: rh-ror41 rh-ruby22
+
