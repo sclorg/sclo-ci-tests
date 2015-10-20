@@ -1,0 +1,3 @@
+tests/install
+tests/check-version
+#tests/uninstall
