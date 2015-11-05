@@ -1,4 +1,0 @@
-tests/install-server
-tests/check-version
-tests/start-server
-tests/uninstall-server
