@@ -40,7 +40,9 @@ get_scl_namespace() {
 # The following environment variables can be set to change default values:
 # * REPOTYPE, if not set, then candidate
 # * REPOFILE, if not set, then sclo-ci.repo
+# * SKIP_REPO_CREATE, if set to 1, then no repository is created
 generate_repo_file() {
+  [ "0$SKIP_REPO_CREATE" -eq 1 ] && return
   repotype=${REPOTYPE-candidate}
   repofile=/etc/yum.repos.d/${REPOFILE-sclo-ci.repo}
   collection="$1"
