@@ -1,2 +1,3 @@
 INSTALL_SCLS=mongodb24
 ENABLE_SCLS=mongodb24
+SERVICE_NAME=mongodb24-mongodb

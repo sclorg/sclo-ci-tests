@@ -1,2 +1,3 @@
 INSTALL_SCLS=mysql55
 ENABLE_SCLS=mysql55
+SERVICE_NAME=mysql55-mysqld

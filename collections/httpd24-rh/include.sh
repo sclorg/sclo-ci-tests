@@ -1,2 +1,3 @@
 INSTALL_SCLS=httpd24
 ENABLE_SCLS=httpd24
+SERVICE_NAME=httpd24-httpd
