@@ -82,7 +82,8 @@ it from the speciffic test directory you just need to specify the tree.
 Configuration of the virtual machine is taken from the "machine.conf" file.
 
 ```
-common/vm/mkvirt-sclo6.sh -s 3 http://mirror.centos.org/centos/6.7/os/x86_64/
+cd vm
+./mkvirt-sclo6.sh -s 3 http://mirror.centos.org/centos/6.7/os/x86_64/
 ```
     
 Of course you may create the virtual machine yourself.
