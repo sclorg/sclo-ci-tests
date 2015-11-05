@@ -12,6 +12,9 @@ passed=0
 failed=0
 
 resDirAll=$(mktemp -d /tmp/sclo-results-XXXXXX)
+
+echo "Running tests for $THISDIR ..."
+
 for tst in $(cat ${THISDIR}/enabled_tests|grep -v '^#')
 do
     resDir="$resDirAll/$tst"
