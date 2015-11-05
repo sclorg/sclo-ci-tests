@@ -1,0 +1,2 @@
+INSTALL_SCLS=thermostat1
+ENABLE_SCLS=thermostat1

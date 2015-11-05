@@ -6,7 +6,7 @@
 
 #set -ex
 
-source ../common/functions.sh
+source `dirname ${BASH_SOURCE[0]}`/../common/functions.sh
 
 if [ $# -lt 2 ] ; then
   echo "Usage: `basename $0` <collection> <el_version{6|7|..}>" >&2
@@ -42,7 +42,7 @@ pkgs_extra=$(mktemp /tmp/pkgs-extra-XXXXXX)
 repoquery $rq_args --qf '%{NAME}' -a 2>/dev/null | sort >$pkgs_available
 touch "$pkgs_missing"
 touch "$pkgs_extra"
-cat ../PackageLists/${collection}/all | while read line ; do
+cat `dirname ${BASH_SOURCE[0]}`/../PackageLists/${collection}/all | while read line ; do
   pkg=$(echo "$line" | awk '{print $1}')
   only_el_version=$(echo "$line" | awk '{print $2}')
   if [[ "$only_el_version" =~ rhel-.* ]] && [ "$only_el_version" != "rhel-$el_version" ] ; then
@@ -55,7 +55,7 @@ done
 
 # check whether there are some more packages, in the repo (but ignore extra packages from this collection)
 cat "$pkgs_available" | grep -v -e "^$collection" | while read pkg ; do
-  grep -e "^[[:space:]]*$pkg[[:space:]]*\(?rhel.*\)\?[[:space:]]*$" ../PackageLists/${collection}/all &>/dev/null || echo "[FAIL] Package $pkg should not be in $repo" >>$pkgs_extra
+  grep -e "^[[:space:]]*$pkg[[:space:]]*\(?rhel.*\)\?[[:space:]]*$" `dirname ${BASH_SOURCE[0]}`/../PackageLists/${collection}/all &>/dev/null || echo "[FAIL] Package $pkg should not be in $repo" >>$pkgs_extra
 done
 
 # print results

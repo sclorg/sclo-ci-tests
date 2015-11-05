@@ -1,0 +1,2 @@
+INSTALL_SCLS=mongodb24
+ENABLE_SCLS=mongodb24

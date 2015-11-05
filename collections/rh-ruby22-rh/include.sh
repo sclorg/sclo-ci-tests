@@ -1,0 +1,2 @@
+INSTALL_SCLS=rh-ruby22
+ENABLE_SCLS=rh-ruby22

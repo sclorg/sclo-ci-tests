@@ -1,1 +1,1 @@
-../run-all.sh
+../run-all-repo-tests.sh

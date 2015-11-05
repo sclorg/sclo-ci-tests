@@ -1,0 +1,2 @@
+INSTALL_SCLS=maven30
+ENABLE_SCLS=maven30

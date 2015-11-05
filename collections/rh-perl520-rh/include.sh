@@ -1,0 +1,2 @@
+INSTALL_SCLS=rh-perl520
+ENABLE_SCLS=rh-perl520

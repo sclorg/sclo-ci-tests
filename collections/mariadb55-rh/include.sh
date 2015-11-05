@@ -1,0 +1,2 @@
+INSTALL_SCLS=mariadb55
+ENABLE_SCLS=mariadb55

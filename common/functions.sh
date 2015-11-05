@@ -5,10 +5,19 @@ strip_comments() {
   cat | sed -e 's:#.*$::g' -e '/^[[:space:]]*$/d'
 }
 
-# accepts one option (collection) and returns list of collections that need to be enabled to be able to install this one
+# get major version of the system
+os_major_version() {
+  rpm -q --qf "%{VERSION}" $(rpm -q --whatprovides redhat-release) | grep -o "^[0-9]*"
+}
+
+# accepts one or more options (collection names) and returns list of collections
+# that need to be enabled to be able to install the original set
 get_depended_collections() {
-  echo -n "$1 "
-  cat "`dirname ${BASH_SOURCE[0]}`"/../PackageLists/collections-dependencies | strip_comments | grep -e "^$1:" | head -n 1 | cut -d':' -f2
+  while [ -n "$1" ] ; do
+    echo -n "$1 "
+    cat "`dirname ${BASH_SOURCE[0]}`"/../PackageLists/collections-dependencies | strip_comments | grep -e "^$1:" | head -n 1 | cut -d':' -f2
+    shift
+  done | xargs -n1 | sort -u | xargs
 }
 
 # returns `rh` or `sclo` as output or exits if collections does not exists in the list
@@ -26,13 +35,19 @@ get_scl_namespace() {
 # generate a yum repo file for specified collection and write it to stdout
 # accepts these possitional arguments:
 # * collection
-# * el_version (6, 7, ...)
-# * arch (x86_64, ppc64, ...)
+# * el_version (6, 7, ...), optional
+# * arch (x86_64, ppc64, ...), optional
+# The following environment variables can be set to change default values:
+# * REPOTYPE, if not set, then candidate
+# * REPOFILE, if not set, then sclo-ci.repo
 generate_repo_file() {
   repotype=${REPOTYPE-candidate}
+  repofile=/etc/yum.repos.d/${REPOFILE-sclo-ci.repo}
   collection="$1"
-  el_version="$2"
-  arch="$3"
+  el_version="${2-`os_major_version`}"
+  arch="${3-\$basearch}"
+
+  rm -f "$repofile" ; touch "$repofile"
   for c in `get_depended_collections $collection` ; do
     namespace=$(get_scl_namespace "$c" "$el_version")
     cat >> "$repofile" <<- EOM

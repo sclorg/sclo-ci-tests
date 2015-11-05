@@ -1,0 +1,2 @@
+INSTALL_SCLS=devassist09
+ENABLE_SCLS=devassist09

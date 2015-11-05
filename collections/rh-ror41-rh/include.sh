@@ -1,0 +1,2 @@
+INSTALL_SCLS=rh-ror41
+ENABLE_SCLS=rh-ror41

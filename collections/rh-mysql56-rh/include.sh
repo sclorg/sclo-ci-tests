@@ -1,0 +1,2 @@
+INSTALL_SCLS=rh-mysql56
+ENABLE_SCLS=rh-mysql56

@@ -1,0 +1,2 @@
+INSTALL_SCLS=rh-python34
+ENABLE_SCLS=rh-python34

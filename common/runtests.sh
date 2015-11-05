@@ -29,9 +29,9 @@ fi
 test_list=$(cat "$test_list_file")
 
 
-if  [ -f machine.conf ]
+if  [ -f ./machine.conf ]
 then
-    virt_name=$(cat machine.conf|grep "^name="|sed -r 's/^[^=]*=//' |tail -n 1)
+    virt_name=$(cat ./machine.conf|grep "^name="|sed -r 's/^[^=]*=//' |tail -n 1)
 fi
 
 while [ $#  -gt 0 ]
@@ -82,7 +82,7 @@ fi
 
 
 # Get IP
-if ! ip=$(arp -e |grep  $mac  \
+if ! ip=$(arp -e |grep -e "$mac"  \
             |grep -o -P "^\d{1,3}\.\d{1,3}\.\d{1,3}\.\d{1,3}")
 then
     echo "$0: Failed to get ip of the client in arp table"

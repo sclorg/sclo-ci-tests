@@ -1,0 +1,2 @@
+INSTALL_SCLS=python27
+ENABLE_SCLS=python27

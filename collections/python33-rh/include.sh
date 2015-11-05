@@ -1,0 +1,2 @@
+INSTALL_SCLS=python33
+ENABLE_SCLS=python33

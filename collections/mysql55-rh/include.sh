@@ -1,0 +1,2 @@
+INSTALL_SCLS=mysql55
+ENABLE_SCLS=mysql55

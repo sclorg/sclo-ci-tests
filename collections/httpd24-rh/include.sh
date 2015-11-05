@@ -1,0 +1,2 @@
+INSTALL_SCLS=httpd24
+ENABLE_SCLS=httpd24
