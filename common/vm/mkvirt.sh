@@ -113,6 +113,7 @@ $(dirname $(realpath $0))/vm-install.sh \
     -v "$volume_dir" \
     -n "$name" \
     -t "$tree" \
+    -s "$size" \
     -r "$repoprefix"
 
 retcode=$?

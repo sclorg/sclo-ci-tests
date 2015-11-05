@@ -2,7 +2,7 @@
 
 #defined constants
 repos_path=http://cbs.centos.org/repos/
-default_size=12
+default_size=8
 
 
 function existsParam
