@@ -7,6 +7,7 @@ strip_comments() {
 
 # get major version of the system
 os_major_version() {
+  [ -v OVERRIDE_OS_MAJOR_VERSION ] && echo $OVERRIDE_OS_MAJOR_VERSION && return
   rpm -q --qf "%{VERSION}" $(rpm -q --whatprovides redhat-release) | grep -o "^[0-9]*"
 }
 
@@ -20,13 +21,19 @@ get_depended_collections() {
   done | xargs -n1 | sort -u | xargs
 }
 
+# get list of all collections
+get_collections_list() {
+  cat "`dirname ${BASH_SOURCE[0]}`"/../PackageLists/collections-list-*-el`os_major_version` | strip_comments
+}
+
 # returns `rh` or `sclo` as output or exits if collections does not exists in the list
 # takes two possitional arguments:
 # * collection name
 # * el_version (6, 7, ...)
 get_scl_namespace() {
+  el_version=${2-`os_major_version`}
   for namespace in rh sclo ; do
-    grep -e "^[[:space:]]*$1[[:space:]]*$" "`dirname ${BASH_SOURCE[0]}`"/../PackageLists/collections-list-$namespace-el$2 >/dev/null
+    grep -e "^[[:space:]]*$1[[:space:]]*$" "`dirname ${BASH_SOURCE[0]}`"/../PackageLists/collections-list-$namespace-el$el_version >/dev/null
     [ $? -eq 0 ] && echo "$namespace" && return 0
   done
   return 1
