@@ -2,18 +2,17 @@
 
 This repository includes various tests that will be run for verifying Software Collection packages, that are provided by [SCLo SIG group in CentOS](https://wiki.centos.org/SpecialInterestGroup/SCLo).
 
-To run all tests for a collection `foo` on CentOS 7, run the `./run-all-tests.sh` with name(s) of the collection(s):
+To run all tests for a collection `foo` on CentOS 7, run the `./run.sh` with name(s) of the collection(s):
 ```
-./run-all-tests.sh rh-python34
+./run.sh rh-python34
 ```
 or run `run.sh` script in particular collection directory:
 ```
-./run-all-tests.sh rh-python34
+./run.sh rh-python34
 ```
 
-To run all tests for all collections on CentOS 7, run:
+To run all tests for all collections, run the same command without arguments:
 ```
-cd collections/rh-postgresql94-rh
 ./run.sh
 ```
 
@@ -31,6 +30,7 @@ cd validate-pkg-list
 
 ##Structure of tests
 ```
+    ├── run.sh      -- main entrypoint to run the tests
     ├── common      -- contains files common for all tests
     ├── collections -- contains tests for all collections
         │
