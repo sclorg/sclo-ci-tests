@@ -1,7 +1,8 @@
 #!/bin/bash
 
 # Runs all tests for one or more collections, specified by arguments
-# The arguments are collection names with namespace suffix, e.g. mysql55-rh
+# The arguments are collection names without namespace suffix
+# (namespace is added from configuration), e.g. mysql55
 # If no collection is specified, then all collections are tested.
 
 THISDIR=$(dirname ${BASH_SOURCE[0]})
