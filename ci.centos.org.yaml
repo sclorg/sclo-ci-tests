@@ -1,0 +1,14 @@
+- project:
+    name: sclo-pkgs
+    centos_ver:
+      - 6
+      - 7
+    collections:
+      - ruby200-rh
+      - rh-ruby22-rh
+    centos_arch: x86_64
+    git_url: https://github.com/sclorg/sclo-ci-tests.git
+    jobs:
+      - 'ci.centos.org-{name}-{collection}-{centos_ver}-job':
+        rundotshargs: '{collection}'
+
