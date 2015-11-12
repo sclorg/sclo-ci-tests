@@ -74,3 +74,10 @@ function project_root
 {
   readlink -f $(dirname `dirname ${BASH_SOURCE[0]}`)
 }
+
+exit_fail() {
+  echo -n "[FAIL] "
+  echo $@
+  exit 1
+}
+
