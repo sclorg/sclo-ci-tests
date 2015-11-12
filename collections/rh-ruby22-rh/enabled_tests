@@ -2,5 +2,6 @@ install
 check-version
 basic-usage
 bundler
+install-all-pkgs
 uninstall
 validate-pkg-list
