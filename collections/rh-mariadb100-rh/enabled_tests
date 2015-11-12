@@ -2,5 +2,6 @@ install
 check-version
 service-start
 service-stop
+install-all-pkgs
 uninstall
 validate-pkg-list

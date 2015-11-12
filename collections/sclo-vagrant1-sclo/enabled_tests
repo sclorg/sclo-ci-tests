@@ -1,4 +1,5 @@
 install
 vagrant-up
+install-all-pkgs
 uninstall
 validate-pkg-list

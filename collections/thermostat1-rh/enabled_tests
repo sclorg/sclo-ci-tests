@@ -1,3 +1,4 @@
 install
+install-all-pkgs
 uninstall
 validate-pkg-list
