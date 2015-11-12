@@ -8,10 +8,4 @@ THISDIR=$(dirname ${BASH_SOURCE[0]})
 source ${THISDIR}/../../../common/functions.sh
 source ${THISDIR}/../include.sh
 
-generate_repo_file "$INSTALL_SCLS"
-
-set -e
-
-for SCL in $INSTALL_SCLS ; do
-  yum install -y $EXCLUDE_PKGS ${SCL}\*
-done
+${THISDIR}/../../python-common/basic-usage/basic-tests.sh
