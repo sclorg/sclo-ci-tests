@@ -10,5 +10,7 @@ source ${THISDIR}/../include.sh
 
 generate_repo_file "$INSTALL_SCLS"
 
-yum remove -y ${INSTALL_PKGS-$INSTALL_SCLS}
-exit $?
+set -e
+for SCL in $INSTALL_SCLS ; do
+  yum remove -y ${SCL}\*
+done
