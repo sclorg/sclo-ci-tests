@@ -18,4 +18,7 @@ scl enable $ENABLE_SCLS -- easy_install Django || exit_fail "easy_install Django
 
 scl enable $ENABLE_SCLS -- pip install Flask || exit_fail "pip Flask couldn't be installed"
 
+scl enable $ENABLE_SCLS -- python -c "from flask import Flask"
+scl enable $ENABLE_SCLS -- python -c "from django.conf.urls import patterns, url"
+
 exit $?

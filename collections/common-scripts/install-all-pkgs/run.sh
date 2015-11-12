@@ -13,5 +13,5 @@ generate_repo_file "$INSTALL_SCLS"
 set -e
 
 for SCL in $INSTALL_SCLS ; do
-  yum install -y ${SCL}\*
+  yum install -y $EXCLUDE_PKGS ${SCL}\*
 done
