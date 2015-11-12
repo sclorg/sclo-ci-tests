@@ -6,6 +6,12 @@
 
 THISDIR=$(dirname ${BASH_SOURCE[0]})
 source ${THISDIR}/../../../common/functions.sh
-source ${THISDIR}/../include.sh
 
-${THISDIR}/../../ruby-common/basic-usage/basic-tests.sh
+set -xe
+
+out=$(scl enable $ENABLE_SCLS -- ruby -e "puts 'Hello World'")
+[ "$out" != "Hello World" ] && exit_fail "Basic test of ruby -e failed"
+
+scl enable $ENABLE_SCLS -- gem install activeresource || exit_fail "gem activeresource couldn't be installed"
+
+exit $?

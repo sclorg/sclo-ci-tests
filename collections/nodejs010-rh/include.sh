@@ -1,2 +1,2 @@
-INSTALL_SCLS=nodejs010
-ENABLE_SCLS=nodejs010
+export INSTALL_SCLS=nodejs010
+export ENABLE_SCLS=nodejs010

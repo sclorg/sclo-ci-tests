@@ -1,2 +1,2 @@
-INSTALL_SCLS=maven30
-ENABLE_SCLS=maven30
+export INSTALL_SCLS=maven30
+export ENABLE_SCLS=maven30

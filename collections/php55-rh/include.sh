@@ -1,2 +1,2 @@
-INSTALL_SCLS=php55
-ENABLE_SCLS=php55
+export INSTALL_SCLS=php55
+export ENABLE_SCLS=php55

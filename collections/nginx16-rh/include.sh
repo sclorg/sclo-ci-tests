@@ -1,3 +1,3 @@
-INSTALL_SCLS=nginx16
-ENABLE_SCLS=nginx16
-SERVICE_NAME=nginx16-nginx
+export INSTALL_SCLS=nginx16
+export ENABLE_SCLS=nginx16
+export SERVICE_NAME=nginx16-nginx

@@ -1,4 +1,5 @@
 install
 check-version
+basic-usage
 uninstall
 validate-pkg-list

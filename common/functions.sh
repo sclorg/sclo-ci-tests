@@ -70,8 +70,7 @@ EOM
   done
 }
 
-function project_root
-{
+project_root() {
   readlink -f $(dirname `dirname ${BASH_SOURCE[0]}`)
 }
 

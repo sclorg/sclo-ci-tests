@@ -1,2 +1,2 @@
-INSTALL_SCLS=thermostat1
-ENABLE_SCLS=thermostat1
+export INSTALL_SCLS=thermostat1
+export ENABLE_SCLS=thermostat1

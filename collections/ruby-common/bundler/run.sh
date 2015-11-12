@@ -8,4 +8,4 @@ THISDIR=$(dirname ${BASH_SOURCE[0]})
 source ${THISDIR}/../../../common/functions.sh
 source ${THISDIR}/../include.sh
 
-${THISDIR}/../../ruby-common/basic-usage/basic-tests.sh
+${THISDIR}/../../ruby-common/bundler/bundler.sh

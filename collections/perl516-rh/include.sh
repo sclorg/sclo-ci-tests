@@ -1,2 +1,2 @@
-INSTALL_SCLS=perl516
-ENABLE_SCLS=perl516
+export INSTALL_SCLS=perl516
+export ENABLE_SCLS=perl516

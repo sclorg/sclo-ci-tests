@@ -1,3 +1,3 @@
-INSTALL_SCLS=rh-postgresql94
-ENABLE_SCLS=rh-postgresql94
-SERVICE_NAME=rh-postgresql94-postgresql
+export INSTALL_SCLS=rh-postgresql94
+export ENABLE_SCLS=rh-postgresql94
+export SERVICE_NAME=rh-postgresql94-postgresql

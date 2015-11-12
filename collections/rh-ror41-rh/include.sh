@@ -1,2 +1,2 @@
-INSTALL_SCLS=rh-ror41
-ENABLE_SCLS=rh-ror41
+export INSTALL_SCLS=rh-ror41
+export ENABLE_SCLS=rh-ror41

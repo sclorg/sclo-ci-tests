@@ -1,2 +1,2 @@
-INSTALL_SCLS=nginx14
-ENABLE_SCLS=nginx14
+export INSTALL_SCLS=nginx14
+export ENABLE_SCLS=nginx14

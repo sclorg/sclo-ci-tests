@@ -1,2 +1,2 @@
-INSTALL_SCLS=ror40
-ENABLE_SCLS=ror40
+export INSTALL_SCLS=ror40
+export ENABLE_SCLS=ror40

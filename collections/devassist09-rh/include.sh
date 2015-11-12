@@ -1,2 +1,2 @@
-INSTALL_SCLS=devassist09
-ENABLE_SCLS=devassist09
+export INSTALL_SCLS=devassist09
+export ENABLE_SCLS=devassist09

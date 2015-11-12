@@ -1,3 +1,3 @@
-INSTALL_SCLS=postgresql92
-ENABLE_SCLS=postgresql92
-SERVICE_NAME=postgresql92-postgresql
+export INSTALL_SCLS=postgresql92
+export ENABLE_SCLS=postgresql92
+export SERVICE_NAME=postgresql92-postgresql
