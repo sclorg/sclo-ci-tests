@@ -1,5 +1,6 @@
 install
 check-version
+create-project
 install-all-pkgs
 uninstall
 validate-pkg-list
