@@ -1,5 +1,6 @@
 install
 check-version
+clone-commit
 install-all-pkgs
 uninstall
 validate-pkg-list
