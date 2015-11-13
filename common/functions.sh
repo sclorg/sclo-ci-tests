@@ -7,7 +7,7 @@ strip_comments() {
 
 # get major version of the system
 os_major_version() {
-  [ -v OVERRIDE_OS_MAJOR_VERSION ] && echo $OVERRIDE_OS_MAJOR_VERSION && return
+  [ -n "$OVERRIDE_OS_MAJOR_VERSION" ] && echo $OVERRIDE_OS_MAJOR_VERSION && return
   rpm -q --qf "%{VERSION}" $(rpm -q --whatprovides redhat-release) | grep -o "^[0-9]*"
 }
 
