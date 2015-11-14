@@ -13,6 +13,9 @@ yum install -y ${INSTALL_SCLS}-php-devel ${INSTALL_SCLS}-php-pear libxml2-devel
 
 scl enable ${ENABLE_SCLS} - <<'EOF'
   set -ex
+  # if module is already installed, another install fails,
+  # so try to remove it before and ignore error here
+  pecl uninstall xmldiff || :
   pecl install xmldiff
 EOF
 
