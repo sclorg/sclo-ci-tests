@@ -61,12 +61,12 @@ done
 # print results
 missing=$(cat $pkgs_missing)
 if [ -n "$missing" ] ; then
-  echo "$missing"
+  echo "$missing" >&2
   retval=1
 fi
 extra=$(cat $pkgs_extra)
 if [ -n "$extra" ] ; then
-  echo "$extra"
+  echo "$extra" >&2
   retval=1
 fi
 

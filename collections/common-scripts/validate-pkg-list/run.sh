@@ -5,8 +5,9 @@
 # create a copy of this file instead of symlink.
 
 THISDIR=$(dirname ${BASH_SOURCE[0]})
+source ${THISDIR}/../../../common/functions.sh
 source ${THISDIR}/../include.sh
 
 for scl in $INSTALL_SCLS ; do
-  ${THISDIR}/../../../validate-pkg-list/run.sh $scl 7
+  ${THISDIR}/../../../validate-pkg-list/run.sh $scl `os_major_version`
 done
