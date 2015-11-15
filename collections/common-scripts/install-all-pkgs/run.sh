@@ -12,6 +12,11 @@ generate_repo_file "$INSTALL_SCLS"
 
 set -e
 
+# scldevel packages conflict across similar collections from their nature
+# so to avoid expected conflicts, let's remove scldevel packages
+# from all collections first
+yum remove -y \*-scldevel
+
 for SCL in $INSTALL_SCLS ; do
   yum install -y $EXCLUDE_PKGS ${SCL}\*
 done
