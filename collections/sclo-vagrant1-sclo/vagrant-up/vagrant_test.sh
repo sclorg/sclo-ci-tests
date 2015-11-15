@@ -7,6 +7,6 @@ fi
 
 cd $1
 vagrant up
-vagrant ssh -c 'cd sync; sudo env "PATH=$PATH" ./runtests.sh'
+vagrant ssh -c 'cd sync; sudo env "PATH=$PATH" ./runtests.sh p_ruby'
 exit $?
 
