@@ -1,0 +1,7 @@
+rh-varnish4
+rh-varnish4-varnish
+rh-varnish4-varnish-libs
+rh-varnish4-jemalloc
+rh-varnish4-runtime
+rh-varnish4-varnish-selinux    rhel-6
+

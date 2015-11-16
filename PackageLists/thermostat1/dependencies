@@ -1,0 +1,17 @@
+rh-java-common-apache-commons-beanutils
+rh-java-common-apache-commons-cli
+rh-java-common-apache-commons-codec
+rh-java-common-apache-commons-collections
+rh-java-common-apache-commons-io
+rh-java-common-apache-commons-logging
+rh-java-common-felix-framework
+rh-java-common-google-gson
+rh-java-common-hawtjni
+rh-java-common-httpcomponents-client
+rh-java-common-httpcomponents-core
+rh-java-common-jansi
+rh-java-common-jansi-native
+rh-java-common-lucene
+rh-java-common-objectweb-asm
+
+thermostat1-protobuf-java                          BR of netty

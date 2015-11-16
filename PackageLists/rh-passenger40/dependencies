@@ -1,0 +1,34 @@
+httpd24-apr                         rhel-6
+httpd24-apr-util                    rhel-6
+httpd24-httpd
+httpd24-httpd-tools
+httpd24-runtime
+rh-ruby22-ruby
+rh-ruby22-ruby-irb
+rh-ruby22-ruby-libs
+rh-ruby22-rubygem-bigdecimal
+rh-ruby22-rubygem-io-console
+rh-ruby22-rubygem-json
+rh-ruby22-rubygem-psych
+rh-ruby22-rubygem-rdoc
+rh-ruby22-rubygems
+rh-ruby22-runtime
+ruby193-ruby
+ruby193-ruby-irb
+ruby193-ruby-libs
+ruby193-rubygem-bigdecimal
+ruby193-rubygem-io-console
+ruby193-rubygem-rdoc
+ruby193-rubygem-sqlite3
+ruby193-rubygems
+ruby193-runtime
+ruby200-ruby
+ruby200-ruby-irb
+ruby200-ruby-libs
+ruby200-rubygem-bigdecimal
+ruby200-rubygem-io-console
+ruby200-rubygem-json
+ruby200-rubygem-psych
+ruby200-rubygem-rdoc
+ruby200-rubygems
+ruby200-runtime
