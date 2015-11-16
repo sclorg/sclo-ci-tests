@@ -39,8 +39,12 @@ rh-java-common-apache-commons-compress
 rh-java-common-apache-commons-compress-javadoc
 rh-java-common-apache-commons-dbcp
 rh-java-common-apache-commons-dbcp-javadoc
+rh-java-common-apache-commons-el
+rh-java-common-apache-commons-el-javadoc
 rh-java-common-apache-commons-io
 rh-java-common-apache-commons-io-javadoc
+rh-java-common-apache-commons-jxpath
+rh-java-common-apache-commons-jxpath-javadoc
 rh-java-common-apache-commons-lang
 rh-java-common-apache-commons-lang-javadoc
 rh-java-common-apache-commons-logging
