@@ -39,6 +39,7 @@ fi
 pkgs_available=$(mktemp /tmp/pkgs-available-XXXXXX)
 pkgs_missing=$(mktemp /tmp/pkgs-missing-XXXXXX)
 pkgs_extra=$(mktemp /tmp/pkgs-extra-XXXXXX)
+repoquery $rq_args clean cache &>/dev/null
 repoquery $rq_args --qf '%{NAME}' -a 2>/dev/null | sort >$pkgs_available
 touch "$pkgs_missing"
 touch "$pkgs_extra"
