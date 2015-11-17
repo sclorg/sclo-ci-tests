@@ -8,7 +8,16 @@ THISDIR=$(dirname ${BASH_SOURCE[0]})
 source ${THISDIR}/../../../common/functions.sh
 source ${THISDIR}/../include.sh
 
-set -e
+set -ex
+
+CONF=/etc/opt/rh/rh-varnish4/varnish/default.vcl
+sed -i 's/8080/80/' $CONF
+
 for service in $SERVICE_NAME ; do
-  service "$service" start
+  service "$service" restart
 done
+
+echo "Hello World" >${STATIC_DATA_DIR}/index.html
+out=$(curl 127.0.0.1:6081)
+[ "$out" == "Hello World" ]
+

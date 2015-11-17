@@ -1,5 +1,6 @@
 devassist09
 devtoolset-3
+devtoolset-4
 git19
 httpd24
 mariadb55
@@ -19,6 +20,7 @@ rh-java-common
 rh-mariadb100
 rh-mongodb26
 rh-mysql56
+rh-nginx18
 rh-passenger40
 rh-perl520
 rh-php56
@@ -26,6 +28,7 @@ rh-postgresql94
 rh-python34
 rh-ror41
 rh-ruby22
+rh-varnish4
 ror40
 ruby193
 ruby200

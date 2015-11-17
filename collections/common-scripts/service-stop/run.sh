@@ -8,5 +8,7 @@ THISDIR=$(dirname ${BASH_SOURCE[0]})
 source ${THISDIR}/../../../common/functions.sh
 source ${THISDIR}/../include.sh
 
-service "$SERVICE_NAME" stop
-exit $?
+set -e
+for service in $SERVICE_NAME ; do
+  service "$service" stop
+done
