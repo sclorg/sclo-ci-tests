@@ -23,7 +23,11 @@ retval=0
 # construct repoquery arguments
 namespace=$(get_scl_namespace "$collection" "$el_version")
 repo="sclo${el_version}-${collection}-${namespace}-$repotype"
-rq_args="--disablerepo=* --repofrompath=$collection,http://cbs.centos.org/repos/${repo}/${arch}/os/ --enablerepo=$collection"
+if [ "$repotype" == "mirror" ] ; then
+  rq_args="--disablerepo=* --repofrompath=$collection,http://mirror.centos.org/centos-${el_version}/${el_version}/sclo/x86_64/${namespace}/ --enablerepo=$collection"
+else
+  rq_args="--disablerepo=* --repofrompath=$collection,http://cbs.centos.org/repos/${repo}/${arch}/os/ --enablerepo=$collection"
+fi
 
 # check that all packages use expected arch or noarch
 bad_arch=$(repoquery $rq_args --qf '%{ARCH} %{NVR}' -a 2>/dev/null | grep -v -e '^noarch ' -e "$arch " &>/dev/null) || :
@@ -55,9 +59,11 @@ cat `dirname ${BASH_SOURCE[0]}`/../PackageLists/${collection}/all | while read l
 done
 
 # check whether there are some more packages, in the repo (but ignore extra packages from this collection)
-cat "$pkgs_available" | grep -v -e "^$collection" | while read pkg ; do
-  grep -e "^[[:space:]]*$pkg[[:space:]]*\(?rhel.*\)\?[[:space:]]*$" `dirname ${BASH_SOURCE[0]}`/../PackageLists/${collection}/all &>/dev/null || echo "[FAIL] Package $pkg should not be in $repo" >>$pkgs_extra
-done
+if [ "$repotype" != "mirror" ] ; then
+  cat "$pkgs_available" | grep -v -e "^$collection" | while read pkg ; do
+    grep -e "^[[:space:]]*$pkg[[:space:]]*\(?rhel.*\)\?[[:space:]]*$" `dirname ${BASH_SOURCE[0]}`/../PackageLists/${collection}/all &>/dev/null || echo "[FAIL] Package $pkg should not be in $repo" >>$pkgs_extra
+  done
+fi
 
 # print results
 missing=$(cat $pkgs_missing)
