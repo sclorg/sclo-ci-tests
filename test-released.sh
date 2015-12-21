@@ -12,7 +12,7 @@ test_released_repo() {
 
   keyid=$(gpg --list-packets /etc/pki/rpm-gpg/RPM-GPG-KEY-CentOS-SIG-SCLo | grep -e '^\s*keyid' | awk '{print tolower($NF)}')
   echo "Checking all packages for signing key $keyid:"
-  rpm -qa --qf '%{NAME}-%{VERSION}-%{RELEASE} %{SIGPGP:pgpsig}\n' rh-postgresql94\* | awk '{print $1, tolower($NF)}' | while read pkg key ; do
+  rpm -qa --qf '%{NAME}-%{VERSION}-%{RELEASE} %{SIGPGP:pgpsig}\n' ${collection}\* | awk '{print $1, tolower($NF)}' | while read pkg key ; do
     [ "$keyid" != "$key" ] && echo -n "[FAIL] " || echo -n "[PASS] "
     echo "$pkg has key ID: $key"
   done
