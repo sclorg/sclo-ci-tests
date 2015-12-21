@@ -7,6 +7,7 @@ test_released_repo() {
   collection="$1"
 
   yum -y install centos-release-scl
+  yum -y remove \*-scldevel
   yum -y install ${collection}\*
 
   keyid=$(gpg --list-packets /etc/pki/rpm-gpg/RPM-GPG-KEY-CentOS-SIG-SCLo | grep -e '^\s*keyid' | awk '{print tolower($NF)}')
