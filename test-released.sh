@@ -6,9 +6,9 @@ source ${THISDIR}/common/functions.sh
 test_released_repo() {
   collection="$1"
 
-  yum -y install centos-release-scl
-  yum -y remove \*-scldevel
-  yum -y install ${collection}\*
+  yum -y install centos-release-scl >/dev/null
+  yum -y remove \*-scldevel >/dev/null
+  yum -y install ${collection}\* >/dev/null
 
   keyid=$(gpg --list-packets /etc/pki/rpm-gpg/RPM-GPG-KEY-CentOS-SIG-SCLo | grep -e '^\s*keyid' | awk '{print tolower($NF)}')
   echo "Checking all packages for signing key $keyid:"
