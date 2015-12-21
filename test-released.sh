@@ -8,7 +8,6 @@ test_released_repo() {
 
   yum -y install centos-release-scl
   yum -y install ${collection}\*
-  rpm -qa --qf '%{NAME}-%{VERSION}-%{RELEASE} %{SIGPGP:pgpsig} %{SIGGPG:pgpsig}\n'
 
   keyid=$(gpg --list-packets /etc/pki/rpm-gpg/RPM-GPG-KEY-CentOS-SIG-SCLo | grep -e '^\s*keyid' | awk '{print tolower($NF)}')
   echo "Checking all packages for signing key $keyid:"
