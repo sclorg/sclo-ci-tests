@@ -1,0 +1,26 @@
+# parameters:
+#   name: software collection name, e.g. httpd24
+#   namespace: SCL namespace/prefix, e.g. rh
+#   release: version of CentOS to test, e.g. 6
+#   arch: architecture of CentOS to test, e.g. x86_64
+- job-template:
+    name: 'SCLo-{name}-{namespace}-C{release}-{arch}'
+    scm:
+        - sclo-ci-tests
+    triggers:
+        - cbs-repo:
+            tag: 'sclo{release}-{name}-{namespace}-candidate'
+            arch: '{arch}'
+    builders:
+        - cico_install
+        - shell: |
+            . cicoclient/bin/activate
+            cico node get -f value --arch {arch} --release {release} --count 1 --api-key $(cat ~/duffy.key) | tee cico.out
+            tail -n 1 cico.out | cut -d ' ' -f 7 > ssid
+            tail -n 1 cico.out | cut -d ' ' -f 2 > host
+        - generate_ssh_config
+        - shell: |
+            scp -F ssh_config -rp tests/ host:tests/
+            ssh -F ssh_config host tests/run.sh {name}
+    publishers:
+        - cico_done

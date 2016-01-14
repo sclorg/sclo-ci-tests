@@ -1,0 +1,16 @@
+##############################################################################
+####   Defaults
+###############################################################################
+- defaults:
+    description: |
+      This job is automatically updated by Jenkins Job Builder, any manual
+      change will be lost in the next update. If you want to make permanent
+      changes, check out the <a href="https://github.com/sclorg/sclo-ci-tests/">sclo-ci-tests</a> repo.
+    name: global
+    project-type: freestyle
+    concurrent: false
+    logrotate:
+      numToKeep: 10
+    wrappers:
+      - timestamps
+    node: sclo-sig

@@ -1,0 +1,4 @@
+- builder:
+    name: cico_install
+    builders:
+        - shell: !include-raw: cico_install.sh

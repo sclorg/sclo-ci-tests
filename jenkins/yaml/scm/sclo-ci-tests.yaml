@@ -1,0 +1,6 @@
+- scm:
+    name: sclo-ci-tests
+    scm:
+      - git:
+          url: git://github.com/sclorg/sclo-ci-tests
+          basedir: tests

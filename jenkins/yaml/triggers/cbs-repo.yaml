@@ -1,0 +1,9 @@
+- trigger:
+    name: cbs-repo
+    triggers:
+        - pollurl:
+            cron: 'H/10 * * * *'
+            polling-node: sclo-sig
+            urls:
+                - url: 'http://cbs.centos.org/repos/{tag}/{arch}/os/repodata/repomd.xml'
+                  check-date: true
