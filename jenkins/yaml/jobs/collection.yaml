@@ -11,6 +11,7 @@
         - cbs-repo:
             tag: 'sclo{release}-{name}-{namespace}-candidate'
             arch: '{arch}'
+        - weekly
     builders:
         - cico_install
         - shell: |
