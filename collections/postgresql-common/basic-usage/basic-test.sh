@@ -11,6 +11,8 @@ set -xe
 
 [ -z "${PGDATA}" ] && exit_fail "Environment variable PGDATA must be set"
 
+source scl_source enable ${ENABLE_SCLS}
+
 export PGPASSWORD=secretpass
 psql -d testdb -U testuser <<EOF
 \x on

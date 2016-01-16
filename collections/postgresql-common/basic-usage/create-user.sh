@@ -15,7 +15,7 @@ service $SERVICE_NAME restart
 
 su - postgres <<EOF
   set -x
-  source scl_source enable ${ENABLED_SCLS}
+  source scl_source enable ${ENABLE_SCLS}
   psql -c "CREATE ROLE testuser ENCRYPTED PASSWORD 'secretpass' LOGIN;"
   createdb testdb --owner testuser;
 EOF
