@@ -142,3 +142,5 @@ liblsan
 libmpx
 libtsan
 libubsan
+libatomic				rhel-6
+libitm					rhel-6
