@@ -136,3 +136,9 @@ devtoolset-4-tika
 devtoolset-4-tika-parsers
 devtoolset-4-toolchain
 devtoolset-4-valgrind
+libasan2
+libcilkrts
+liblsan
+libmpx
+libtsan
+libubsan
