@@ -10,6 +10,8 @@ source ${THISDIR}/../include.sh
 
 # make sure we don't use system gcc
 yum -y remove gcc || :
+# install dependencies for compilation process
+yum -y install wget
 scl enable $INSTALL_SCLS - <<"EOF"
   set -ex
   workkingdir=$(mktemp -d /tmp/da-prj-XXXXXX)
@@ -17,7 +19,7 @@ scl enable $INSTALL_SCLS - <<"EOF"
   wget https://ftp.postgresql.org/pub/source/v9.4.4/postgresql-9.4.4.tar.bz2
   tar -xf postgresql-9.4.4.tar.bz2
   cd postgresql-9.4.4
-  ./configure --without-readline
+  ./configure --without-readline --without-zlib
   make
   gccver=$(strings -a ./src/backend/postgres | grep -oe "compiled by.*GCC) \([0-9]*\.[0-9]*\.\)" | sed -e 's/.*[[:space:]]//')
   [ "${gccver}" != "5.2." ] && echo "Wrong GCC version found in postgres binary: ${gccver}" && exit 1
