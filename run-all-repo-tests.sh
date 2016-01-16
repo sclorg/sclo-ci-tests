@@ -25,6 +25,6 @@ fi
 # loop through all collections and test all
 for collection in $collections ; do
   echo "Checking SCL $collection ..."
-  ./run-repo-tests.sh "$collection" "$el_version"
+  ./run.sh "$collection" "$el_version"
 done
 
