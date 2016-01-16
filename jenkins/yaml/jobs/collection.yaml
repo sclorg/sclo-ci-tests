@@ -6,12 +6,15 @@
 - job-template:
     name: 'SCLo-{name}-{namespace}-C{release}-{arch}'
     scm:
-        - sclo-ci-tests
+        - sclo-ci-tests-collection:
+            collection: '{name}'
+            namespace: '{namespace}'
     triggers:
         - cbs-repo:
             tag: 'sclo{release}-{name}-{namespace}-candidate'
             arch: '{arch}'
         - weekly
+        - scm_fifteen_minutes
     builders:
         - cico_install
         - shell: |

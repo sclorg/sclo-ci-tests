@@ -1,0 +1,12 @@
+# parameters:
+#   collection: software collection name, e.g. httpd24
+#   namespace: SCL namespace/prefix, e.g. rh
+- scm:
+    name: sclo-ci-tests-collection
+    scm:
+      - git:
+          url: git://github.com/sclorg/sclo-ci-tests
+          basedir: tests
+          included-regions:
+              - collections/{collection}-{namespace}/.*
+              - PackageLists/{collection}/.*

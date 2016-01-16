@@ -1,0 +1,5 @@
+- trigger:
+    name: scm_fifteen_minutes
+    triggers:
+      - pollscm:
+          cron: 'H/15 * * * *'
