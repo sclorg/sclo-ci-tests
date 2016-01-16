@@ -61,7 +61,7 @@ done
 # check whether there are some more packages, in the repo (but ignore extra packages from this collection)
 if [ "$repotype" != "mirror" ] ; then
   cat "$pkgs_available" | grep -v -e "^$collection" | while read pkg ; do
-    grep -e "^[[:space:]]*$pkg[[:space:]]*\(?rhel.*\)\?[[:space:]]*$" `dirname ${BASH_SOURCE[0]}`/../PackageLists/${collection}/all &>/dev/null || echo "[FAIL] Package $pkg should not be in $repo" >>$pkgs_extra
+    grep -e "^[[:space:]]*$pkg[[:space:]]*\(rhel.${el_version}\)\?[[:space:]]*$" `dirname ${BASH_SOURCE[0]}`/../PackageLists/${collection}/all &>/dev/null || echo "[FAIL] Package $pkg should not be in $repo" >>$pkgs_extra
   done
 fi
 
