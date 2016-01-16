@@ -3,6 +3,7 @@
 # depends on packages from collections `rh-ruby22` and `v8314`.
 
 devtoolset-3: rh-java-common maven30
+devtoolset-4: rh-java-common maven30
 maven30: rh-java-common
 mongodb24: v8314 rh-java-common maven30
 nodejs010: v8314
