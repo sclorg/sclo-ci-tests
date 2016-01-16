@@ -51,15 +51,18 @@ get_scl_namespace() {
 generate_repo_file() {
   [ "0$SKIP_REPO_CREATE" -eq 1 ] && return
   repotype=${REPOTYPE-candidate}
-  repofile=/etc/yum.repos.d/${REPOFILE-sclo-ci.repo}
-  collection="$1"
-  el_version="${2-`os_major_version`}"
-  arch="${3-\$basearch}"
+  if [ "$repotype" == "mirror" ] ; then
+    yum -y install centos-release-scl
+  else
+    repofile=/etc/yum.repos.d/${REPOFILE-sclo-ci.repo}
+    collection="$1"
+    el_version="${2-`os_major_version`}"
+    arch="${3-\$basearch}"
 
-  rm -f "$repofile" ; touch "$repofile"
-  for c in `get_depended_collections $collection` ; do
-    namespace=$(get_scl_namespace "$c" "$el_version")
-    cat >> "$repofile" <<- EOM
+    rm -f "$repofile" ; touch "$repofile"
+    for c in `get_depended_collections $collection` ; do
+      namespace=$(get_scl_namespace "$c" "$el_version")
+      cat >> "$repofile" <<- EOM
 [sclo${el_version}-${c}-${namespace}-$repotype]
 name=sclo${el_version}-${c}-${namespace}-$repotype
 baseurl=http://cbs.centos.org/repos/sclo${el_version}-${c}-${namespace}-$repotype/${arch}/os/
@@ -67,7 +70,8 @@ gpgcheck=0
 enabled=1
 
 EOM
-  done
+    done
+  fi
 }
 
 project_root() {
