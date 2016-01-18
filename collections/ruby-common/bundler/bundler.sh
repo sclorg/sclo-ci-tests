@@ -9,7 +9,7 @@ source ${THISDIR}/../../../common/functions.sh
 
 set -xe
 
-yum install -y rh-ruby22-rubygem-bundler
+yum install -y ${INSTALL_SCLS}-rubygem-bundler
 
 username=testuser$$
 homedir=/var/lib/test-home$$
