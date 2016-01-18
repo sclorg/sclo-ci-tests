@@ -1,0 +1,4 @@
+- builder:
+    name: generate_ssh_config
+    builders:
+        - shell: !include-raw: generate_ssh_config.sh

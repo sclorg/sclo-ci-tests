@@ -1,0 +1,4 @@
+- trigger:
+    name: weekly
+    triggers:
+        - timed: 'H H * * H'

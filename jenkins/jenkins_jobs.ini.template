@@ -1,0 +1,11 @@
+[jenkins]
+user=
+password=
+url=https://ci.centos.org/
+
+[job_builder]
+ignore_cache=True
+keep_descriptions=False
+include_path=.
+recursive=True
+allow_duplicates=False
