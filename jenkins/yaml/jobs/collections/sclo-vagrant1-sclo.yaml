@@ -2,7 +2,6 @@
     name: sclo-vagrant1
     namespace: sclo
     release:
-        - 6
         - 7
     arch: x86_64
     jobs:
