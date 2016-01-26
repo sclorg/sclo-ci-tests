@@ -50,11 +50,12 @@ function sshwp
 
 rel_path=$(readlink -f $THISDIR | sed -e "s|^`project_root`/||")
 git_url=$(git config --get remote.origin.url || echo https://github.com/sclorg/sclo-ci-tests.git)
+git_branch=$(git name-rev --name-only HEAD || echo master)
 
 echo "Using host $SSH_HOST, user $SSH_USER."
 sshwp "
 repo=\$(mktemp -d /tmp/sclo-ci-XXXXXX)
-git clone $git_url \$repo/repo
+git clone -b $git_branch $git_url \$repo/repo
 cd \$repo/repo/$rel_path
 ./run.sh
 "
