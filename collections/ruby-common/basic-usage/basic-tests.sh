@@ -9,6 +9,8 @@ source ${THISDIR}/../../../common/functions.sh
 
 set -xe
 
+install_build_tools
+
 out=$(scl enable $ENABLE_SCLS -- ruby -e "puts 'Hello World'")
 [ "$out" != "Hello World" ] && exit_fail "Basic test of ruby -e failed"
 

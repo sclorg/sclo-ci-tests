@@ -84,3 +84,11 @@ exit_fail() {
   exit 1
 }
 
+# install basic tools that are usually needed for building other SW
+install_build_tools() {
+  yum -y install \
+      bash bzip2 coreutils cpio diffutils findutils gawk gcc gcc-c++ grep \
+      gzip info make patch redhat-rpm-config rpm-build sed shadow-utils \
+      tar unzip util-linux-ng wget which iso-codes
+}
+
