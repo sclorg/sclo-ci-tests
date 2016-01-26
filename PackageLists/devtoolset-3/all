@@ -173,5 +173,5 @@ libcilkrts
 liblsan
 libtsan
 libubsan
-libatomic
-libitm
+libatomic					rhel-6
+libitm						rhel-6
