@@ -9,7 +9,9 @@ source ${THISDIR}/../../../common/functions.sh
 source ${THISDIR}/../include.sh
 
 # make sure we don't use system gcc
-yum -y remove gcc || :
+# TODO: not sure why removing gcc causes removal of devtoolset-3-gcc as well
+# yum -y remove gcc || :
+
 # install dependencies for compilation process
 yum -y install wget
 scl enable $INSTALL_SCLS - <<"EOF"

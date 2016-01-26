@@ -1,6 +1,6 @@
 install
 check-version
 compile-postgresql
-install-all-pkgs
+#install-all-pkgs
 uninstall
 validate-pkg-list

@@ -12,71 +12,71 @@ devtoolset-3-cbi-plugins
 devtoolset-3-cbi-plugins-javadoc
 devtoolset-3-decentxml
 devtoolset-3-decentxml-javadoc
-devtoolset-3-dockerfiles
+devtoolset-3-dockerfiles			rhel-7
 devtoolset-3-dwz
-devtoolset-3-dyninst
-devtoolset-3-dyninst-devel
-devtoolset-3-dyninst-doc
-devtoolset-3-dyninst-static
-devtoolset-3-dyninst-testsuite
-devtoolset-3-eclipse-cdt
-devtoolset-3-eclipse-cdt-parsers
-devtoolset-3-eclipse-cdt-sdk
-devtoolset-3-eclipse-cdt-tests
-devtoolset-3-eclipse-changelog
-devtoolset-3-eclipse-ecf-core
-devtoolset-3-eclipse-egit
-devtoolset-3-eclipse-egit-mylyn
-devtoolset-3-eclipse-emf-core
-devtoolset-3-eclipse-emf-examples
-devtoolset-3-eclipse-emf-runtime
-devtoolset-3-eclipse-emf-sdk
-devtoolset-3-eclipse-equinox-osgi
-devtoolset-3-eclipse-filesystem
-devtoolset-3-eclipse-gcov
-devtoolset-3-eclipse-gef
-devtoolset-3-eclipse-gef-examples
-devtoolset-3-eclipse-gef-sdk
-devtoolset-3-eclipse-gprof
-devtoolset-3-eclipse-jdt
-devtoolset-3-eclipse-jgit
-devtoolset-3-eclipse-license
-devtoolset-3-eclipse-linuxtools
-devtoolset-3-eclipse-linuxtools-tests
-devtoolset-3-eclipse-manpage
-devtoolset-3-eclipse-mylyn
-devtoolset-3-eclipse-mylyn-builds
-devtoolset-3-eclipse-mylyn-builds-hudson
-devtoolset-3-eclipse-mylyn-context-cdt
-devtoolset-3-eclipse-mylyn-context-java
-devtoolset-3-eclipse-mylyn-context-pde
-devtoolset-3-eclipse-mylyn-context-team
-devtoolset-3-eclipse-mylyn-docs-epub
-devtoolset-3-eclipse-mylyn-docs-htmltext
-devtoolset-3-eclipse-mylyn-docs-wikitext
-devtoolset-3-eclipse-mylyn-ide
-devtoolset-3-eclipse-mylyn-sdk
-devtoolset-3-eclipse-mylyn-tasks-bugzilla
-devtoolset-3-eclipse-mylyn-tasks-trac
-devtoolset-3-eclipse-mylyn-tasks-web
-devtoolset-3-eclipse-mylyn-tests
-devtoolset-3-eclipse-mylyn-versions
-devtoolset-3-eclipse-mylyn-versions-cvs
-devtoolset-3-eclipse-mylyn-versions-git
-devtoolset-3-eclipse-oprofile
-devtoolset-3-eclipse-p2-discovery
-devtoolset-3-eclipse-pde
-devtoolset-3-eclipse-perf
-devtoolset-3-eclipse-platform
-devtoolset-3-eclipse-remote
-devtoolset-3-eclipse-rpm-editor
-devtoolset-3-eclipse-rse
-devtoolset-3-eclipse-rse-server
-devtoolset-3-eclipse-swt
-devtoolset-3-eclipse-swtbot
-devtoolset-3-eclipse-systemtap
-devtoolset-3-eclipse-tests
-devtoolset-3-eclipse-valgrind
+devtoolset-3-dyninst				rhel-7
+devtoolset-3-dyninst-devel			rhel-7
+devtoolset-3-dyninst-doc			rhel-7
+devtoolset-3-dyninst-static			rhel-7
+devtoolset-3-dyninst-testsuite			rhel-7
+devtoolset-3-eclipse-cdt			rhel-7
+devtoolset-3-eclipse-cdt-parsers		rhel-7
+devtoolset-3-eclipse-cdt-sdk			rhel-7
+devtoolset-3-eclipse-cdt-tests			rhel-7
+devtoolset-3-eclipse-changelog			rhel-7
+devtoolset-3-eclipse-ecf-core			rhel-7
+devtoolset-3-eclipse-egit			rhel-7
+devtoolset-3-eclipse-egit-mylyn			rhel-7
+devtoolset-3-eclipse-emf-core			rhel-7
+devtoolset-3-eclipse-emf-examples		rhel-7
+devtoolset-3-eclipse-emf-runtime		rhel-7
+devtoolset-3-eclipse-emf-sdk			rhel-7
+devtoolset-3-eclipse-equinox-osgi		rhel-7
+devtoolset-3-eclipse-filesystem			rhel-7
+devtoolset-3-eclipse-gcov			rhel-7
+devtoolset-3-eclipse-gef			rhel-7
+devtoolset-3-eclipse-gef-examples		rhel-7
+devtoolset-3-eclipse-gef-sdk			rhel-7
+devtoolset-3-eclipse-gprof			rhel-7
+devtoolset-3-eclipse-jdt			rhel-7
+devtoolset-3-eclipse-jgit			rhel-7
+devtoolset-3-eclipse-license			rhel-7
+devtoolset-3-eclipse-linuxtools			rhel-7
+devtoolset-3-eclipse-linuxtools-tests		rhel-7
+devtoolset-3-eclipse-manpage			rhel-7
+devtoolset-3-eclipse-mylyn			rhel-7
+devtoolset-3-eclipse-mylyn-builds		rhel-7
+devtoolset-3-eclipse-mylyn-builds-hudson	rhel-7
+devtoolset-3-eclipse-mylyn-context-cdt		rhel-7
+devtoolset-3-eclipse-mylyn-context-java		rhel-7
+devtoolset-3-eclipse-mylyn-context-pde		rhel-7
+devtoolset-3-eclipse-mylyn-context-team		rhel-7
+devtoolset-3-eclipse-mylyn-docs-epub		rhel-7
+devtoolset-3-eclipse-mylyn-docs-htmltext	rhel-7
+devtoolset-3-eclipse-mylyn-docs-wikitext	rhel-7
+devtoolset-3-eclipse-mylyn-ide			rhel-7
+devtoolset-3-eclipse-mylyn-sdk			rhel-7
+devtoolset-3-eclipse-mylyn-tasks-bugzilla	rhel-7
+devtoolset-3-eclipse-mylyn-tasks-trac		rhel-7
+devtoolset-3-eclipse-mylyn-tasks-web		rhel-7
+devtoolset-3-eclipse-mylyn-tests		rhel-7
+devtoolset-3-eclipse-mylyn-versions		rhel-7
+devtoolset-3-eclipse-mylyn-versions-cvs		rhel-7
+devtoolset-3-eclipse-mylyn-versions-git		rhel-7
+devtoolset-3-eclipse-oprofile			rhel-7
+devtoolset-3-eclipse-p2-discovery		rhel-7
+devtoolset-3-eclipse-pde			rhel-7
+devtoolset-3-eclipse-perf			rhel-7
+devtoolset-3-eclipse-platform			rhel-7
+devtoolset-3-eclipse-remote			rhel-7
+devtoolset-3-eclipse-rpm-editor			rhel-7
+devtoolset-3-eclipse-rse			rhel-7
+devtoolset-3-eclipse-rse-server			rhel-7
+devtoolset-3-eclipse-swt			rhel-7
+devtoolset-3-eclipse-swtbot			rhel-7
+devtoolset-3-eclipse-systemtap			rhel-7
+devtoolset-3-eclipse-tests			rhel-7
+devtoolset-3-eclipse-valgrind			rhel-7
 devtoolset-3-elfutils
 devtoolset-3-elfutils-devel
 devtoolset-3-elfutils-libelf
@@ -173,3 +173,5 @@ libcilkrts
 liblsan
 libtsan
 libubsan
+libatomic
+libitm
