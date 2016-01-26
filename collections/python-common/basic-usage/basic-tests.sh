@@ -9,6 +9,8 @@ source ${THISDIR}/../../../common/functions.sh
 
 set -xe
 
+install_build_tools
+
 out=$(scl enable $ENABLE_SCLS -- python -c "print('Hello World')")
 [ "$out" != "Hello World" ] && exit_fail "Basic test of python -c failed"
 
@@ -19,6 +21,6 @@ scl enable $ENABLE_SCLS -- easy_install Django || exit_fail "easy_install Django
 scl enable $ENABLE_SCLS -- pip install Flask || exit_fail "pip Flask couldn't be installed"
 
 scl enable $ENABLE_SCLS -- python -c "from flask import Flask"
-scl enable $ENABLE_SCLS -- python -c "from django.conf.urls import patterns, url"
+scl enable $ENABLE_SCLS -- python -c "import django.conf"
 
 exit $?
