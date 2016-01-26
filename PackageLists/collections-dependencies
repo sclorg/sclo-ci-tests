@@ -21,5 +21,6 @@ rh-ror41: rh-ruby22 v8314
 ruby193: httpd24 v8314
 ror40: ruby200 v8314
 thermostat1: rh-java-common maven30 rh-mongodb26 v8314
+sclo-ror42: rh-ruby22 v8314
 sclo-vagrant1: rh-ror41 rh-ruby22
 rh-nginx18: rh-passenger40 ruby193
