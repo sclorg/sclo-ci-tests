@@ -7,7 +7,7 @@
 THISDIR=$(dirname ${BASH_SOURCE[0]})
 source ${THISDIR}/../../common/functions.sh
 
-out=${out-/dev/null}
+out=${out-/dev/stdout}
 
 stPass="[PASSED]"
 stFail="[FAILED]"
@@ -86,6 +86,10 @@ do
         failed_tests="$failed_tests $tst"
     fi
 done
+
+echo
+echo "Test results summary:"
+cat $resDirAll/tests.log
 
 echo -e "\n$passed tests passed, $failed tests failed."
 
