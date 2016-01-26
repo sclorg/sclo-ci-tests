@@ -11,7 +11,10 @@ set -xe
 
 service $SERVICE_NAME restart
 
+# scl_source returns non-zero return code from some reason
+set +e
 source scl_source enable ${ENABLE_SCLS}
+set -e
 
 mysql -u root <<'EOF'
 CREATE DATABASE IF NOT EXISTS db1;
@@ -36,6 +39,7 @@ SELECT COUNT(*) as count FROM test_table WHERE fakevalue=4 \G
 EOF
 )
 out=$(echo "$out"|tail -n 1)
+echo "output: $out, expected: 'count: 1'"
 
 [ "$out" == "count: 1" ]
 
