@@ -84,3 +84,10 @@ exit_fail() {
   exit 1
 }
 
+source_scl() {
+  set -o | egrep -q errexit.*on
+  errexit=$?
+  set +e
+  source scl_source enable ${1-${ENABLE_SCLS}}
+  [ $errexit -eq 0 ] && set -e
+}

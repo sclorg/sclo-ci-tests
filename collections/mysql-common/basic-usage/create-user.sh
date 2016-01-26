@@ -11,7 +11,7 @@ set -xe
 
 service $SERVICE_NAME restart
 
-source scl_source enable ${ENABLE_SCLS}
+source_scl
 
 mysql -u root <<'EOF'
 CREATE DATABASE IF NOT EXISTS db1;
