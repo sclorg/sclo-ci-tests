@@ -6,7 +6,8 @@ if [ "$#" -ne 1 ] ; then
 fi
 
 cd $1
+
+set -xe
+
 vagrant up
 vagrant ssh -c 'cd sync; sudo env "PATH=$PATH" ./runtests.sh p_ruby'
-exit $?
-
