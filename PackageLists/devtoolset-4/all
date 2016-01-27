@@ -63,6 +63,7 @@ devtoolset-4-eclipse-rpm-editor
 devtoolset-4-eclipse-rse
 devtoolset-4-eclipse-rse-server
 devtoolset-4-eclipse-swt
+devtoolset-4-eclipse-swtbot
 devtoolset-4-eclipse-systemtap
 devtoolset-4-eclipse-tm-terminal
 devtoolset-4-eclipse-valgrind
@@ -115,6 +116,7 @@ devtoolset-4-libstdc++-devel
 devtoolset-4-lpg-java-compat
 devtoolset-4-ltrace
 devtoolset-4-memstomp
+devtoolset-4-mockito
 devtoolset-4-netty
 devtoolset-4-oprofile
 devtoolset-4-osgi-resource-locator
