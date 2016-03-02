@@ -5,6 +5,7 @@
 devtoolset-3: rh-java-common maven30
 devtoolset-4: rh-java-common maven30
 maven30: rh-java-common
+rh-maven33: rh-java-common
 mongodb24: v8314 rh-java-common maven30
 nodejs010: v8314
 perl516: httpd24
@@ -13,11 +14,15 @@ php55: httpd24
 python33: httpd24
 rh-java-common: maven30
 rh-mongodb26: v8314 rh-java-common maven30 python27
+rh-mongodb30upg: v8314 rh-java-common rh-maven33 python27
+rh-mongodb32: rh-java-common rh-maven33 python27
 rh-passenger40: httpd24 ruby193 ror40 ruby200 rh-ror41 rh-ruby22
 rh-perl520: httpd24
 rh-php56: httpd24
 rh-python34: httpd24
+rh-python35: httpd24
 rh-ror41: rh-ruby22 v8314
+rh-ror42: rh-ruby23 rh-nodejs4
 ruby193: httpd24 v8314
 ror40: ruby200 v8314
 thermostat1: rh-java-common maven30 rh-mongodb26 v8314

@@ -18,6 +18,7 @@ python27
 python33
 rh-java-common
 rh-mariadb100
+rh-mariadb101
 rh-mongodb26
 rh-mysql56
 rh-nginx18
@@ -25,6 +26,7 @@ rh-passenger40
 rh-perl520
 rh-php56
 rh-postgresql94
+rh-postgresql95
 rh-python34
 rh-ror41
 rh-ruby22
