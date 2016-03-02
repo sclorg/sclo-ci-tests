@@ -1,0 +1,8 @@
+rh-python35
+rh-python35-python
+rh-python35-python-devel
+rh-python35-python-libs
+rh-python35-python-pip
+rh-python35-python-setuptools
+rh-python35-python-virtualenv
+rh-python35-runtime

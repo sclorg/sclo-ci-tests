@@ -1,0 +1,13 @@
+rh-postgresql95
+rh-postgresql95-postgresql
+rh-postgresql95-postgresql-contrib
+rh-postgresql95-postgresql-devel
+rh-postgresql95-postgresql-docs
+rh-postgresql95-postgresql-libs
+rh-postgresql95-postgresql-plperl
+rh-postgresql95-postgresql-plpython
+rh-postgresql95-postgresql-pltcl
+rh-postgresql95-postgresql-server
+rh-postgresql95-postgresql-test
+rh-postgresql95-runtime
+rh-postgresql95-scldevel
