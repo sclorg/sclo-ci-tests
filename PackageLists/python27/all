@@ -21,6 +21,7 @@ python27-python-psycopg2
 python27-python-psycopg2-doc
 python27-python-pygments
 python27-python-pymongo
+python27-python-pymongo-doc
 python27-python-pymongo-gridfs
 python27-python-setuptools
 python27-python-simplejson
@@ -34,6 +35,7 @@ python27-python-virtualenv
 python27-python-wheel
 python27-python-werkzeug
 python27-python-werkzeug-doc
+python27-PyYAML
 python27-runtime
 python27-scipy
 python27-scldevel
