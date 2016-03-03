@@ -16,8 +16,16 @@ set +e
 source scl_source enable ${ENABLE_SCLS}
 set -e
 
+set +e
+# ignore error here, user may exist from previous run
+mysql -u root <<'EOF'
+DROP USER 'valeria'@'localhost';
+EOF
+set -e
+
 mysql -u root <<'EOF'
 CREATE DATABASE IF NOT EXISTS db1;
+CREATE USER 'valeria'@'localhost';
 GRANT USAGE ON *.* TO 'valeria'@'localhost';
 DROP USER 'valeria'@'localhost';
 FLUSH PRIVILEGES;
