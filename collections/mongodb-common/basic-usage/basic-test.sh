@@ -20,8 +20,8 @@ service $SERVICE_NAME restart
 
 mongo ${MONGODB_DATABASE} --eval "db.removeUser('${MONGODB_USER}')"
 mongo admin --eval "db.removeUser('admin')"
-mongo ${MONGODB_DATABASE} --eval "db.addUser({user: '${MONGODB_USER}', pwd: '${MONGODB_PASSWORD}', roles: [ 'readWrite' ]})"
-mongo admin --eval "db.addUser({user: 'admin', pwd: '${MONGODB_ADMIN_PASSWORD}', roles: ['dbAdminAnyDatabase', 'userAdminAnyDatabase' , 'readWriteAnyDatabase','clusterAdmin' ]})"
+mongo ${MONGODB_DATABASE} --eval "db.createUser({user: '${MONGODB_USER}', pwd: '${MONGODB_PASSWORD}', roles: [ 'readWrite' ]})"
+mongo admin --eval "db.createUser({user: 'admin', pwd: '${MONGODB_ADMIN_PASSWORD}', roles: ['dbAdminAnyDatabase', 'userAdminAnyDatabase' , 'readWriteAnyDatabase','clusterAdmin' ]})"
 
 mongo "$MONGODB_DATABASE" --host 127.0.0.1 -u "$MONGODB_USER" -p "$MONGODB_PASSWORD" <<'EOF'
 db.restaurants.insert(
