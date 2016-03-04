@@ -30,6 +30,7 @@ rh-ror42-rubygem-byebug
 rh-ror42-rubygem-byebug-doc
 rh-ror42-rubygem-childprocess
 rh-ror42-rubygem-childprocess-doc
+rh-ror42-rubygem-coderay
 rh-ror42-rubygem-coffee-rails
 rh-ror42-rubygem-coffee-rails-doc
 rh-ror42-rubygem-coffee-script
@@ -73,6 +74,8 @@ rh-ror42-rubygem-mime-types
 rh-ror42-rubygem-mime-types-doc
 rh-ror42-rubygem-mocha
 rh-ror42-rubygem-mocha-doc
+rh-ror42-rubygem-mongo
+rh-ror42-rubygem-mongo-doc
 rh-ror42-rubygem-multi_json
 rh-ror42-rubygem-multi_json-doc
 rh-ror42-rubygem-nokogiri
