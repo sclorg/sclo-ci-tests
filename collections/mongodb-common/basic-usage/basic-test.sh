@@ -18,10 +18,14 @@ set -xe
 
 service $SERVICE_NAME restart
 
+createuserfunc=createUser
+[ "$MONGODB_VERSION" == "2.4" ] && createuserfunc=addUser
+
+
 mongo ${MONGODB_DATABASE} --eval "db.removeUser('${MONGODB_USER}')"
 mongo admin --eval "db.removeUser('admin')"
-mongo ${MONGODB_DATABASE} --eval "db.createUser({user: '${MONGODB_USER}', pwd: '${MONGODB_PASSWORD}', roles: [ 'readWrite' ]})"
-mongo admin --eval "db.createUser({user: 'admin', pwd: '${MONGODB_ADMIN_PASSWORD}', roles: ['dbAdminAnyDatabase', 'userAdminAnyDatabase' , 'readWriteAnyDatabase','clusterAdmin' ]})"
+mongo ${MONGODB_DATABASE} --eval "db.${createuserfunc}({user: '${MONGODB_USER}', pwd: '${MONGODB_PASSWORD}', roles: [ 'readWrite' ]})"
+mongo admin --eval "db.${createuserfunc}({user: 'admin', pwd: '${MONGODB_ADMIN_PASSWORD}', roles: ['dbAdminAnyDatabase', 'userAdminAnyDatabase' , 'readWriteAnyDatabase','clusterAdmin' ]})"
 
 mongo "$MONGODB_DATABASE" --host 127.0.0.1 -u "$MONGODB_USER" -p "$MONGODB_PASSWORD" <<'EOF'
 db.restaurants.insert(
