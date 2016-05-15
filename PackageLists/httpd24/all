@@ -21,3 +21,4 @@ httpd24-mod_session
 httpd24-mod_ssl
 httpd24-runtime
 httpd24-scldevel
+CUnit-devel
