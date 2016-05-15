@@ -1,0 +1,8 @@
+- project:
+    name: rh-ror42
+    namespace: rh
+    release:
+        - 7
+    arch: x86_64
+    jobs:
+        - 'SCLo-{name}-{namespace}-C{release}-{arch}'
