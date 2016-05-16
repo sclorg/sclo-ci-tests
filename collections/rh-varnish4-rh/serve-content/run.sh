@@ -17,7 +17,17 @@ for service in $SERVICE_NAME ; do
   service "$service" restart
 done
 
+sleep 3
+
 echo "Hello World" >${STATIC_DATA_DIR}/index.html
 out=$(curl 127.0.0.1:6081)
 [ "$out" == "Hello World" ]
+res=$?
 
+# in case of failure, print some diagnostics
+if [ $res -ne 0 ] ; then
+  yum -y install net-tools
+  netstat -putna
+fi
+
+exit $res
