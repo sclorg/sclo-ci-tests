@@ -5,7 +5,7 @@
 devtoolset-3: rh-java-common maven30
 devtoolset-4: rh-java-common maven30
 maven30: rh-java-common
-rh-maven33: rh-java-common
+rh-maven33: rh-java-common maven30
 mongodb24: v8314 rh-java-common maven30
 nodejs010: v8314
 perl516: httpd24
