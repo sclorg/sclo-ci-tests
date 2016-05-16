@@ -7,7 +7,6 @@ rh-nodejs4-runtime    rhel-7
 rh-nodejs4-gyp    rhel-7
 rh-nodejs4-http-parser    rhel-7
 rh-nodejs4-libuv    rhel-7
-rh-nodejs4-libuv-static    rhel-7
 rh-nodejs4-node-gyp    rhel-7
 rh-nodejs4-nodejs-abbrev    rhel-7
 rh-nodejs4-nodejs-ansicolors    rhel-7
