@@ -54,6 +54,7 @@ rh-maven33-avalon-framework
 rh-maven33-avalon-framework-javadoc
 rh-maven33-avalon-logkit
 rh-maven33-avalon-logkit-javadoc
+rh-maven33-base64coder
 rh-maven33-beust-jcommander
 rh-maven33-beust-jcommander-javadoc
 rh-maven33-bsh
