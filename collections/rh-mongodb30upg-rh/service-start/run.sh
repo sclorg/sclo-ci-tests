@@ -1,4 +1,4 @@
-h!/bin/bash
+#!/bin/bash
 
 THISDIR=$(dirname ${BASH_SOURCE[0]})
 source ${THISDIR}/../../../common/functions.sh
