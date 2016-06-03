@@ -53,6 +53,10 @@ generate_repo_file() {
   repotype=${REPOTYPE-candidate}
   if [ "$repotype" == "mirror" ] ; then
     yum -y install centos-release-scl
+  elif [ "$repotype" == "buildlogs" ] ; then
+    yum -y install centos-release-scl
+    yum-config-manager --enable centos-sclo-rh-testing
+    yum-config-manager --enable centos-sclo-sclo-testing
   else
     repofile=/etc/yum.repos.d/${REPOFILE-sclo-ci.repo}
     collection="$1"
