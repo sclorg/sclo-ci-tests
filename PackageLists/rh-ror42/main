@@ -8,11 +8,13 @@ rh-ror42-rubygem-activerecord
 rh-ror42-rubygem-activesupport
 rh-ror42-rubygem-arel
 rh-ror42-rubygem-bcrypt
+rh-ror42-rubygem-binding_of_caller
 rh-ror42-rubygem-builder
 rh-ror42-rubygem-byebug
 rh-ror42-rubygem-coffee-rails
 rh-ror42-rubygem-coffee-script
 rh-ror42-rubygem-coffee-script-source
+rh-ror42-rubygem-debug_inspector
 rh-ror42-rubygem-erubis
 rh-ror42-rubygem-execjs
 rh-ror42-rubygem-globalid
@@ -44,5 +46,5 @@ rh-ror42-rubygem-tilt
 rh-ror42-rubygem-turbolinks
 rh-ror42-rubygem-tzinfo
 rh-ror42-rubygem-uglifier
+rh-ror42-rubygem-web-console
 rh-ror42-runtime
-rh-ror42-scldevel
