@@ -4,6 +4,7 @@ thermostat1-jcommon
 thermostat1-jfreechart
 thermostat1-jline2
 thermostat1-netty
+thermostat1-jgraphx
 thermostat1-runtime
 thermostat1-thermostat
 thermostat1-thermostat-webapp

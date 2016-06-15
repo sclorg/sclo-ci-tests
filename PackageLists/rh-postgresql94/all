@@ -9,6 +9,7 @@ rh-postgresql94-postgresql-plpython
 rh-postgresql94-postgresql-pltcl
 rh-postgresql94-postgresql-server
 rh-postgresql94-postgresql-test
+rh-postgresql94-postgresql-static
 rh-postgresql94-postgresql-upgrade
 rh-postgresql94-runtime
 rh-postgresql94-scldevel

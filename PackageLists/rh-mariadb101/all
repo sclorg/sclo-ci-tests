@@ -1,35 +1,35 @@
 rh-mariadb101
-rh-mariadb101-boost
-rh-mariadb101-boost-atomic
-rh-mariadb101-boost-build
-rh-mariadb101-boost-chrono
-rh-mariadb101-boost-container
-rh-mariadb101-boost-context
-rh-mariadb101-boost-coroutine
-rh-mariadb101-boost-date-time
-rh-mariadb101-boost-devel
-rh-mariadb101-boost-doc
-rh-mariadb101-boost-doctools
-rh-mariadb101-boost-examples
-rh-mariadb101-boost-filesystem
-rh-mariadb101-boost-graph
-rh-mariadb101-boost-iostreams
-rh-mariadb101-boost-jam
-rh-mariadb101-boost-locale
-rh-mariadb101-boost-log
-rh-mariadb101-boost-math
-rh-mariadb101-boost-program-options
-rh-mariadb101-boost-python
-rh-mariadb101-boost-random
-rh-mariadb101-boost-regex
-rh-mariadb101-boost-serialization
-rh-mariadb101-boost-signals
-rh-mariadb101-boost-static
-rh-mariadb101-boost-system
-rh-mariadb101-boost-test
-rh-mariadb101-boost-thread
-rh-mariadb101-boost-timer
-rh-mariadb101-boost-wave
+rh-mariadb101-boost	rhel-6
+rh-mariadb101-boost-atomic	rhel-6
+rh-mariadb101-boost-build	rhel-6
+rh-mariadb101-boost-chrono	rhel-6
+rh-mariadb101-boost-container	rhel-6
+rh-mariadb101-boost-context	rhel-6
+rh-mariadb101-boost-coroutine	rhel-6
+rh-mariadb101-boost-date-time	rhel-6
+rh-mariadb101-boost-devel	rhel-6
+rh-mariadb101-boost-doc	rhel-6
+rh-mariadb101-boost-doctools	rhel-6
+rh-mariadb101-boost-examples	rhel-6
+rh-mariadb101-boost-filesystem	rhel-6
+rh-mariadb101-boost-graph	rhel-6
+rh-mariadb101-boost-iostreams	rhel-6
+rh-mariadb101-boost-jam	rhel-6
+rh-mariadb101-boost-locale	rhel-6
+rh-mariadb101-boost-log	rhel-6
+rh-mariadb101-boost-math	rhel-6
+rh-mariadb101-boost-program-options	rhel-6
+rh-mariadb101-boost-python	rhel-6
+rh-mariadb101-boost-random	rhel-6
+rh-mariadb101-boost-regex	rhel-6
+rh-mariadb101-boost-serialization	rhel-6
+rh-mariadb101-boost-signals	rhel-6
+rh-mariadb101-boost-static	rhel-6
+rh-mariadb101-boost-system	rhel-6
+rh-mariadb101-boost-test	rhel-6
+rh-mariadb101-boost-thread	rhel-6
+rh-mariadb101-boost-timer	rhel-6
+rh-mariadb101-boost-wave	rhel-6
 rh-mariadb101-galera
 rh-mariadb101-Judy
 rh-mariadb101-Judy-devel

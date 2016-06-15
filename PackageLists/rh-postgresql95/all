@@ -9,5 +9,6 @@ rh-postgresql95-postgresql-plpython
 rh-postgresql95-postgresql-pltcl
 rh-postgresql95-postgresql-server
 rh-postgresql95-postgresql-test
+rh-postgresql95-postgresql-static
 rh-postgresql95-runtime
 rh-postgresql95-scldevel

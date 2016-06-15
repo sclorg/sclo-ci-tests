@@ -10,6 +10,8 @@ thermostat1-jline2
 thermostat1-jline2-javadoc
 thermostat1-netty
 thermostat1-netty-javadoc
+thermostat1-jgraphx
+thermostat1-jgraphx-javadoc
 thermostat1-runtime
 thermostat1-scldevel
 thermostat1-thermostat
