@@ -1,0 +1,1 @@
+../../mysql-common/basic-usage/run.sh
