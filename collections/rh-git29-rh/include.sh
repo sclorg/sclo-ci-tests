@@ -1,2 +1,2 @@
-export INSTALL_SCLS=git19
-export ENABLE_SCLS=git19
+export INSTALL_SCLS=rh-git29
+export ENABLE_SCLS=rh-git29
