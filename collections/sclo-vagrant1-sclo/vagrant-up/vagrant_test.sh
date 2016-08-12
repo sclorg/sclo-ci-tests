@@ -10,4 +10,4 @@ cd $1
 set -xe
 
 vagrant up
-vagrant ssh -c 'cd sync; sudo env "PATH=$PATH" ./runtests.sh p_ruby'
+vagrant ssh -c 'cd /vagrant; sudo env "PATH=$PATH" ./runtests.sh p_ruby'
