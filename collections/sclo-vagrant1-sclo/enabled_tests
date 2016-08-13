@@ -1,5 +1,6 @@
 install
 vagrant-up
+vagrant-up-c6
 install-all-pkgs
 uninstall
 validate-pkg-list
