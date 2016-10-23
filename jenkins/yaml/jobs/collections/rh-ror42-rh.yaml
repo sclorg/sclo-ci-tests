@@ -4,5 +4,7 @@
     release:
         - 7
     arch: x86_64
+    repotype:
+        - candidate
     jobs:
-        - 'SCLo-{name}-{namespace}-C{release}-{arch}'
+        - 'SCLo-{name}-{namespace}-C{release}-{repotype}-{arch}'

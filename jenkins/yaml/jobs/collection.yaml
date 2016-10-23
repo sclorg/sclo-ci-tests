@@ -4,14 +4,14 @@
 #   release: version of CentOS to test, e.g. 6
 #   arch: architecture of CentOS to test, e.g. x86_64
 - job-template:
-    name: 'SCLo-{name}-{namespace}-C{release}-{arch}'
+    name: 'SCLo-{name}-{namespace}-C{release}-{repotype}-{arch}'
     scm:
         - sclo-ci-tests-collection:
             collection: '{name}'
             namespace: '{namespace}'
     triggers:
         - cbs-repo:
-            tag: 'sclo{release}-{name}-{namespace}-candidate'
+            tag: 'sclo{release}-{name}-{namespace}-{repotype}'
             arch: '{arch}'
         - weekly
         - scm_fifteen_minutes
@@ -25,7 +25,7 @@
         - generate_ssh_config
         - shell: |
             scp -F ssh_config -rp tests/ host:tests/
-            ssh -F ssh_config host tests/run.sh {name}
+            ssh -F ssh_config host tests/run.sh --repo_type {repotype} {name}
     publishers:
         - post-tasks:
             - matches:
