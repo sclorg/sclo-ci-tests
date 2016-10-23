@@ -7,6 +7,34 @@
 THISDIR=$(dirname ${BASH_SOURCE[0]})
 source ${THISDIR}/../../common/functions.sh
 
+usage() {
+    echo "Usage: `basename $0` [ -h | --help ] [ repo ]"
+    echo
+    echo "This script runs all scripts for particular collection. Collection is determined from the name of the parent directory."
+    echo
+    echo "Options:"
+    echo "  -h, --help    Show this help."
+    echo "  repo          Which packages to install. It can be one of candidate, testing, mirror, none. Default none."
+}
+
+# parsing command-line args
+REPOTYPE=none
+while [ -n "$1" ] ; do
+    case "$1" in
+        -h|--help) usage ; exit 0 ;;
+        none) REPOTYPE=none ;;
+        candidate) REPOTYPE=candidate ;;
+        testing|buildlogs) REPOTYPE=buildlogs ;;
+        mirror) REPOTYPE=mirror ;;
+        *) usage ; exit 1 ;;
+    esac
+    shift
+done
+if [ "$REPOTYPE" == none ] ; then
+    export SKIP_REPO_CREATE=1
+fi
+export REPOTYPE
+
 out=${out-/dev/stdout}
 
 stPass="[PASSED]"
