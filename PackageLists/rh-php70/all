@@ -5,7 +5,6 @@ rh-php70-php-cli
 rh-php70-php-common
 rh-php70-php-dba
 rh-php70-php-dbg
-rh-php70-php-debuginfo
 rh-php70-php-devel
 rh-php70-php-embedded
 rh-php70-php-enchant
