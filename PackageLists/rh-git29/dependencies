@@ -1,0 +1,4 @@
+subversion-perl
+cvsps
+perl-Net-SMTP-SSL	rhel-6
+perl-YAML		rhel-6

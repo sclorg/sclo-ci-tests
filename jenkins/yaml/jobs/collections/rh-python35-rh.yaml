@@ -2,9 +2,12 @@
     name: rh-python35
     namespace: rh
     release:
+        - 6
         - 7
     arch: x86_64
     repotype:
         - candidate
+        - testing
+        - mirror
     jobs:
         - 'SCLo-{name}-{namespace}-C{release}-{repotype}-{arch}'
