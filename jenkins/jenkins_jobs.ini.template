@@ -2,6 +2,7 @@
 user=
 password=
 url=https://ci.centos.org/
+query_plugins_info = False
 
 [job_builder]
 ignore_cache=True
