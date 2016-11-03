@@ -23,11 +23,17 @@ retval=0
 # construct repoquery arguments
 namespace=$(get_scl_namespace "$collection" "$el_version")
 repo="sclo${el_version}-${collection}-${namespace}-$repotype"
-if [ "$repotype" == "mirror" ] ; then
-  rq_args="--disablerepo=* --repofrompath=$collection,http://mirror.centos.org/centos-${el_version}/${el_version}/sclo/x86_64/${namespace}/ --enablerepo=$collection"
-else
-  rq_args="--disablerepo=* --repofrompath=$collection,http://cbs.centos.org/repos/${repo}/${arch}/os/ --enablerepo=$collection"
-fi
+case "$repotype" in
+  mirror|release)
+    rq_args="--disablerepo=* --repofrompath=$collection,http://mirror.centos.org/centos-${el_version}/${el_version}/sclo/x86_64/${namespace}/ --enablerepo=$collection"
+    ;;
+  buildlogs|testing)
+    rq_args="--disablerepo=* --repofrompath=$collection,http://buildlogs.centos.org/centos/${el_version}/sclo/x86_64/${namespace}/ --enablerepo=$collection"
+    ;;
+  *)
+    rq_args="--disablerepo=* --repofrompath=$collection,http://cbs.centos.org/repos/${repo}/${arch}/os/ --enablerepo=$collection"
+    ;;
+esac
 
 # check that all packages use expected arch or noarch
 bad_arch=$(repoquery $rq_args --qf '%{ARCH} %{NVR}' -a 2>/dev/null | grep -v -e '^noarch ' -e "$arch " &>/dev/null) || :
