@@ -1,5 +1,4 @@
 install
 check-version
 compile-postgresql
-install-all-pkgs
 uninstall
