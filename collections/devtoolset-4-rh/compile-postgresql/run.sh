@@ -11,7 +11,8 @@ source ${THISDIR}/../include.sh
 # make sure we don't use system gcc
 #yum -y remove gcc || :
 # install dependencies for compilation process
-yum -y install wget
+yum -y install wget bzip2-devel bzip2 coreutils cpio diffutils findutils gawk gcc gcc-c++ grep gzip info make patch redhat-release-server redhat-rpm-config rpm-build sed shadow-utils tar unzip util-linux-ng which iso-codes 'perl(ExtUtils::MakeMaker)' glibc-devel bison flex gawk 'perl(ExtUtils::Embed)' readline-devel zlib-devel
+
 scl enable $INSTALL_SCLS - <<"EOF"
   set -ex
   workkingdir=$(mktemp -d /tmp/da-prj-XXXXXX)
