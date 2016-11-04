@@ -4,7 +4,7 @@
 #   release: version of CentOS to test, e.g. 6
 #   arch: architecture of CentOS to test, e.g. x86_64
 - job-template:
-    name: 'SCLo-{name}-{namespace}-C{release}-{repotype}-{arch}'
+    name: 'SCLo-pkg-{name}-{namespace}-C{release}-{repotype}-{arch}'
     scm:
         - sclo-ci-tests-collection:
             collection: '{name}'

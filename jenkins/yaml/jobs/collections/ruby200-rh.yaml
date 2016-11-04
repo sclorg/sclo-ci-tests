@@ -10,4 +10,4 @@
         - testing
         - release
     jobs:
-        - 'SCLo-{name}-{namespace}-C{release}-{repotype}-{arch}'
+        - 'SCLo-pkg-{name}-{namespace}-C{release}-{repotype}-{arch}'
