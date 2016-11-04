@@ -16,9 +16,7 @@
         - weekly
         - scm_fifteen_minutes
     builders:
-        - cico_install
         - shell: |
-            . cicoclient/bin/activate
             cico node get -f value --arch {arch} --release {release} --count 1 --api-key $(cat ~/duffy.key) | tee cico.out
             tail -n 1 cico.out | cut -d ' ' -f 7 > ssid
             tail -n 1 cico.out | cut -d ' ' -f 2 > host
