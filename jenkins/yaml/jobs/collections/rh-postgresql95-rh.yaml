@@ -8,6 +8,6 @@
     repotype:
         - candidate
         - testing
-        - mirror
+        - release
     jobs:
         - 'SCLo-{name}-{namespace}-C{release}-{repotype}-{arch}'

@@ -25,7 +25,7 @@ while [ -n "$1" ] ; do
         none) REPOTYPE=none ;;
         candidate) REPOTYPE=candidate ;;
         testing|buildlogs) REPOTYPE=buildlogs ;;
-        mirror) REPOTYPE=mirror ;;
+        release|mirror) REPOTYPE=mirror ;;
         *) usage ; exit 1 ;;
     esac
     shift
