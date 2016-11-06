@@ -53,7 +53,7 @@ repoquery $rq_args clean cache &>/dev/null
 repoquery $rq_args --qf '%{NAME}' -a 2>/dev/null | sort >$pkgs_available
 touch "$pkgs_missing"
 touch "$pkgs_extra"
-cat `dirname ${BASH_SOURCE[0]}`/../PackageLists/${collection}/all | while read line ; do
+cat `dirname ${BASH_SOURCE[0]}`/../PackageLists/${collection}/all | strip_comments | while read line ; do
   pkg=$(echo "$line" | awk '{print $1}')
   only_el_version=$(echo "$line" | awk '{print $2}')
   if [[ "$only_el_version" =~ rhel-.* ]] && [ "$only_el_version" != "rhel-$el_version" ] ; then
