@@ -18,5 +18,5 @@ set -e
 yum remove -y \*-scldevel
 
 for SCL in $INSTALL_SCLS ; do
-  yum install -y $EXCLUDE_PKGS ${SCL}\*
+  yum install -y scl-utils $EXCLUDE_PKGS ${SCL}\*
 done
