@@ -10,5 +10,5 @@ source ${THISDIR}/../include.sh
 
 generate_repo_file "$INSTALL_SCLS"
 
-yum install -y scl-utils ${INSTALL_PKGS-$INSTALL_SCLS}
+yum install -y ${YUM_OPTS:-} ${INSTALL_PKGS-$INSTALL_SCLS}
 exit $?

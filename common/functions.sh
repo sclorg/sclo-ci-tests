@@ -57,6 +57,7 @@ generate_repo_file() {
     yum -y install centos-release-scl
     yum-config-manager --enable centos-sclo-rh-testing
     yum-config-manager --enable centos-sclo-sclo-testing
+    export YUM_OPTS=--nogpgcheck
   else
     repofile=/etc/yum.repos.d/${REPOFILE-sclo-ci.repo}
     collection="$1"
