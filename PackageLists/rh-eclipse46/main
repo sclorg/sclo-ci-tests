@@ -10,6 +10,7 @@ rh-eclipse46-eclipse-abrt
 rh-eclipse46-eclipse-cdt
 rh-eclipse46-eclipse-cdt-docker
 rh-eclipse46-eclipse-cdt-llvm
+rh-eclipse46-eclipse-cdt-native
 rh-eclipse46-eclipse-cdt-parsers
 rh-eclipse46-eclipse-cdt-qt
 rh-eclipse46-eclipse-changelog
@@ -92,8 +93,8 @@ rh-eclipse46-glassfish-hk2-api
 rh-eclipse46-glassfish-hk2-locator
 rh-eclipse46-glassfish-hk2-osgi-resource-locator
 rh-eclipse46-glassfish-hk2-utils
-rh-eclipse46-glassfish-jaxb-api
 rh-eclipse46-glassfish-jax-rs-api
+rh-eclipse46-glassfish-jaxb-api
 rh-eclipse46-glassfish-servlet-api
 rh-eclipse46-guava
 rh-eclipse46-h2
