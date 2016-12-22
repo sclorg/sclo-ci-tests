@@ -34,4 +34,5 @@ rh-git29: httpd24
 rh-eclipse46: rh-maven33 rh-java-common
 rh-php70: httpd24
 rh-thermostat16: rh-java-common rh-maven33 rh-mongodb32
+rh-nodejs4: devtoolset-4
 
