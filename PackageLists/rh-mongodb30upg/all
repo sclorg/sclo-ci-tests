@@ -1,6 +1,10 @@
 rh-mongodb30upg
 rh-mongodb30upg-runtime
 rh-mongodb30upg-scldevel
+rh-mongodb30upg-gperftools                        rhel-6
+rh-mongodb30upg-gperftools-devel          rhel-6
+rh-mongodb30upg-libunwind                 rhel-6
+rh-mongodb30upg-libunwind-devel           rhel-6
 rh-mongodb30upg-libstemmer
 rh-mongodb30upg-libstemmer-devel
 rh-mongodb30upg-mongodb
