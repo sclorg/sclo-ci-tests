@@ -41,8 +41,12 @@ rh-java-common-apache-commons-compress
 rh-java-common-apache-commons-compress-javadoc
 rh-java-common-apache-commons-dbcp
 rh-java-common-apache-commons-dbcp-javadoc
+rh-java-common-apache-commons-discovery
+rh-java-common-apache-commons-discovery-javadoc
 rh-java-common-apache-commons-el
 rh-java-common-apache-commons-el-javadoc
+rh-java-common-apache-commons-fileupload
+rh-java-common-apache-commons-fileupload-javadoc
 rh-java-common-apache-commons-io
 rh-java-common-apache-commons-io-javadoc
 rh-java-common-apache-commons-jxpath
