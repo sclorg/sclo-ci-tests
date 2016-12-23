@@ -24,8 +24,10 @@ while [ -n "$1" ] ; do
         -h|--help) usage ; exit 0 ;;
         none) REPOTYPE=none ;;
         candidate) REPOTYPE=candidate ;;
-        testing|buildlogs) REPOTYPE=buildlogs ;;
-        release|mirror) REPOTYPE=mirror ;;
+        testing) REPOTYPE=testing ;;
+        buildlogs) REPOTYPE=buildlogs ;;
+        release) REPOTYPE=release ;;
+        mirror) REPOTYPE=mirror ;;
         *) usage ; exit 1 ;;
     esac
     shift
