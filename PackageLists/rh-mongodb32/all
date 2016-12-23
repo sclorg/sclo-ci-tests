@@ -37,6 +37,8 @@ rh-mongodb32-libstemmer-devel
 rh-mongodb32-mongodb
 rh-mongodb32-mongodb-server
 rh-mongodb32-mongodb-test
+rh-mongodb32-mongo-cxx-driver
+rh-mongodb32-mongo-cxx-driver-devel
 rh-mongodb32-mongo-java-driver
 rh-mongodb32-mongo-java-driver-bson
 rh-mongodb32-mongo-java-driver-driver
