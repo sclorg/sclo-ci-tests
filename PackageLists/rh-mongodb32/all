@@ -32,8 +32,12 @@ rh-mongodb32-boost-program-options
 rh-mongodb32-boost-regex
 rh-mongodb32-boost-system
 rh-mongodb32-boost-thread
+rh-mongodb32-gperftools			rhel-6
+rh-mongodb32-gperftools-devel		rhel-6
 rh-mongodb32-libstemmer
 rh-mongodb32-libstemmer-devel
+rh-mongodb32-libunwind			rhel-6
+rh-mongodb32-libunwind-devel		rhel-6
 rh-mongodb32-mongodb
 rh-mongodb32-mongodb-server
 rh-mongodb32-mongodb-test
