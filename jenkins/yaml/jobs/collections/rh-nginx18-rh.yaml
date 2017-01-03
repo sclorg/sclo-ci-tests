@@ -1,5 +1,6 @@
 - project:
     name: rh-nginx18
+    scl: rh-nginx18
     namespace: rh
     release:
         - 6
@@ -10,4 +11,28 @@
         - testing
         - release
     jobs:
-        - 'SCLo-pkg-{name}-{namespace}-C{release}-{repotype}-{arch}'
+        - 'SCLo-pkg-cbs'
+
+- project:
+    name: rh-nginx18-mirror
+    scl: rh-nginx18
+    namespace: rh
+    release:
+        - 6
+        - 7
+    arch: x86_64
+    repotype: mirror
+    jobs:
+        - 'SCLo-pkg-mirror'
+
+- project:
+    name: rh-nginx18-buildlogs
+    scl: rh-nginx18
+    namespace: rh
+    release:
+        - 6
+        - 7
+    arch: x86_64
+    repotype: buildlogs
+    jobs:
+        - 'SCLo-pkg-buildlogs'

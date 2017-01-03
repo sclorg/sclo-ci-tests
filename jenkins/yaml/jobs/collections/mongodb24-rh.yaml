@@ -1,5 +1,6 @@
 - project:
     name: mongodb24
+    scl: mongodb24
     namespace: rh
     release:
         - 6
@@ -10,4 +11,28 @@
         - testing
         - release
     jobs:
-        - 'SCLo-pkg-{name}-{namespace}-C{release}-{repotype}-{arch}'
+        - 'SCLo-pkg-cbs'
+
+- project:
+    name: mongodb24-mirror
+    scl: mongodb24
+    namespace: rh
+    release:
+        - 6
+        - 7
+    arch: x86_64
+    repotype: mirror
+    jobs:
+        - 'SCLo-pkg-mirror'
+
+- project:
+    name: mongodb24-buildlogs
+    scl: mongodb24
+    namespace: rh
+    release:
+        - 6
+        - 7
+    arch: x86_64
+    repotype: buildlogs
+    jobs:
+        - 'SCLo-pkg-buildlogs'

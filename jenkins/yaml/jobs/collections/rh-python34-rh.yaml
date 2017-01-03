@@ -1,5 +1,6 @@
 - project:
     name: rh-python34
+    scl: rh-python34
     namespace: rh
     release:
         - 6
@@ -10,4 +11,28 @@
         - testing
         - release
     jobs:
-        - 'SCLo-pkg-{name}-{namespace}-C{release}-{repotype}-{arch}'
+        - 'SCLo-pkg-cbs'
+
+- project:
+    name: rh-python34-mirror
+    scl: rh-python34
+    namespace: rh
+    release:
+        - 6
+        - 7
+    arch: x86_64
+    repotype: mirror
+    jobs:
+        - 'SCLo-pkg-mirror'
+
+- project:
+    name: rh-python34-buildlogs
+    scl: rh-python34
+    namespace: rh
+    release:
+        - 6
+        - 7
+    arch: x86_64
+    repotype: buildlogs
+    jobs:
+        - 'SCLo-pkg-buildlogs'

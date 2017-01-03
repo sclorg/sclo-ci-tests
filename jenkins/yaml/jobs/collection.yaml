@@ -3,11 +3,12 @@
 #   namespace: SCL namespace/prefix, e.g. rh
 #   release: version of CentOS to test, e.g. 6
 #   arch: architecture of CentOS to test, e.g. x86_64
-- job-template:
-    name: 'SCLo-pkg-{name}-{namespace}-C{release}-{repotype}-{arch}'
+- job-template: &CBSJOB
+    name: 'SCLo-pkg-{scl}-{namespace}-C{release}-{repotype}-{arch}'
+    id: 'SCLo-pkg-cbs'
     scm:
         - sclo-ci-tests-collection:
-            collection: '{name}'
+            collection: '{scl}'
             namespace: '{namespace}'
     triggers:
         - cbs-repo:
@@ -23,7 +24,7 @@
         - generate_ssh_config
         - shell: |
             scp -F ssh_config -rp tests/ host:tests/
-            ssh -F ssh_config host tests/run.sh --repo_type {repotype} {name}
+            ssh -F ssh_config host tests/run.sh --repo_type {repotype} {scl}
     publishers:
         - post-tasks:
             - matches:
@@ -39,3 +40,28 @@
             artifacts: 'results/**'
             allow-empty: true
             default-excludes: true
+
+- job-template:
+    <<: *CBSJOB
+    name: 'SCLo-pkg-{scl}-{namespace}-C{release}-buildlogs-{arch}'
+    id: 'SCLo-pkg-buildlogs'
+    triggers:
+        - buildlogs-repo:
+            release: '{release}'
+            namespace: '{namespace}'
+            arch: '{arch}'
+        - weekly
+        - scm_fifteen_minutes
+
+- job-template:
+    <<: *CBSJOB
+    name: 'SCLo-pkg-{scl}-{namespace}-C{release}-mirror-{arch}'
+    id: 'SCLo-pkg-mirror'
+    triggers:
+        - mirror-repo:
+            release: '{release}'
+            namespace: '{namespace}'
+            arch: '{arch}'
+        - weekly
+        - scm_fifteen_minutes
+

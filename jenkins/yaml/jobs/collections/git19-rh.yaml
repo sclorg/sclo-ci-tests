@@ -1,5 +1,6 @@
 - project:
     name: git19
+    scl: git19
     namespace: rh
     release:
         - 6
@@ -10,4 +11,28 @@
         - testing
         - release
     jobs:
-        - 'SCLo-pkg-{name}-{namespace}-C{release}-{repotype}-{arch}'
+        - 'SCLo-pkg-cbs'
+
+- project:
+    name: git19-mirror
+    scl: git19
+    namespace: rh
+    release:
+        - 6
+        - 7
+    arch: x86_64
+    repotype: mirror
+    jobs:
+        - 'SCLo-pkg-mirror'
+
+- project:
+    name: git19-buildlogs
+    scl: git19
+    namespace: rh
+    release:
+        - 6
+        - 7
+    arch: x86_64
+    repotype: buildlogs
+    jobs:
+        - 'SCLo-pkg-buildlogs'

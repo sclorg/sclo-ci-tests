@@ -1,5 +1,6 @@
 - project:
     name: rh-java-common
+    scl: rh-java-common
     namespace: rh
     release:
         - 6
@@ -10,4 +11,28 @@
         - testing
         - release
     jobs:
-        - 'SCLo-pkg-{name}-{namespace}-C{release}-{repotype}-{arch}'
+        - 'SCLo-pkg-cbs'
+
+- project:
+    name: rh-java-common-mirror
+    scl: rh-java-common
+    namespace: rh
+    release:
+        - 6
+        - 7
+    arch: x86_64
+    repotype: mirror
+    jobs:
+        - 'SCLo-pkg-mirror'
+
+- project:
+    name: rh-java-common-buildlogs
+    scl: rh-java-common
+    namespace: rh
+    release:
+        - 6
+        - 7
+    arch: x86_64
+    repotype: buildlogs
+    jobs:
+        - 'SCLo-pkg-buildlogs'
