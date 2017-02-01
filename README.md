@@ -2,6 +2,8 @@
 
 This repository includes various tests that will be run for verifying Software Collection packages, that are provided by [SCLo SIG group in CentOS](https://wiki.centos.org/SpecialInterestGroup/SCLo).
 
+**Warning: All scripts in this repo are expected to be run as root user, since they usually install packages and do other things where root permissions are expected. That said, do not run anything in this repo on a machine you care about, it might potentially break your system. All tests are considered potentially destructive.**
+
 To run all tests for a collection `foo` on CentOS 7, run the `./run.sh` with name(s) of the collection(s):
 ```
 ./run.sh rh-python34
