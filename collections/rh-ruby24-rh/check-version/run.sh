@@ -4,9 +4,9 @@ THISDIR=$(dirname ${BASH_SOURCE[0]})
 source ${THISDIR}/../../../common/functions.sh
 source ${THISDIR}/../include.sh
 
-out=$(scl enable ${ENABLE_SCLS} 'nginx -v' 2>&1)
-retcode=$?
+out=$(scl enable ${ENABLE_SCLS} "ruby -v" )
+ret=$?
 
-echo "$out"|grep -o '^nginx version: nginx/1\.8\.'
-
+echo "$out"|grep -o 'ruby 2\.4'
 exit $retcode
+
