@@ -12,12 +12,14 @@ set -ex
 
 cat >${CONFIG_D_DIR}/test.conf <<EOF
 server {
-	listen 80;
+	listen       80 default_server;
+	listen       [::]:80 default_server;
 	server_name myhost.com;
 	root ${STATIC_DATA_DIR};
 	index index.php index.html;
 }
 EOF
+sed -i -e 's/default_server//' ${CONFIG_D_DIR}/../nginx.conf
 
 service "$SERVICE_NAME" restart
 mkdir -p ${STATIC_DATA_DIR}
