@@ -1,0 +1,9 @@
+- publisher:
+    name: rebuild_on_failure
+    publishers:
+      - naginator:
+          rerun-unstable-builds: true
+          progressive-delay-increment: 60
+          progressive-delay-maximum: 6000
+          max-failed-builds: 5
+          regular-expression: "too few arguments"

@@ -26,6 +26,7 @@
             scp -F ssh_config -rp tests/ host:tests/
             ssh -F ssh_config host tests/run.sh --repo_type {repotype} {scl}
     publishers:
+        - rebuild_on_failure
         - post-tasks:
             - matches:
               - log-text: ""
