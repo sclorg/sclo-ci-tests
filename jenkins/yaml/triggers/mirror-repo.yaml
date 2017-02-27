@@ -1,0 +1,9 @@
+- trigger:
+    name: mirror-repo
+    triggers:
+        - pollurl:
+            cron: 'H/10 * * * *'
+            polling-node: sclo-sig
+            urls:
+                - url: 'http://mirror.centos.org/centos-{release}/{release}/sclo/{arch}/{namespace}/repodata/repomd.xml'
+                  check-date: true

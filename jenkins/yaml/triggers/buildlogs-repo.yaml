@@ -1,0 +1,9 @@
+- trigger:
+    name: buildlogs-repo
+    triggers:
+        - pollurl:
+            cron: 'H/10 * * * *'
+            polling-node: sclo-sig
+            urls:
+                - url: 'http://buildlogs.centos.org/centos/{release}/sclo/{arch}/{namespace}/repodata/repomd.xml'
+                  check-date: true
