@@ -24,10 +24,10 @@ retval=0
 namespace=$(get_scl_namespace "$collection" "$el_version")
 repo="sclo${el_version}-${collection}-${namespace}-$repotype"
 case "$repotype" in
-  mirror|release)
+  mirror)
     rq_args="--disablerepo=* --repofrompath=$collection,http://mirror.centos.org/centos-${el_version}/${el_version}/sclo/x86_64/${namespace}/ --enablerepo=$collection"
     ;;
-  buildlogs|testing)
+  buildlogs)
     rq_args="--disablerepo=* --repofrompath=$collection,http://buildlogs.centos.org/centos/${el_version}/sclo/x86_64/${namespace}/ --enablerepo=$collection"
     ;;
   none)

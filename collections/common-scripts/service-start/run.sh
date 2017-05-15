@@ -10,5 +10,8 @@ source ${THISDIR}/../include.sh
 
 set -e
 for service in $SERVICE_NAME ; do
-  service "$service" start
+  if ! service "$service" start ; then
+    service "$service" status
+    exit 1
+  fi
 done

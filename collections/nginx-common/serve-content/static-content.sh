@@ -6,7 +6,6 @@
 
 THISDIR=$(dirname ${BASH_SOURCE[0]})
 source ${THISDIR}/../../../common/functions.sh
-source ${THISDIR}/../include.sh
 
 set -ex
 
@@ -27,3 +26,4 @@ echo "Hello World" >${STATIC_DATA_DIR}/index.html
 out=$(curl 127.0.0.1)
 [ "$out" == "Hello World" ]
 
+rm -f ${CONFIG_D_DIR}/test.conf
