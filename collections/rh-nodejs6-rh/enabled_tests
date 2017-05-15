@@ -1,0 +1,6 @@
+install
+check-version
+node-basic
+install-all-pkgs
+uninstall
+validate-pkg-list
