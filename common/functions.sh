@@ -36,6 +36,7 @@ get_scl_namespace() {
     grep -e "^[[:space:]]*$1[[:space:]]*$" "`dirname ${BASH_SOURCE[0]}`"/../PackageLists/collections-list-$namespace-el$el_version >/dev/null
     [ $? -eq 0 ] && echo "$namespace" && return 0
   done
+  echo "ERROR: collection ${1} not found in PackageLists/collections-list-{rh,sclo}-el$el_version" >&2
   return 1
 }
 
