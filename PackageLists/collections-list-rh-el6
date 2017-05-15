@@ -30,6 +30,7 @@ rh-mysql57
 rh-nginx18
 rh-nginx110
 rh-nodejs4
+rh-nodejs6
 rh-passenger40
 rh-perl520
 rh-perl524
