@@ -8,4 +8,4 @@ THISDIR=$(dirname ${BASH_SOURCE[0]})
 source ${THISDIR}/../../../common/functions.sh
 source ${THISDIR}/../include.sh
 
-scl enable $ENABLE_SCLS scala -h
+scl enable $ENABLE_SCLS -- scalac -help

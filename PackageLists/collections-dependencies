@@ -23,6 +23,8 @@ rh-python34: httpd24
 rh-python35: httpd24
 rh-ror41: rh-ruby22 v8314
 rh-ror42: rh-ruby23 rh-nodejs4
+rh-ror50: rh-ruby24 rh-nodejs6
+rh-scala210: rh-java-common maven30
 ruby193: httpd24 v8314
 ror40: ruby200 v8314
 thermostat1: rh-java-common maven30 rh-mongodb26 v8314
@@ -35,4 +37,5 @@ rh-eclipse46: rh-maven33 rh-java-common
 rh-php70: httpd24
 rh-thermostat16: rh-java-common rh-maven33 rh-mongodb32
 rh-nodejs4: devtoolset-4
+rh-nodejs6: devtoolset-4
 
