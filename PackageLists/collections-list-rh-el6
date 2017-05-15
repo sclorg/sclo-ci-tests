@@ -43,6 +43,7 @@ rh-python35
 rh-redis32
 rh-ror41
 rh-ror42
+rh-ror50
 rh-ruby22
 rh-ruby23
 rh-ruby24
