@@ -22,8 +22,8 @@ scl enable $INSTALL_SCLS - <<"EOF"
   cd postgresql-9.4.4
   ./configure --without-readline --without-zlib
   make
-  gccver=$(strings -a ./src/backend/postgres | grep -oe "compiled by.*GCC) \([0-9]*\.[0-9]*\.\)" | sed -e 's/.*[[:space:]]//')
-  [ "${gccver}" != "6.2." ] && echo "Wrong GCC version found in postgres binary: ${gccver}" && exit 1
+  gccver=$(strings -a ./src/backend/postgres | grep -oe "compiled by.*GCC) \([0-9]*\.\)" | sed -e 's/.*[[:space:]]//')
+  [ "${gccver}" != "6." ] && echo "Wrong GCC version found in postgres binary: ${gccver}" && exit 1
   popd
 EOF
 
