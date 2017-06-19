@@ -38,4 +38,5 @@ rh-php70: httpd24
 rh-thermostat16: rh-java-common rh-maven33 rh-mongodb32
 rh-nodejs4: devtoolset-4
 rh-nodejs6: devtoolset-4
+rh-mariadb102: devtoolset-7
 

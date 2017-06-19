@@ -1,0 +1,47 @@
+rh-mariadb102
+rh-mariadb102-boost	rhel-6
+rh-mariadb102-boost-atomic	rhel-6
+rh-mariadb102-boost-build	rhel-6
+rh-mariadb102-boost-chrono	rhel-6
+rh-mariadb102-boost-container	rhel-6
+rh-mariadb102-boost-context	rhel-6
+rh-mariadb102-boost-coroutine	rhel-6
+rh-mariadb102-boost-date-time	rhel-6
+rh-mariadb102-boost-devel	rhel-6
+rh-mariadb102-boost-doc	rhel-6
+rh-mariadb102-boost-doctools	rhel-6
+rh-mariadb102-boost-examples	rhel-6
+rh-mariadb102-boost-filesystem	rhel-6
+rh-mariadb102-boost-graph	rhel-6
+rh-mariadb102-boost-iostreams	rhel-6
+rh-mariadb102-boost-jam	rhel-6
+rh-mariadb102-boost-locale	rhel-6
+rh-mariadb102-boost-log	rhel-6
+rh-mariadb102-boost-math	rhel-6
+rh-mariadb102-boost-program-options	rhel-6
+rh-mariadb102-boost-python	rhel-6
+rh-mariadb102-boost-random	rhel-6
+rh-mariadb102-boost-regex	rhel-6
+rh-mariadb102-boost-serialization	rhel-6
+rh-mariadb102-boost-signals	rhel-6
+rh-mariadb102-boost-static	rhel-6
+rh-mariadb102-boost-system	rhel-6
+rh-mariadb102-boost-test	rhel-6
+rh-mariadb102-boost-thread	rhel-6
+rh-mariadb102-boost-timer	rhel-6
+rh-mariadb102-boost-wave	rhel-6
+rh-mariadb102-galera
+rh-mariadb102-Judy
+rh-mariadb102-Judy-devel
+rh-mariadb102-mariadb
+rh-mariadb102-mariadb-bench
+rh-mariadb102-mariadb-common
+rh-mariadb102-mariadb-config
+rh-mariadb102-mariadb-devel
+rh-mariadb102-mariadb-errmsg
+rh-mariadb102-mariadb-oqgraph-engine
+rh-mariadb102-mariadb-server
+rh-mariadb102-mariadb-test
+rh-mariadb102-runtime
+rh-mariadb102-scldevel
+rh-mariadb102-scons

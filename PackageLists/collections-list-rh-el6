@@ -21,6 +21,7 @@ rh-git29
 rh-java-common
 rh-mariadb100
 rh-mariadb101
+rh-mariadb102
 rh-maven33
 rh-mongodb26
 rh-mongodb30upg
