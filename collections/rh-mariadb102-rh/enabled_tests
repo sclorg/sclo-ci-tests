@@ -3,6 +3,7 @@ check-version
 service-start
 basic-usage
 service-stop
+syspaths
 install-all-pkgs
 uninstall
 validate-pkg-list

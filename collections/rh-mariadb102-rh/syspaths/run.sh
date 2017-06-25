@@ -8,7 +8,7 @@ THISDIR=$(dirname ${BASH_SOURCE[0]})
 source ${THISDIR}/../../../common/functions.sh
 source ${THISDIR}/../include.sh
 
-yum install -y ${YUM_OPTS:-} ${$INSTALL_SCLS}*-syspaths
+yum install -y ${YUM_OPTS:-} ${INSTALL_SCLS}*-syspaths
 
 service mariadb start
 
