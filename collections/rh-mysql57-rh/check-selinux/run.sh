@@ -1,0 +1,1 @@
+mysql-common/check-selinux/run.sh
