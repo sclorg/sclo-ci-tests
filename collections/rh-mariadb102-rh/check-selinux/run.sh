@@ -1,1 +1,1 @@
-mysql-common/check-selinux/run.sh
+../../mysql-common/check-selinux/run.sh
