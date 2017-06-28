@@ -22,3 +22,10 @@ else
   exit 1
 fi
 
+if ls -AZ /var/lib/mysql/mysql.sock | grep -e mysqld_db_t ; then
+  echo "mysql.sock has expected mysqld_db_t context"
+else
+  echo "mysql.sock has wrong context"
+  exit 1
+fi
+
