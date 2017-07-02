@@ -15,12 +15,14 @@ if [ "$(getenforce)" != 'Enforcing' ] ; then
   echo "SELinux not in enforcing mode."
 fi
 
+exitcode=0
+
 if ps -AZ | grep -e 'mysqld$' | grep -e mysqld_t ; then
   echo "mysqld running under expected mysqld_t context"
 else
   echo "mysqld running under wrong context:"
   ps -AZ | grep -e 'mysqld$'
-  exit 1
+  exitcode=1
 fi
 
 if ls -AZ /var/lib/mysql/mysql.sock | grep -e mysqld_db_t ; then
@@ -28,6 +30,7 @@ if ls -AZ /var/lib/mysql/mysql.sock | grep -e mysqld_db_t ; then
 else
   echo "mysql.sock has wrong context:"
   ls -AZ /var/lib/mysql/mysql.sock
-  exit 1
+  exitcode=2
 fi
 
+exit $exitcode
