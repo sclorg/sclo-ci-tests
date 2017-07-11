@@ -17,16 +17,18 @@ fi
 
 exitcode=0
 
-if ps -AZ | grep -e 'mysqld$' | grep -e mysqld_t ; then
-  echo "mysqld running under expected mysqld_t context"
+expected_mysqld_cont=mysqld_t
+if ps -AZ | grep -e 'mysqld$' | grep -e ${expected_mysqld_cont} ; then
+  echo "mysqld running under expected ${expected_mysqld_cont} context"
 else
   echo "mysqld running under wrong context:"
   ps -AZ | grep -e 'mysqld$'
   exitcode=1
 fi
 
-if ls -AZ /var/lib/mysql/mysql.sock | grep -e mysqld_db_t ; then
-  echo "mysql.sock has expected mysqld_db_t context"
+expected_sock_cont=mysqld_var_run_t
+if ls -AZ /var/lib/mysql/mysql.sock | grep -e ${expected_sock_cont} ; then
+  echo "mysql.sock has expected ${expected_sock_cont} context"
 else
   echo "mysql.sock has wrong context:"
   ls -AZ /var/lib/mysql/mysql.sock
