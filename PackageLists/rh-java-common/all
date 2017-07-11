@@ -201,7 +201,6 @@ rh-java-common-jsoup
 rh-java-common-jsoup-javadoc
 rh-java-common-jul-to-slf4j
 rh-java-common-junit
-rh-java-common-junit-demo
 rh-java-common-junit-javadoc
 rh-java-common-junit-manual
 rh-java-common-jzlib
