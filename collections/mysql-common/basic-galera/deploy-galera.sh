@@ -13,17 +13,16 @@ set -xe
 service $SERVICE_NAME stop || :
 [ -d "${DATA_DIR}" ] && rm -rf "${DATA_DIR}"/*
 
+CONFIG_DIR=${SYSCONF_DIR}/my.cnf.d
+GARBD_CONFIG=${SYSCONF_DIR}/sysconfig/garb
 IPS=$(hostname -I)
 IP=${IPS%% *}
-
-SOCKET=/var/lib/mysql2/mysql.sock
 
 yum -y install ${SCL_GALERA_PKGS}
 cat >"${CONFIG_DIR}"/my-galera.cnf <<EOF
 [mysqld]
 wsrep_cluster_address="gcomm://${IP}"
 EOF
-
 
 # scl_source returns non-zero return code from some reason
 set +xe
@@ -39,6 +38,10 @@ DATA_DIR2=/var/lib/mysql2
 SOCKET2=${DATA_DIR2}/mysql.sock
 BASE_DIR=/opt/rh/rh-mariadb101/root/usr
 CONFIG_FILE2=/etc/my2.cnf
+
+# different ports require selinux re-settings, so far turning off selinux
+selinux_bak=$(getenforce)
+setenforce 0
 
 cat >${CONFIG_FILE2} <<EOF
 [mysqld]
@@ -69,6 +72,8 @@ pid=$!
 # make sure manually run daemon is killed on test end
 cleanup() {
   kill $pid
+  setenforce $selinux_bak
+  service $SERVICE_NAME stop || :
 }
 trap cleanup EXIT
 
@@ -84,8 +89,17 @@ echo "SHOW GLOBAL STATUS LIKE 'wsrep_ready' \G" | mysql | grep 'Value: ON'
 echo "SHOW GLOBAL STATUS LIKE 'wsrep_cluster_size' \G" | mysql | grep 'Value: 2'
 echo "SHOW GLOBAL STATUS LIKE 'wsrep_ready' \G" | mysql --socket ${SOCKET2} | grep 'Value: ON'
 echo "SHOW GLOBAL STATUS LIKE 'wsrep_cluster_size' \G" | mysql --socket ${SOCKET2} | grep 'Value: 2'
-kill $pid
-sleep 5
-echo "SHOW GLOBAL STATUS LIKE 'wsrep_ready' \G" | mysql | grep 'Value: ON'
-echo "SHOW GLOBAL STATUS LIKE 'wsrep_cluster_size' \G" | mysql | grep 'Value: 1'
+
+# run garbd
+cat >${GARBD_CONFIG} <<EOF
+GALERA_NODES="${IP}:4567,${IP}:14567"
+GALERA_GROUP="my_wsrep_cluster"
+GALERA_OPTIONS='base_port=24567;'
+EOF
+
+service ${GARBD_SERVICE_NAME} stop || :
+service ${GARBD_SERVICE_NAME} start
+sleep 3
+service ${GARBD_SERVICE_NAME} status
+service ${GARBD_SERVICE_NAME} stop
 
