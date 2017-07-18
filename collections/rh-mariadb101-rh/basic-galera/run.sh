@@ -1,0 +1,1 @@
+../../mysql-common/basic-galera/run.sh
