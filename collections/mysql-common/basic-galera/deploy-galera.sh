@@ -40,6 +40,10 @@ SOCKET2=${DATA_DIR2}/mysql.sock
 BASE_DIR=/opt/rh/rh-mariadb101/root/usr
 CONFIG_FILE2=/etc/my2.cnf
 
+# different ports require selinux re-settings, so far turning off selinux
+selinux_bak=$(getenforce)
+setenforce 0
+
 cat >${CONFIG_FILE2} <<EOF
 [mysqld]
 binlog_format=ROW
@@ -69,6 +73,7 @@ pid=$!
 # make sure manually run daemon is killed on test end
 cleanup() {
   kill $pid
+  setenforce $selinux_bak
 }
 trap cleanup EXIT
 
@@ -84,7 +89,7 @@ echo "SHOW GLOBAL STATUS LIKE 'wsrep_ready' \G" | mysql | grep 'Value: ON'
 echo "SHOW GLOBAL STATUS LIKE 'wsrep_cluster_size' \G" | mysql | grep 'Value: 2'
 echo "SHOW GLOBAL STATUS LIKE 'wsrep_ready' \G" | mysql --socket ${SOCKET2} | grep 'Value: ON'
 echo "SHOW GLOBAL STATUS LIKE 'wsrep_cluster_size' \G" | mysql --socket ${SOCKET2} | grep 'Value: 2'
-kill $pid
+cleanup
 sleep 5
 echo "SHOW GLOBAL STATUS LIKE 'wsrep_ready' \G" | mysql | grep 'Value: ON'
 echo "SHOW GLOBAL STATUS LIKE 'wsrep_cluster_size' \G" | mysql | grep 'Value: 1'
