@@ -1,0 +1,17 @@
+rh-postgresql96-postgresql
+rh-postgresql96-postgresql-contrib
+rh-postgresql96-postgresql-devel
+rh-postgresql96-postgresql-docs
+rh-postgresql96-postgresql-libs
+rh-postgresql96-postgresql-plperl
+rh-postgresql96-postgresql-plpython
+rh-postgresql96-postgresql-pltcl
+rh-postgresql96-postgresql-server
+rh-postgresql96-postgresql-test
+rh-postgresql96-postgresql-static
+rh-postgresql96-runtime
+rh-postgresql96-scldevel
+rh-postgresql96-syspaths
+rh-postgresql96-postgresql-syspaths
+rh-postgresql96-postgresql-contrib-syspaths
+rh-postgresql96-postgresql-server-syspaths

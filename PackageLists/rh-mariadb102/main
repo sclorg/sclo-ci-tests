@@ -4,4 +4,5 @@ rh-mariadb102-mariadb-common
 rh-mariadb102-mariadb-config
 rh-mariadb102-mariadb-errmsg
 rh-mariadb102-mariadb-server
+rh-mariadb102-mariadb-server-utils
 rh-mariadb102-runtime

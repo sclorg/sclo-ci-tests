@@ -1,0 +1,14 @@
+rh-mongodb34
+rh-mongodb34-boost-chrono
+rh-mongodb34-boost-filesystem
+rh-mongodb34-boost-iostreams
+rh-mongodb34-boost-program-options
+rh-mongodb34-boost-regex
+rh-mongodb34-boost-system
+rh-mongodb34-boost-thread
+rh-mongodb34-gperftools-libs
+rh-mongodb34-libstemmer
+rh-mongodb34-libunwind
+rh-mongodb34-mongodb-server
+rh-mongodb34-runtime
+rh-mongodb34-yaml-cpp

@@ -1,0 +1,71 @@
+rh-mongodb34
+rh-mongodb34-boost
+rh-mongodb34-boost-atomic
+rh-mongodb34-boost-chrono
+rh-mongodb34-boost-build
+rh-mongodb34-boost-date-time
+rh-mongodb34-boost-devel
+rh-mongodb34-boost-doc
+rh-mongodb34-boost-doctools
+rh-mongodb34-boost-examples
+rh-mongodb34-boost-filesystem
+rh-mongodb34-boost-graph
+rh-mongodb34-boost-iostreams
+rh-mongodb34-boost-jam
+rh-mongodb34-boost-locale
+rh-mongodb34-boost-log
+rh-mongodb34-boost-math
+rh-mongodb34-boost-program-options
+rh-mongodb34-boost-python
+rh-mongodb34-boost-random
+rh-mongodb34-boost-regex
+rh-mongodb34-boost-serialization
+rh-mongodb34-boost-signals
+rh-mongodb34-boost-static
+rh-mongodb34-boost-system
+rh-mongodb34-boost-test
+rh-mongodb34-boost-thread
+rh-mongodb34-boost-timer
+rh-mongodb34-boost-type_erasure
+rh-mongodb34-boost-wave
+rh-mongodb34-gperftools
+rh-mongodb34-gperftools-devel
+rh-mongodb34-gperftools-libs
+rh-mongodb34-jctools    rhel-7
+rh-mongodb34-jctools-experimental    rhel-7
+rh-mongodb34-jctools-javadoc    rhel-7
+rh-mongodb34-jctools-parent    rhel-7
+rh-mongodb34-libbson
+rh-mongodb34-libbson-devel
+rh-mongodb34-libstemmer
+rh-mongodb34-libstemmer-devel
+rh-mongodb34-libunwind
+rh-mongodb34-libunwind-devel
+rh-mongodb34-mongo-c-driver
+rh-mongodb34-mongo-c-driver-devel
+rh-mongodb34-mongo-c-driver-libs
+rh-mongodb34-mongo-cxx-driver
+rh-mongodb34-mongo-cxx-driver-bsoncxx
+rh-mongodb34-mongo-cxx-driver-bsoncxx-devel
+rh-mongodb34-mongo-cxx-driver-devel
+rh-mongodb34-mongo-java-driver    rhel-7
+rh-mongodb34-mongo-java-driver-bson    rhel-7
+rh-mongodb34-mongo-java-driver-driver    rhel-7
+rh-mongodb34-mongo-java-driver-driver-async    rhel-7
+rh-mongodb34-mongo-java-driver-driver-core    rhel-7
+rh-mongodb34-mongo-java-driver-javadoc    rhel-7
+rh-mongodb34-mongo-tools
+rh-mongodb34-mongo-tools-devel
+rh-mongodb34-mongo-tools-syspaths
+rh-mongodb34-mongo-tools-unit-test
+rh-mongodb34-mongodb
+rh-mongodb34-mongodb-server
+rh-mongodb34-mongodb-server-syspaths
+rh-mongodb34-mongodb-syspaths
+rh-mongodb34-mongodb-test
+rh-mongodb34-netty    rhel-7
+rh-mongodb34-netty-javadoc    rhel-7
+rh-mongodb34-runtime
+rh-mongodb34-scldevel
+rh-mongodb34-yaml-cpp
+rh-mongodb34-yaml-cpp-devel

@@ -1,0 +1,9 @@
+rh-nginx112                              rhel-7
+rh-nginx112-nginx                        rhel-7
+rh-nginx112-runtime                      rhel-7
+rh-nginx112-scldevel                     rhel-7
+rh-nginx112-nginx-mod-http-image-filter  rhel-7
+rh-nginx112-nginx-mod-http-perl          rhel-7
+rh-nginx112-nginx-mod-http-xslt-filter   rhel-7
+rh-nginx112-nginx-mod-mail               rhel-7
+rh-nginx112-nginx-mod-stream             rhel-7

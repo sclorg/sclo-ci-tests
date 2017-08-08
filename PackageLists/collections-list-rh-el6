@@ -2,6 +2,7 @@ devassist09
 devtoolset-3
 devtoolset-4
 devtoolset-6
+devtoolset-7
 git19
 httpd24
 mariadb55
@@ -26,6 +27,7 @@ rh-maven33
 rh-mongodb26
 rh-mongodb30upg
 rh-mongodb32
+rh-mongodb34
 rh-mysql56
 rh-mysql57
 rh-nginx18
@@ -39,8 +41,10 @@ rh-php56
 rh-php70
 rh-postgresql94
 rh-postgresql95
+rh-postgresql96
 rh-python34
 rh-python35
+rh-python36
 rh-redis32
 rh-ror41
 rh-ror42
