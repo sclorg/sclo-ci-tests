@@ -36,7 +36,6 @@ echo "SHOW GLOBAL STATUS LIKE 'wsrep_ready' \G" | mysql | grep ON
 # start the second server manually (no systemd/init script)
 DATA_DIR2=/var/lib/mysql2
 SOCKET2=${DATA_DIR2}/mysql.sock
-BASE_DIR=/opt/rh/rh-mariadb101/root/usr
 CONFIG_FILE2=/etc/my2.cnf
 
 # different ports require selinux re-settings, so far turning off selinux
