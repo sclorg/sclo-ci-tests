@@ -57,6 +57,6 @@ sshwp "
 repo=\$(mktemp -d /tmp/sclo-ci-XXXXXX)
 git clone -b $git_branch $git_url \$repo/repo
 cd \$repo/repo/$rel_path
-./run.sh
+./run.sh ${@:-none}
 "
 
