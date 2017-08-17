@@ -41,24 +41,24 @@ cd validate-pkg-list
         │   ├── run.sh          -- runs all tests listed in enabled_tests file
         │   ├── check-version   -- a test for checking whether proper version is available
         │   │       ├── run.sh      -- the main script of the test
-        │   │       ├── err         -- expected stderr (oprional)
+        │   │       ├── err         -- expected stderr (optional)
         │   │       ├── out         -- expected stdout (optional)
         │   │       └── retcode     -- expected return code (optional)
         │   └── install         -- a test for installation of the collection
         │           └── run.sh      -- the main script of the test
 ```
 
-When "run.sh" is run, it compares stdout, stderr and return code with valuse specified in
+When "run.sh" is run, it compares stdout, stderr and return code with values specified in
 the test directory. Eg.
 
     collections/ruby200-rh/tests/check-version/out
 
 When no expected stdout or stderr defined, it compares just return code.
-When no return code is specified, the test is succesfull when it returns 0.
+When no return code is specified, the test is successful when it returns 0.
 
 ###Results
-Simple results (passed/failed) are written to stdout. Acctual results (stdout, 
-stderr and return code) can be faund in the directory under /tmp, that is printed
+Simple results (passed/failed) are written to stdout. Actual results (stdout,
+stderr and return code) can be found in the directory under /tmp, that is printed
 to the stdout:
 
 ```
@@ -80,14 +80,14 @@ NOT ALL TESTS PASSED SUCCESSFULLY
 
 ###Make a virtual machine
 You may use the "mkvirt" script to create a virtual machine. If you run
-it from the speciffic test directory you just need to specify the tree.
+it from the specific test directory you just need to specify the tree.
 Configuration of the virtual machine is taken from the "machine.conf" file.
 
 ```
 cd vm
 ./mkvirt-sclo6.sh -s 3 http://mirror.centos.org/centos/6.7/os/x86_64/
 ```
-    
+
 Of course you may create the virtual machine yourself.
 
 ###Run tests
@@ -96,7 +96,7 @@ on remote machine. This script connects to the remote machine, downloads this
 repository there and will execute the `run.sh` script in the same location.
 
 It uses `SSH_HOST` (hostname or IP) or `VM_NAME` (VM domain) environment
-variables to identify the host and then `SSH_PASS` enviroment variable to
+variables to identify the host and then `SSH_PASS` environment variable to
 connect to the machine. Variable `SSH_USER` is optional and can be used to set
 user that should be used in `ssh` commands.
 
