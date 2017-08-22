@@ -1,0 +1,7 @@
+rh-varnish5
+rh-varnish5-varnish
+rh-varnish5-varnish-libs
+rh-varnish5-jemalloc
+rh-varnish5-runtime
+rh-varnish5-varnish-selinux    rhel-6
+
