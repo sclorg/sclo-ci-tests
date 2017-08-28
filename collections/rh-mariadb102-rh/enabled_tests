@@ -5,6 +5,7 @@ check-selinux
 basic-usage
 service-stop
 syspaths
+multiple-instances
 basic-galera
 install-all-pkgs
 uninstall
