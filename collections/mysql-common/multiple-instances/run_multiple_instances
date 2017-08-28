@@ -47,8 +47,8 @@ port=$port
 EOF
 
   # prepare the datadir for the instance and initialize it
-  semanage fcontext -a -t mysqld_db_t "/var/lib/mysql-$instance(/.*)?"
-  semanage port -a -t mysqld_port_t -p tcp $port
+  semanage fcontext -a -t mysqld_db_t "/var/lib/mysql-$instance(/.*)?" || :
+  semanage port -a -t mysqld_port_t -p tcp $port || :
   selinuxenabled && load_policy || :
   mkdir -p $datadir
   chown mysql:mysql $datadir
