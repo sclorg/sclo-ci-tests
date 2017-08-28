@@ -1,0 +1,71 @@
+#!/bin/bash
+
+# Caution: This is common script that is shared by more SCLS.
+# If you need to do changes related to this particular collection,
+# create a copy of this file instead of symlink.
+
+THISDIR=$(dirname ${BASH_SOURCE[0]})
+source ${THISDIR}/../../../common/functions.sh
+
+set -xe
+
+if [ "$(os_major_version)" -lt 7 ] ; then
+  echo "Skipping."
+  exit 0
+fi
+
+# clean after previous tests
+service ${SERVICE_NAME} stop || :
+[ -d "${DATA_DIR}" ] && rm -rf "${DATA_DIR}"/*
+
+CONFIG_DIR=${SYSCONF_DIR}/my.cnf.d
+
+yum -y install ${INSTALL_SCLS}
+
+# clean default config that might be taken into account,
+# because order is not defined in configuration files reading
+rm -f ${CONFIG_DIR}/*.cnf
+
+for instance in 1 2 3 ; do
+  # define separate files/dirs for every instance
+  datadir=/var/lib/mysql-${instance}
+  socket=/var/lib/mysql/mysql-${instance}.sock
+  log_error=/var/lib/mysql-${instance}/${SERVICE_NAME}.log
+  pid_file=/var/lib/mysql-${instance}/${SERVICE_NAME}.pid
+  port=$((3306+${instance}))
+  max_connections=$((42+${instance}))
+
+  # prepare a config for the instance
+  cat >${CONFIG_DIR}/my-server$instance.cnf <<EOF
+[mysqld.server${instance}]
+max_connections=$max_connections
+datadir=$datadir
+socket=$socket
+log-error=$log_error
+pid-file=$pid_file
+port=$port
+EOF
+
+  # prepare the datadir for the instance and initialize it
+  semanage fcontext -a -t mysqld_db_t "/var/lib/mysql-$instance(/.*)?"
+  semanage port -a -t mysqld_port_t -p tcp $port
+  selinuxenabled && load_policy || :
+  mkdir -p $datadir
+  chown mysql:mysql $datadir
+  scl enable ${ENABLE_SCLS} -- ${BASE_DIR}/libexec/mysql-prepare-db-dir --defaults-group-suffix=.server$instance mysql mysql
+  restorecon -r $datadir
+
+  # start the daemon for the instance
+  systemctl start ${SERVICE_NAME}@server$instance.service
+
+  # check that the max_connections is set as we expect just for this instance
+  echo 'select @@max_connections;' | scl enable ${ENABLE_SCLS} -- mysql --host 127.0.0.1 --port $port | grep $max_connections
+done
+
+for instance in 1 2 3 ; do
+  systemctl stop ${SERVICE_NAME}@server$instance.service
+  rm -f ${CONFIG_DIR}/my-server$instance.cnf
+done
+
+yum reinstall -y ${INSTALL_SCLS}\*
+
