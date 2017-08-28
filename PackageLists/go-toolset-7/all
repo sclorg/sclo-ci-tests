@@ -1,0 +1,12 @@
+go-toolset-7
+go-toolset-7-build
+go-toolset-7-golang
+go-toolset-7-golang-bin
+go-toolset-7-golang-docs
+go-toolset-7-golang-misc
+go-toolset-7-golang-race
+go-toolset-7-golang-src
+go-toolset-7-golang-tests
+go-toolset-7-runtime
+go-toolset-7-scldevel
+

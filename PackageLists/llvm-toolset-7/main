@@ -1,0 +1,11 @@
+llvm-toolset-7
+llvm-toolset-7-clang
+llvm-toolset-7-clang-libs
+llvm-toolset-7-compiler-rt
+llvm-toolset-7-libomp
+llvm-toolset-7-lldb
+llvm-toolset-7-llvm
+llvm-toolset-7-llvm-libs
+llvm-toolset-7-python2-lit
+llvm-toolset-7-runtime
+

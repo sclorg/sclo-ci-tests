@@ -1,0 +1,13 @@
+rust-toolset-7
+rust-toolset-7-build
+rust-toolset-7-cargo
+rust-toolset-7-cargo-doc
+rust-toolset-7-cargo-vendor
+rust-toolset-7-runtime
+rust-toolset-7-rust
+rust-toolset-7-rust-debugger-common
+rust-toolset-7-rust-doc
+rust-toolset-7-rust-gdb
+rust-toolset-7-rust-lldb
+rust-toolset-7-rust-std-static
+
