@@ -1,0 +1,5 @@
+install
+install-all-pkgs
+compile-postgresql
+uninstall
+validate-pkg-list
