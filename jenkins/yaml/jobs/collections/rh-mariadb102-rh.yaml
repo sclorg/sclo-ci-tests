@@ -1,0 +1,38 @@
+- project:
+    name: rh-mariadb102
+    scl: rh-mariadb102
+    namespace: rh
+    release:
+        - 6
+        - 7
+    arch: x86_64
+    repotype:
+        - candidate
+        - testing
+        - release
+    jobs:
+        - 'SCLo-pkg-cbs'
+
+- project:
+    name: rh-mariadb102-mirror
+    scl: rh-mariadb102
+    namespace: rh
+    release:
+        - 6
+        - 7
+    arch: x86_64
+    repotype: mirror
+    jobs:
+        - 'SCLo-pkg-mirror'
+
+- project:
+    name: rh-mariadb102-buildlogs
+    scl: rh-mariadb102
+    namespace: rh
+    release:
+        - 6
+        - 7
+    arch: x86_64
+    repotype: buildlogs
+    jobs:
+        - 'SCLo-pkg-buildlogs'

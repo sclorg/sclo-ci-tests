@@ -1,0 +1,38 @@
+- project:
+    name: rh-nodejs8
+    scl: rh-nodejs8
+    namespace: rh
+    release:
+        - 6
+        - 7
+    arch: x86_64
+    repotype:
+        - candidate
+        - testing
+        - release
+    jobs:
+        - 'SCLo-pkg-cbs'
+
+- project:
+    name: rh-nodejs8-mirror
+    scl: rh-nodejs8
+    namespace: rh
+    release:
+        - 6
+        - 7
+    arch: x86_64
+    repotype: mirror
+    jobs:
+        - 'SCLo-pkg-mirror'
+
+- project:
+    name: rh-nodejs8-buildlogs
+    scl: rh-nodejs8
+    namespace: rh
+    release:
+        - 6
+        - 7
+    arch: x86_64
+    repotype: buildlogs
+    jobs:
+        - 'SCLo-pkg-buildlogs'

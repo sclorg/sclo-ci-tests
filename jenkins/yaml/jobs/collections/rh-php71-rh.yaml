@@ -1,0 +1,38 @@
+- project:
+    name: rh-php71
+    scl: rh-php71
+    namespace: rh
+    release:
+        - 6
+        - 7
+    arch: x86_64
+    repotype:
+        - candidate
+        - testing
+        - release
+    jobs:
+        - 'SCLo-pkg-cbs'
+
+- project:
+    name: rh-php71-mirror
+    scl: rh-php71
+    namespace: rh
+    release:
+        - 6
+        - 7
+    arch: x86_64
+    repotype: mirror
+    jobs:
+        - 'SCLo-pkg-mirror'
+
+- project:
+    name: rh-php71-buildlogs
+    scl: rh-php71
+    namespace: rh
+    release:
+        - 6
+        - 7
+    arch: x86_64
+    repotype: buildlogs
+    jobs:
+        - 'SCLo-pkg-buildlogs'
