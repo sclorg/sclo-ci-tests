@@ -1,0 +1,1 @@
+../../common-scripts/validate-pkg-list/run.sh
