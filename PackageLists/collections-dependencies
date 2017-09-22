@@ -48,3 +48,4 @@ rh-nodejs8: devtoolset-7
 rh-mariadb102: devtoolset-7
 rust-toolset-7: devtoolset-7 llvm-toolset-7
 llvm-toolset-7: devtoolset-7
+sclo-cassandra3: rh-maven33 rh-java-common

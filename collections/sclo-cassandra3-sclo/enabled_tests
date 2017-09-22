@@ -1,0 +1,5 @@
+install
+service-start
+service-stop
+uinstall
+validate-pkg-list
