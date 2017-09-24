@@ -98,3 +98,21 @@ install_build_tools() {
       tar unzip util-linux-ng wget which iso-codes
 }
 
+get_public_ip() {
+  local hostnames=$(hostname -I)
+  local public_ip=''
+  local found_ip
+  for guess_exp in '127\.0\.0\.1' '192\.168\.[0-9\.]*' '172\.[0-9\.]*' \
+                   '10\.[0-9\.]*' '[0-9\.]*' ; do
+    found_ip=$(echo "${hostnames}" | grep -oe "${guess_exp}")
+    if [ -n "${found_ip}" ] ; then
+      hostnames=$(echo "${hostnames}" | sed -e "s/${found_ip}//")
+      public_ip="${found_ip}"
+    fi
+  done
+  if [ -z "${public_ip}" ] ; then
+    echo "ERROR: public IP could not be guessed."
+    return 1
+  fi
+  echo "${public_ip}"
+}
