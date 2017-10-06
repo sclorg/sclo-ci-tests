@@ -1,5 +1,7 @@
 install
+check-version
 service-start
 service-stop
+install-all-pkgs
 uinstall
 validate-pkg-list
