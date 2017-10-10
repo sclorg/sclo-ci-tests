@@ -1,25 +1,25 @@
-devassist09
-devtoolset-3
+devassist09 EOL
+devtoolset-3 EOL
 devtoolset-4
 devtoolset-6
 devtoolset-7
-git19
+git19 EOL
 go-toolset-7
 httpd24
 llvm-toolset-7
-mariadb55
-maven30
-mongodb24
-mysql55
-nginx14
-nginx16
-nodejs010
-perl516
-php54
-php55
-postgresql92
+mariadb55 EOL
+maven30 EOL
+mongodb24 EOL
+mysql55 EOL
+nginx14 EOL
+nginx16 EOL
+nodejs010 EOL
+perl516 EOL
+php54 EOL
+php55 EOL
+postgresql92 EOL
 python27
-python33
+python33 EOL
 rh-eclipse46
 rh-git29
 rh-java-common
@@ -63,9 +63,9 @@ rh-scala210
 rh-thermostat16
 rh-varnish4
 rh-varnish5
-ror40
-ruby193
-ruby200
+ror40 EOL
+ruby193 EOL
+ruby200 EOL
 rust-toolset-7
-thermostat1
+thermostat1 EOL
 v8314

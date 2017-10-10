@@ -23,7 +23,7 @@ get_depended_collections() {
 
 # get list of all collections
 get_collections_list() {
-  cat "`dirname ${BASH_SOURCE[0]}`"/../PackageLists/collections-list-*-el`os_major_version` | strip_comments
+  cat "`dirname ${BASH_SOURCE[0]}`"/../PackageLists/collections-list-*-el`os_major_version` | strip_comments | cut -d' ' -f1
 }
 
 # returns `rh` or `sclo` as output or exits if collections does not exists in the list
@@ -33,7 +33,7 @@ get_collections_list() {
 get_scl_namespace() {
   el_version=${2-`os_major_version`}
   for namespace in rh sclo ; do
-    grep -e "^[[:space:]]*$1[[:space:]]*$" "`dirname ${BASH_SOURCE[0]}`"/../PackageLists/collections-list-$namespace-el$el_version >/dev/null
+    grep -e "$1" "`dirname ${BASH_SOURCE[0]}`"/../PackageLists/collections-list-$namespace-el$el_version >/dev/null
     [ $? -eq 0 ] && echo "$namespace" && return 0
   done
   echo "ERROR: collection ${1} not found in PackageLists/collections-list-{rh,sclo}-el$el_version" >&2
