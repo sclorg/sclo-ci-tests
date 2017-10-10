@@ -9,7 +9,8 @@ source ${THISDIR}/../../../common/functions.sh
 
 set -xe
 
-yum install -y ${INSTALL_SCLS}-php-devel ${INSTALL_SCLS}-php-pear libxml2-devel
+install_build_tools
+yum install -y ${INSTALL_SCLS}-php-devel ${INSTALL_SCLS}-php-pear libxml2-devel gcc
 
 scl enable ${ENABLE_SCLS} - <<'EOF'
   set -ex
