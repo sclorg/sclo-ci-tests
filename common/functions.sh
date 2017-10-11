@@ -33,7 +33,8 @@ get_collections_list() {
 get_scl_namespace() {
   el_version=${2-`os_major_version`}
   for namespace in rh sclo ; do
-    grep -e "$1" "`dirname ${BASH_SOURCE[0]}`"/../PackageLists/collections-list-$namespace-el$el_version >/dev/null
+    # Choose only exact name of the collection; i.e. mysql55, not sclo-mysql55
+    grep -e "^[[:space:]]*$1[[:space:]]*" "`dirname ${BASH_SOURCE[0]}`"/../PackageLists/collections-list-$namespace-el$el_version >/dev/null
     [ $? -eq 0 ] && echo "$namespace" && return 0
   done
   echo "ERROR: collection ${1} not found in PackageLists/collections-list-{rh,sclo}-el$el_version" >&2
