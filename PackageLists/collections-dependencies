@@ -43,8 +43,8 @@ rh-eclipse46: rh-maven33 rh-java-common
 rh-php70: httpd24
 rh-php71: httpd24
 rh-thermostat16: rh-java-common rh-maven33 rh-mongodb32
-rh-nodejs4: devtoolset-4
-rh-nodejs6: devtoolset-4
+rh-nodejs4: devtoolset-4 devtoolset-6
+rh-nodejs6: devtoolset-4 devtoolset-6
 rh-nodejs8: devtoolset-7
 rh-mariadb102: devtoolset-7
 rust-toolset-7: devtoolset-7 llvm-toolset-7
