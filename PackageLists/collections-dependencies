@@ -35,6 +35,7 @@ thermostat1: rh-java-common maven30 rh-mongodb26 v8314
 sclo-ror42: rh-ruby22 v8314
 sclo-vagrant1: rh-ror41 rh-ruby22
 rh-nginx18: rh-passenger40 ruby193
+rh-nginx110: httpd24 rh-perl524
 rh-nginx112: httpd24 rh-perl524
 rh-perl524: httpd24
 rh-git29: httpd24
