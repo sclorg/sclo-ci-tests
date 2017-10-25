@@ -1,7 +1,10 @@
 #!/bin/bash
 
+THISDIR=$(dirname ${BASH_SOURCE[0]})
+source ${THISDIR}/../../../common/functions.sh
+source ${THISDIR}/../include.sh
 
-out=$(scl enable rh-postgresql95 'postgres -V')
+out=$(scl enable $ENABLE_SCLS 'postgres -V')
 retcode=$?
 
 echo "$out"|grep -o '^postgres (PostgreSQL) 9\.6\.'
