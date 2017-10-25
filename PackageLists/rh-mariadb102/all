@@ -53,5 +53,5 @@ rh-mariadb102-runtime
 rh-mariadb102-scldevel
 rh-mariadb102-scons
 rh-mariadb102-syspaths
-multilib-rpm-config
+multilib-rpm-config	rhel-6
 scl-utils-build-helpers

@@ -38,7 +38,7 @@ case "$repotype" in
 esac
 
 # check that all packages use expected arch or noarch
-bad_arch=$(repoquery $rq_args --qf '%{ARCH} %{NVR}' -a 2>/dev/null | grep -v -e '^noarch ' -e "$arch " &>/dev/null) || :
+bad_arch=$(repoquery -q $rq_args --qf '%{ARCH} %{NVR}' -a 2>/dev/null | grep -v -e '^noarch ' -e "$arch " &>/dev/null) || :
 if [ -n "$bad_arch" ] ; then
   echo "[FAIL] Repository $repo includes unexpectedd arches packages:"
   echo "$bad_arch"
@@ -51,8 +51,8 @@ fi
 pkgs_available=$(mktemp /tmp/pkgs-available-XXXXXX)
 pkgs_missing=$(mktemp /tmp/pkgs-missing-XXXXXX)
 pkgs_extra=$(mktemp /tmp/pkgs-extra-XXXXXX)
-repoquery $rq_args clean cache &>/dev/null
-repoquery $rq_args --qf '%{NAME}' -a 2>/dev/null | sort >$pkgs_available
+repoquery -q $rq_args clean cache &>/dev/null
+repoquery -q $rq_args --qf '%{NAME}' -a 2>/dev/null | sort >$pkgs_available
 touch "$pkgs_missing"
 touch "$pkgs_extra"
 cat `dirname ${BASH_SOURCE[0]}`/../PackageLists/${collection}/all | strip_comments | while read line ; do
