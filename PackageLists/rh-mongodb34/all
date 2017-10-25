@@ -69,5 +69,3 @@ rh-mongodb34-runtime
 rh-mongodb34-scldevel
 rh-mongodb34-yaml-cpp
 rh-mongodb34-yaml-cpp-devel
-multilib-rpm-config
-scl-utils-build-helpers
