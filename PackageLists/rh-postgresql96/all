@@ -15,3 +15,5 @@ rh-postgresql96-syspaths
 rh-postgresql96-postgresql-syspaths
 rh-postgresql96-postgresql-contrib-syspaths
 rh-postgresql96-postgresql-server-syspaths
+multilib-rpm-config
+scl-utils-build-helpers
