@@ -11,14 +11,25 @@ os_major_version() {
   rpm -q --qf "%{VERSION}" $(rpm -q --whatprovides redhat-release) | grep -o "^[0-9]*"
 }
 
+# Reads list of scls from stdin and returns only scls that exist on current os_version
+filter_scl_for_current_os_version() {
+  el_version=${1} ; shift
+  while read scl ; do
+    # Choose only exact name of the collection; i.e. mysql55, not sclo-mysql55
+    grep -e "^[[:space:]]*$scl[[:space:]]*" "`dirname ${BASH_SOURCE[0]}`"/../PackageLists/collections-list-{rh,sclo}-el$el_version >/dev/null
+    [ $? -eq 0 ] && echo "$scl"
+  done
+}
+
 # accepts one or more options (collection names) and returns list of collections
 # that need to be enabled to be able to install the original set
 get_depended_collections() {
+  el_version=${1} ; shift
   while [ -n "$1" ] ; do
     echo -n "$1 "
     cat "`dirname ${BASH_SOURCE[0]}`"/../PackageLists/collections-dependencies | strip_comments | grep -e "^$1:" | head -n 1 | cut -d':' -f2
     shift
-  done | xargs -n1 | sort -u | xargs
+  done | xargs -n1 | sort -u | filter_scl_for_current_os_version "${el_version}" | xargs
 }
 
 # get list of all collections
@@ -67,7 +78,7 @@ generate_repo_file() {
     arch="${3-\$basearch}"
 
     rm -f "$repofile" ; touch "$repofile"
-    for c in `get_depended_collections $collection` ; do
+    for c in `get_depended_collections $el_version $collection` ; do
       namespace=$(get_scl_namespace "$c" "$el_version")
       cat >> "$repofile" <<- EOM
 [sclo${el_version}-${c}-${namespace}-$repotype]
