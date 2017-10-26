@@ -69,16 +69,3 @@ rh-mongodb34-runtime
 rh-mongodb34-scldevel
 rh-mongodb34-yaml-cpp
 rh-mongodb34-yaml-cpp-devel
-scons	rhel-6
-go-toolset-7	 rhel-6
-go-toolset-7-build	 rhel-6
-go-toolset-7-golang	 rhel-6
-go-toolset-7-golang-bin	 rhel-6
-go-toolset-7-golang-docs	 rhel-6
-go-toolset-7-golang-misc	 rhel-6
-go-toolset-7-golang-race	 rhel-6
-go-toolset-7-golang-src	 rhel-6
-go-toolset-7-golang-tests	 rhel-6
-go-toolset-7-runtime	 rhel-6
-go-toolset-7-scldevel	 rhel-6
-scl-utils-build-helpers

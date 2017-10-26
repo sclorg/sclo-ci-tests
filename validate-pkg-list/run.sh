@@ -69,7 +69,10 @@ done
 # check whether there are some more packages, in the repo (but ignore extra packages from this collection)
 if ! [[ "$repotype" =~ mirror|release|buildlogs|testing|none ]] ; then
   cat "$pkgs_available" | grep -v -e "^$collection" | while read pkg ; do
-    grep -e "^[[:space:]]*$pkg[[:space:]]*\(rhel.${el_version}\)\?[[:space:]]*$" `dirname ${BASH_SOURCE[0]}`/../PackageLists/${collection}/all &>/dev/null || echo "[FAIL] Package $pkg should not be in $repo" >>$pkgs_extra
+    pkg_list_files_dir=`dirname ${BASH_SOURCE[0]}`/../PackageLists/${collection}/
+    pkg_list_files=${pkg_list_files_dir}/all
+    [ -f ${pkg_list_files_dir}/buildonly ] && pkg_list_files="${pkg_list_files} ${pkg_list_files_dir}/buildonly"
+    grep -e "^[[:space:]]*$pkg[[:space:]]*\(rhel.${el_version}\)\?[[:space:]]*$" ${pkg_list_files} &>/dev/null || echo "[FAIL] Package $pkg should not be in $repo" >>$pkgs_extra
   done
 fi
 
