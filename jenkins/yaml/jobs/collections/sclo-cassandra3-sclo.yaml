@@ -1,10 +1,8 @@
 - project:
-    name: ruby193
-    scl: ruby193
-    namespace: rh
-    release:
-        - 6
-        - 7
+    name: sclo-cassandra3
+    scl: sclo-cassandra3
+    namespace: sclo
+    release: [ 7 ]
     arch: x86_64
     repotype:
         - candidate
@@ -14,24 +12,20 @@
         - 'SCLo-pkg-cbs'
 
 - project:
-    name: ruby193-mirror
-    scl: ruby193
-    namespace: rh
-    release:
-        - 6
-        - 7
+    name: sclo-cassandra3-mirror
+    scl: sclo-cassandra3
+    namespace: sclo
+    release: [ 7 ]
     arch: x86_64
     repotype: mirror
     jobs:
         - 'SCLo-pkg-mirror'
 
 - project:
-    name: ruby193-buildlogs
-    scl: ruby193
-    namespace: rh
-    release:
-        - 6
-        - 7
+    name: sclo-cassandra3-buildlogs
+    scl: sclo-cassandra3
+    namespace: sclo
+    release: [ 7 ]
     arch: x86_64
     repotype: buildlogs
     jobs:

@@ -2,9 +2,7 @@
     name: rh-ror50
     scl: rh-ror50
     namespace: rh
-    release:
-        - 6
-        - 7
+    release: [ 6, 7 ]
     arch: x86_64
     repotype:
         - candidate
@@ -17,9 +15,7 @@
     name: rh-ror50-mirror
     scl: rh-ror50
     namespace: rh
-    release:
-        - 6
-        - 7
+    release: [ 6, 7 ]
     arch: x86_64
     repotype: mirror
     jobs:
@@ -29,9 +25,7 @@
     name: rh-ror50-buildlogs
     scl: rh-ror50
     namespace: rh
-    release:
-        - 6
-        - 7
+    release: [ 6, 7 ]
     arch: x86_64
     repotype: buildlogs
     jobs:

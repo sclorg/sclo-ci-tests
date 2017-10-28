@@ -37,6 +37,35 @@ get_collections_list() {
   cat "`dirname ${BASH_SOURCE[0]}`"/../PackageLists/collections-list-*-el`os_major_version` | strip_comments | cut -d' ' -f1
 }
 
+# get list of all collections that are supported
+get_supported_collections_list() {
+  cat "`dirname ${BASH_SOURCE[0]}`"/../PackageLists/collections-list-*-el* |  strip_comments | grep -v -e EOL | cut -d' ' -f1 | sort -u
+}
+
+# get list of all collections that are NOT supported
+get_unsupported_collections_list() {
+  cat "`dirname ${BASH_SOURCE[0]}`"/../PackageLists/collections-list-*-el* |  strip_comments | grep -e EOL | cut -d' ' -f1 | sort -u
+}
+
+# returns list of el versions that the collections is available on, formatted as yaml in-line list
+get_supported_collections_array() {
+  local out=''
+  for el in `get_collections_releases "${1}"` ; do
+    [ -n "${out}" ] && out="${out}, "
+    out="${out}${el}"
+  done
+  echo "[ ${out} ]"
+}
+
+# returns list of el versions that the collections is available on
+get_collections_releases() {
+  for el in 6 7 ; do
+    if grep -qe "^${1}" "`dirname ${BASH_SOURCE[0]}`"/../PackageLists/collections-list-*-el${el} ; then
+      echo -n "$el "
+    fi
+  done
+}
+
 # returns `rh` or `sclo` as output or exits if collections does not exists in the list
 # takes two possitional arguments:
 # * collection name
@@ -128,3 +157,5 @@ get_public_ip() {
   fi
   echo "${public_ip}"
 }
+
+# vim: set ts=2 sw=2 tw=0 :

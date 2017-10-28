@@ -2,9 +2,7 @@
     name: %SCL%
     scl: %SCL%
     namespace: %NAMESPACE%
-    release:
-        - 6
-        - 7
+    release: %RELEASES%
     arch: x86_64
     repotype:
         - candidate
@@ -17,9 +15,7 @@
     name: %SCL%-mirror
     scl: %SCL%
     namespace: %NAMESPACE%
-    release:
-        - 6
-        - 7
+    release: %RELEASES%
     arch: x86_64
     repotype: mirror
     jobs:
@@ -29,9 +25,7 @@
     name: %SCL%-buildlogs
     scl: %SCL%
     namespace: %NAMESPACE%
-    release:
-        - 6
-        - 7
+    release: %RELEASES%
     arch: x86_64
     repotype: buildlogs
     jobs:

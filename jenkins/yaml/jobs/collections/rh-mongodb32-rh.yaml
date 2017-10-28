@@ -2,9 +2,7 @@
     name: rh-mongodb32
     scl: rh-mongodb32
     namespace: rh
-    release:
-        - 6
-        - 7
+    release: [ 6, 7 ]
     arch: x86_64
     repotype:
         - candidate
@@ -17,9 +15,7 @@
     name: rh-mongodb32-mirror
     scl: rh-mongodb32
     namespace: rh
-    release:
-        - 6
-        - 7
+    release: [ 6, 7 ]
     arch: x86_64
     repotype: mirror
     jobs:
@@ -29,9 +25,7 @@
     name: rh-mongodb32-buildlogs
     scl: rh-mongodb32
     namespace: rh
-    release:
-        - 6
-        - 7
+    release: [ 6, 7 ]
     arch: x86_64
     repotype: buildlogs
     jobs:

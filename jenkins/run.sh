@@ -31,11 +31,12 @@ fi
 
 # Generate jobs from collection list
 OVERRIDE_OS_MAJOR_VERSION=7
-for scl in $(get_collections_list); do
+for scl in $(get_supported_collections_list); do
   namespace=$(get_scl_namespace "$scl")
+	el_versions=$(get_supported_collections_array "$scl")
   yaml=$THISDIR/yaml/jobs/collections/${scl}-${namespace}.yaml
   [ -f $yaml ] || \
-    sed "s/%SCL%/${scl}/g; s/%NAMESPACE%/${namespace}/g;" \
+    sed "s/%SCL%/${scl}/g; s/%NAMESPACE%/${namespace}/g; s/%RELEASES%/${el_versions}/g;" \
       $THISDIR/yaml/jobs/collections/template > $yaml
 done
 
@@ -43,6 +44,12 @@ done
 if [ $# -gt 0 ]; then
   action=$1
   shift
+	if [ "${action}" == 'clear-eol' ] ; then
+		for scl in $(get_unsupported_collections_list); do
+			jenkins-jobs --conf $THISDIR/jenkins_jobs.ini delete SCLo-pkg-${scl}-rh-C{6,7}-{candidate,release,testing}-x86_64 SCLo-pkg-${scl}-rh-C{6,7}-{buildlogs,mirror}-x86_64
+		done
+		exit 0
+  fi
   jenkins-jobs --conf $THISDIR/jenkins_jobs.ini $action -r $THISDIR/yaml $*
 else
   jenkins-jobs $*
