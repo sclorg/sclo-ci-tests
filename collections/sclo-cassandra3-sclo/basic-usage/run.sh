@@ -2,6 +2,7 @@
 
 THISDIR=$(dirname ${BASH_SOURCE[0]})
 source ${THISDIR}/../../../common/functions.sh
+source ${THISDIR}/../include.sh
 
 source scl_source enable ${ENABLE_SCLS}
 
