@@ -22,6 +22,7 @@ python27
 python33 EOL
 rh-eclipse46
 rh-git29
+rh-haproxy18
 rh-java-common
 rh-mariadb100
 rh-mariadb101
