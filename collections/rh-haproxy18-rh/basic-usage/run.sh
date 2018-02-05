@@ -18,7 +18,9 @@ yum -y install httpd
 # Allow httpd to can network connect
 setsebool httpd_can_network_connect 0
 
-sed -i -e 's/^Listen 80/Listen 8008/g' "${HTTPDCFGPATH}"
+if ! grep -e '^Listen 8008' "${HTTPDCFGPATH}" ; then
+  sed -i -e 's/^Listen 80/Listen 8008/g' "${HTTPDCFGPATH}"
+fi
 cp "${THISDIR}/haproxy.cfg" "${HAPCFGPATH}"
 haproxy -c -V -f "${HAPCFGPATH}"
 

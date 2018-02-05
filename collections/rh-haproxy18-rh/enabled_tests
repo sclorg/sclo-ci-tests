@@ -2,6 +2,7 @@ install
 check-version
 service-start
 service-stop
+basic-usage
 install-all-pkgs
 uinstall
 validate-pkg-list
