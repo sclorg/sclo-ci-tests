@@ -4,5 +4,5 @@ service-start
 service-stop
 basic-usage
 install-all-pkgs
-unistall
+uninstall
 validate-pkg-list
