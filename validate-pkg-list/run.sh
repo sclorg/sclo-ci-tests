@@ -21,24 +21,17 @@ arch=${3-x86_64}
 retval=0
 
 # construct repoquery arguments
-namespace=$(get_scl_namespace "$collection" "$el_version")
-repo="sclo${el_version}-${collection}-${namespace}-$repotype"
-case "$repotype" in
-  mirror)
-    rq_args="--disablerepo=* --repofrompath=$collection,http://mirror.centos.org/centos-${el_version}/${el_version}/sclo/x86_64/${namespace}/ --enablerepo=$collection"
-    ;;
-  buildlogs)
-    rq_args="--disablerepo=* --repofrompath=$collection,http://buildlogs.centos.org/centos/${el_version}/sclo/x86_64/${namespace}/ --enablerepo=$collection"
-    ;;
-  none)
-    ;;
-  *)
-    rq_args="--disablerepo=* --repofrompath=$collection,http://cbs.centos.org/repos/${repo}/${arch}/os/ --enablerepo=$collection"
-    ;;
-esac
+readonly -a sclparams=("$repotype" "$collection" "$el_version" "$arch")
+readonly repo="$(repo_name "${sclparams[@]}")"
+readonly baseurl="$(repo_baseurl "${sclparams[@]}")"
+readonly -a rq_args=(
+    '--disablerepo=*'  # must be first! Possible repo name conflict otherwise
+    "--repofrompath=${collection},${baseurl}"
+    "--enablerepo=${collection}"
+)
 
 # check that all packages use expected arch or noarch
-bad_arch=$(repoquery -q $rq_args --qf '%{ARCH} %{NVR}' -a 2>/dev/null | grep -v -e '^noarch ' -e "$arch " &>/dev/null) || :
+bad_arch=$(repoquery -q "${rq_args[@]}" --qf '%{ARCH} %{NVR}' -a 2>/dev/null | grep -v -e '^noarch ' -e "$arch " &>/dev/null) || :
 if [ -n "$bad_arch" ] ; then
   echo "[FAIL] Repository $repo includes unexpectedd arches packages:"
   echo "$bad_arch"
@@ -51,8 +44,8 @@ fi
 pkgs_available=$(mktemp /tmp/pkgs-available-XXXXXX)
 pkgs_missing=$(mktemp /tmp/pkgs-missing-XXXXXX)
 pkgs_extra=$(mktemp /tmp/pkgs-extra-XXXXXX)
-repoquery -q $rq_args clean cache &>/dev/null
-repoquery -q $rq_args --qf '%{NAME}' -a 2>/dev/null | sort >$pkgs_available
+repoquery -q "${rq_args[@]}" clean cache &>/dev/null
+repoquery -q "${rq_args[@]}" --qf '%{NAME}' -a 2>/dev/null | sort >"$pkgs_available"
 touch "$pkgs_missing"
 touch "$pkgs_extra"
 cat `dirname ${BASH_SOURCE[0]}`/../PackageLists/${collection}/all | strip_comments | while read line ; do
@@ -98,4 +91,3 @@ if [ "$retval" -eq 0 ] ; then
 fi
 
 exit $retval
-

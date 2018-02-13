@@ -71,7 +71,8 @@ get_collections_releases() {
 # * collection name
 # * el_version (6, 7, ...)
 get_scl_namespace() {
-  el_version=${2-`os_major_version`}
+  local el_version=${2-`os_major_version`}
+  local namespace
   for namespace in rh sclo ; do
     # Choose only exact name of the collection; i.e. mysql55, not sclo-mysql55
     grep -e "^[[:space:]]*$1[[:space:]]*" "`dirname ${BASH_SOURCE[0]}`"/../PackageLists/collections-list-$namespace-el$el_version >/dev/null
@@ -156,6 +157,45 @@ get_public_ip() {
     return 1
   fi
   echo "${public_ip}"
+}
+
+get_collection_name() {
+  local -r collection_dir="${1:-$(dirname "${BASH_SOURCE[0]}")}"; shift
+  basename "$(readlink -f "$collection_dir")" | sed 's/-\(sclo\|rh\)$//'
+}
+
+# Assemble collection parameters into canonical repository name
+repo_name() {
+  local -r repotype="$1"; shift
+  local -r collection="$1"; shift
+  local -r el_version="$1"; shift
+  local -r arch="${1:-x86_64}"; shift
+
+  local -r namespace="$(get_scl_namespace "$collection" "$el_version")"
+
+  echo "sclo${el_version}-${collection}-${namespace}-${repotype}"
+}
+
+# Determine appropriate base URL from collection parameters
+repo_baseurl() {
+  local -r repotype="$1"
+  local -r collection="$2"
+  local -r el_version="$3"
+  local -r arch="${4:-x86_64}"
+
+  local -r namespace="$(get_scl_namespace "$collection" "$el_version")"
+  local -r reponame="$(repo_name "$@")"
+
+  case "$repotype" in
+    mirror)
+      echo "http://mirror.centos.org/centos-${el_version}/${el_version}/sclo/x86_64/${namespace}/" ;;
+    buildlogs)
+      echo "http://buildlogs.centos.org/centos/${el_version}/sclo/x86_64/${namespace}/" ;;
+    none)
+      ;;
+    *)
+      echo "http://cbs.centos.org/repos/${reponame}/${arch}/os/" ;;
+  esac
 }
 
 # vim: set ts=2 sw=2 tw=0 :

@@ -45,9 +45,23 @@ stFail="[FAILED]"
 passed=0
 failed=0
 
+readonly scl_name="$(get_collection_name "$(basename "$(readlink -f "$THISDIR")")")"
+readonly scl_el="$(os_major_version)"
+
 resDirAll=$(mktemp -d /tmp/sclo-results-XXXXXX)
 
-echo "Running tests for `basename $(readlink -f $THISDIR)` ..."
+echo "Listing source packages for current ${scl_name} ..."
+
+readonly -a rq_params=(
+    '--disablerepo=*'
+    "--repofrompath=${scl_name},$(repo_baseurl "$REPOTYPE" "$scl_name" "$scl_el")"
+    "--enablerepo=${scl_name}"
+    '--all'
+    '--source'
+)
+repoquery "${rq_params[@]}" 2>/dev/null | sort | uniq >"$resDirAll/source-packages.txt"
+
+echo "Running tests for ${scl_name} ..."
 
 for tst in $(cat ${THISDIR}/enabled_tests|grep -v '^#')
 do
