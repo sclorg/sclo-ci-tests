@@ -44,6 +44,7 @@ rh-nodejs8
 rh-passenger40
 rh-perl520
 rh-perl524
+rh-perl526
 rh-php56
 rh-php70
 rh-php71
