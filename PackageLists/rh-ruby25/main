@@ -1,0 +1,13 @@
+rh-ruby25
+rh-ruby25-ruby
+rh-ruby25-ruby-irb
+rh-ruby25-ruby-libs
+rh-ruby25-rubygem-bigdecimal
+rh-ruby25-rubygem-did_you_mean
+rh-ruby25-rubygem-io-console
+rh-ruby25-rubygem-json
+rh-ruby25-rubygem-openssl
+rh-ruby25-rubygem-psych
+rh-ruby25-rubygem-rdoc
+rh-ruby25-rubygems
+rh-ruby25-runtime
