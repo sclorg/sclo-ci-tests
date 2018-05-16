@@ -11,8 +11,6 @@ rh-perl526-perl-autodie
 rh-perl526-perl-B-Debug
 rh-perl526-perl-bignum
 rh-perl526-perl-BSD-Resource
-rh-perl526-perl-Business-ISBN
-rh-perl526-perl-Business-ISBN-Data
 rh-perl526-perl-Capture-Tiny
 rh-perl526-perl-Carp
 rh-perl526-perl-Class-Singleton
@@ -21,7 +19,6 @@ rh-perl526-perl-Compress-Raw-Bzip2
 rh-perl526-perl-Compress-Raw-Zlib
 rh-perl526-perl-Config-Perl-V
 rh-perl526-perl-constant
-rh-perl526-perl-core
 rh-perl526-perl-CPAN
 rh-perl526-perl-CPAN-DistnameInfo
 rh-perl526-perl-CPAN-Meta
@@ -29,7 +26,6 @@ rh-perl526-perl-CPAN-Meta-Check
 rh-perl526-perl-CPAN-Meta-Requirements
 rh-perl526-perl-CPAN-Meta-YAML
 rh-perl526-perl-Data-Dumper
-rh-perl526-perl-Data-Flow
 rh-perl526-perl-Data-OptList
 rh-perl526-perl-Data-Section
 rh-perl526-perl-Date-ISO8601
@@ -87,10 +83,8 @@ rh-perl526-perl-inc-latest
 rh-perl526-perl-IO
 rh-perl526-perl-IO-Compress
 rh-perl526-perl-IO-Socket-IP
-rh-perl526-perl-IO-Tty
 rh-perl526-perl-IO-Zlib
 rh-perl526-perl-IPC-Cmd
-rh-perl526-perl-IPC-Run
 rh-perl526-perl-IPC-System-Simple
 rh-perl526-perl-IPC-SysV
 rh-perl526-perl-JSON-PP
@@ -126,9 +120,7 @@ rh-perl526-perl-Package-Generator
 rh-perl526-perl-Params-Check
 rh-perl526-perl-Params-Classify
 rh-perl526-perl-Params-Util
-rh-perl526-perl-Params-Validate
 rh-perl526-perl-parent
-rh-perl526-perl-Parse-CPAN-Meta
 rh-perl526-perl-Parse-PMFile
 rh-perl526-perl-PathTools
 rh-perl526-perl-Perl-OSType
