@@ -33,6 +33,7 @@ rh-mongodb26
 rh-mongodb30upg
 rh-mongodb32
 rh-mongodb34
+rh-mongodb36
 rh-mysql56
 rh-mysql57
 rh-nginx18

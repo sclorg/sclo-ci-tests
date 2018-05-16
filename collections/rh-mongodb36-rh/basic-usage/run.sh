@@ -1,0 +1,1 @@
+../../mongodb-common/basic-usage/run.sh

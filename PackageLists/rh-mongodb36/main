@@ -1,0 +1,14 @@
+rh-mongodb36
+rh-mongodb36-boost-chrono
+rh-mongodb36-boost-filesystem
+rh-mongodb36-boost-iostreams
+rh-mongodb36-boost-program-options
+rh-mongodb36-boost-regex
+rh-mongodb36-boost-system
+rh-mongodb36-boost-thread
+rh-mongodb36-gperftools-libs
+rh-mongodb36-libstemmer
+rh-mongodb36-libunwind
+rh-mongodb36-mongodb-server
+rh-mongodb36-runtime
+rh-mongodb36-yaml-cpp

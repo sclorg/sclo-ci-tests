@@ -1,0 +1,71 @@
+rh-mongodb36
+rh-mongodb36-boost
+rh-mongodb36-boost-atomic
+rh-mongodb36-boost-chrono
+rh-mongodb36-boost-build
+rh-mongodb36-boost-date-time
+rh-mongodb36-boost-devel
+rh-mongodb36-boost-doc
+rh-mongodb36-boost-doctools
+rh-mongodb36-boost-examples
+rh-mongodb36-boost-filesystem
+rh-mongodb36-boost-graph
+rh-mongodb36-boost-iostreams
+rh-mongodb36-boost-jam
+rh-mongodb36-boost-locale
+rh-mongodb36-boost-log
+rh-mongodb36-boost-math
+rh-mongodb36-boost-program-options
+rh-mongodb36-boost-python
+rh-mongodb36-boost-random
+rh-mongodb36-boost-regex
+rh-mongodb36-boost-serialization
+rh-mongodb36-boost-signals
+rh-mongodb36-boost-static
+rh-mongodb36-boost-system
+rh-mongodb36-boost-test
+rh-mongodb36-boost-thread
+rh-mongodb36-boost-timer
+rh-mongodb36-boost-type_erasure
+rh-mongodb36-boost-wave
+rh-mongodb36-gperftools
+rh-mongodb36-gperftools-devel
+rh-mongodb36-gperftools-libs
+rh-mongodb36-jctools    rhel-7
+rh-mongodb36-jctools-experimental    rhel-7
+rh-mongodb36-jctools-javadoc    rhel-7
+rh-mongodb36-jctools-parent    rhel-7
+rh-mongodb36-libbson
+rh-mongodb36-libbson-devel
+rh-mongodb36-libstemmer
+rh-mongodb36-libstemmer-devel
+rh-mongodb36-libunwind
+rh-mongodb36-libunwind-devel
+rh-mongodb36-mongo-c-driver
+rh-mongodb36-mongo-c-driver-devel
+rh-mongodb36-mongo-c-driver-libs
+rh-mongodb36-mongo-cxx-driver
+rh-mongodb36-mongo-cxx-driver-bsoncxx
+rh-mongodb36-mongo-cxx-driver-bsoncxx-devel
+rh-mongodb36-mongo-cxx-driver-devel
+rh-mongodb36-mongo-java-driver    rhel-7
+rh-mongodb36-mongo-java-driver-bson    rhel-7
+rh-mongodb36-mongo-java-driver-driver    rhel-7
+rh-mongodb36-mongo-java-driver-driver-async    rhel-7
+rh-mongodb36-mongo-java-driver-driver-core    rhel-7
+rh-mongodb36-mongo-java-driver-javadoc    rhel-7
+rh-mongodb36-mongo-tools
+rh-mongodb36-mongo-tools-devel
+rh-mongodb36-mongo-tools-syspaths
+rh-mongodb36-mongo-tools-unit-test
+rh-mongodb36-mongodb
+rh-mongodb36-mongodb-server
+rh-mongodb36-mongodb-server-syspaths
+rh-mongodb36-mongodb-syspaths
+rh-mongodb36-mongodb-test
+rh-mongodb36-netty    rhel-7
+rh-mongodb36-netty-javadoc    rhel-7
+rh-mongodb36-runtime
+rh-mongodb36-scldevel
+rh-mongodb36-yaml-cpp
+rh-mongodb36-yaml-cpp-devel
