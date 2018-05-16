@@ -1,0 +1,32 @@
+- project:
+    name: rh-mongodb36
+    scl: rh-mongodb36
+    namespace: rh
+    release: [ 7 ]
+    arch: x86_64
+    repotype:
+        - candidate
+        - testing
+        - release
+    jobs:
+        - 'SCLo-pkg-cbs'
+
+- project:
+    name: rh-mongodb36-mirror
+    scl: rh-mongodb36
+    namespace: rh
+    release: [ 7 ]
+    arch: x86_64
+    repotype: mirror
+    jobs:
+        - 'SCLo-pkg-mirror'
+
+- project:
+    name: rh-mongodb36-buildlogs
+    scl: rh-mongodb36
+    namespace: rh
+    release: [ 7 ]
+    arch: x86_64
+    repotype: buildlogs
+    jobs:
+        - 'SCLo-pkg-buildlogs'

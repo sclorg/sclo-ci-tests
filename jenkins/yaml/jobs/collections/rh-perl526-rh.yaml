@@ -1,0 +1,32 @@
+- project:
+    name: rh-perl526
+    scl: rh-perl526
+    namespace: rh
+    release: [ 7 ]
+    arch: x86_64
+    repotype:
+        - candidate
+        - testing
+        - release
+    jobs:
+        - 'SCLo-pkg-cbs'
+
+- project:
+    name: rh-perl526-mirror
+    scl: rh-perl526
+    namespace: rh
+    release: [ 7 ]
+    arch: x86_64
+    repotype: mirror
+    jobs:
+        - 'SCLo-pkg-mirror'
+
+- project:
+    name: rh-perl526-buildlogs
+    scl: rh-perl526
+    namespace: rh
+    release: [ 7 ]
+    arch: x86_64
+    repotype: buildlogs
+    jobs:
+        - 'SCLo-pkg-buildlogs'
