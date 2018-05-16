@@ -51,6 +51,7 @@ rh-php71
 rh-postgresql94
 rh-postgresql95
 rh-postgresql96
+rh-postgresql10
 rh-python34
 rh-python35
 rh-python36

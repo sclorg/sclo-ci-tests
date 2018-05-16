@@ -1,0 +1,17 @@
+rh-postgresql10-postgresql
+rh-postgresql10-postgresql-contrib
+rh-postgresql10-postgresql-devel
+rh-postgresql10-postgresql-docs
+rh-postgresql10-postgresql-libs
+rh-postgresql10-postgresql-plperl
+rh-postgresql10-postgresql-plpython
+rh-postgresql10-postgresql-pltcl
+rh-postgresql10-postgresql-server
+rh-postgresql10-postgresql-test
+rh-postgresql10-postgresql-static
+rh-postgresql10-runtime
+rh-postgresql10-scldevel
+rh-postgresql10-syspaths
+rh-postgresql10-postgresql-syspaths
+rh-postgresql10-postgresql-contrib-syspaths
+rh-postgresql10-postgresql-server-syspaths
