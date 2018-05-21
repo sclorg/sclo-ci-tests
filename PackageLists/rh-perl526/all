@@ -3,6 +3,7 @@ rh-perl526-mod_perl
 rh-perl526-mod_perl-devel
 rh-perl526-perl
 rh-perl526-perl-Algorithm-Diff
+rh-perl526-perl-Apache-Reload
 rh-perl526-perl-App-cpanminus
 rh-perl526-perl-Archive-Tar
 rh-perl526-perl-Archive-Zip

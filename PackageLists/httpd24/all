@@ -20,6 +20,7 @@ httpd24-libcurl-devel
 httpd24-libnghttp2
 httpd24-libnghttp2-devel
 httpd24-mod_auth_kerb
+httpd24-mod_auth_mellon         rhel-7
 httpd24-mod_ldap
 httpd24-mod_proxy_html
 httpd24-mod_session
