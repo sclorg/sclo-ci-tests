@@ -36,6 +36,7 @@ rh-mongodb34
 rh-mongodb36
 rh-mysql56 EOL
 rh-mysql57
+rh-mysql80
 rh-nginx18
 rh-nginx110
 rh-nginx112

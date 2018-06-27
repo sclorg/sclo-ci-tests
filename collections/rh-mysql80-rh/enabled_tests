@@ -1,0 +1,9 @@
+install
+check-version
+service-start
+check-selinux
+basic-usage
+service-stop
+install-all-pkgs
+uninstall
+validate-pkg-list
