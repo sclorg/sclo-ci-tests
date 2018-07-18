@@ -7,6 +7,6 @@ source ${THISDIR}/../include.sh
 out=$(scl enable $ENABLE_SCLS 'mysql -V')
 retcode=$?
 
-echo "$out"|grep -o 'Distrib 8\.0\.'
+echo "$out" | grep -o '\(Distrib\|Ver\) 8\.0\.'
 
-exit $retcode
+exit $?
