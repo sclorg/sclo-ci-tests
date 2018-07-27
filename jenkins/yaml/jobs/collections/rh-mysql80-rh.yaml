@@ -1,0 +1,32 @@
+- project:
+    name: rh-mysql80
+    scl: rh-mysql80
+    namespace: rh
+    release: [ 7 ]
+    arch: x86_64
+    repotype:
+        - candidate
+        - testing
+        - release
+    jobs:
+        - 'SCLo-pkg-cbs'
+
+- project:
+    name: rh-mysql80-mirror
+    scl: rh-mysql80
+    namespace: rh
+    release: [ 7 ]
+    arch: x86_64
+    repotype: mirror
+    jobs:
+        - 'SCLo-pkg-mirror'
+
+- project:
+    name: rh-mysql80-buildlogs
+    scl: rh-mysql80
+    namespace: rh
+    release: [ 7 ]
+    arch: x86_64
+    repotype: buildlogs
+    jobs:
+        - 'SCLo-pkg-buildlogs'
