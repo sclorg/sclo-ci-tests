@@ -24,7 +24,7 @@ scl enable $INSTALL_SCLS - <<"EOF"
   ./configure --without-readline --without-zlib --with-CC=clang
   CC=clang make
   clangver=$(strings -a ./src/backend/postgres | grep -oe "compiled by.*clang version \([0-9]*\.\)" | sed -e 's/.*[[:space:]]//')
-  [ "${clangver}" != "4." ] && echo "Wrong clang version found in postgres binary: ${clangver}" && exit 1
+  [ "${clangver}" != "5." ] && echo "Wrong clang version found in postgres binary: ${clangver}" && exit 1
   popd
 EOF
 
