@@ -23,7 +23,7 @@ rh-java-common
 rh-mariadb100 EOL
 rh-mariadb101
 rh-mariadb102
-rh-maven33 EOL
+rh-maven33
 rh-mongodb26 EOL
 rh-mongodb30upg EOL
 rh-mongodb32
