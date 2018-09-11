@@ -26,7 +26,7 @@ rh-python34: httpd24
 rh-python35: httpd24
 rh-python36: httpd24
 rh-ror41: rh-ruby22 v8314
-rh-ror42: rh-ruby23 rh-nodejs4
+rh-ror42: rh-ruby23 rh-nodejs6 rh-nodejs8
 rh-ror50: rh-ruby24 rh-nodejs6
 rh-scala210: rh-java-common maven30
 ruby193: httpd24 v8314
