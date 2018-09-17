@@ -1,0 +1,8 @@
+rh-nodejs10 rhel-7
+rh-nodejs10-nodejs rhel-7
+rh-nodejs10-nodejs-devel rhel-7
+rh-nodejs10-nodejs-docs rhel-7
+rh-nodejs10-nodejs-nodemon rhel-7
+rh-nodejs10-npm rhel-7
+rh-nodejs10-runtime rhel-7
+rh-nodejs10-scldevel rhel-7

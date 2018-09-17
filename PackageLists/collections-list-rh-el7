@@ -43,6 +43,7 @@ rh-nginx112
 rh-nodejs4 EOL
 rh-nodejs6
 rh-nodejs8
+rh-nodejs10
 rh-passenger40 EOL
 rh-perl520 EOL
 rh-perl524
