@@ -7,6 +7,6 @@ source ${THISDIR}/../include.sh
 out=$(scl enable $ENABLE_SCLS "php -v")
 ret=$?
 
-echo "$out"|grep -o 'PHP 7\.1\.'
+echo "$out"|grep -o 'PHP 7\..\.'
 exit $retcode
 
