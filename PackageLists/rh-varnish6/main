@@ -1,0 +1,5 @@
+rh-varnish6               rhel-7
+rh-varnish6-varnish       rhel-7
+rh-varnish6-varnish-libs  rhel-7
+rh-varnish6-jemalloc      rhel-7
+rh-varnish6-runtime       rhel-7
