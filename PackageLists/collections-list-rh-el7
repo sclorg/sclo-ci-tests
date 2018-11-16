@@ -22,6 +22,7 @@ python27
 python33 EOL
 rh-eclipse46
 rh-git29
+rh-git218
 rh-haproxy18
 rh-java-common
 rh-mariadb100 EOL
@@ -40,6 +41,7 @@ rh-mysql80
 rh-nginx18
 rh-nginx110
 rh-nginx112
+rh-nginx114
 rh-nodejs4 EOL
 rh-nodejs6
 rh-nodejs8
@@ -51,6 +53,7 @@ rh-perl526
 rh-php56 EOL
 rh-php70
 rh-php71
+rh-php72
 rh-postgresql94 EOL
 rh-postgresql95
 rh-postgresql96
@@ -70,6 +73,7 @@ rh-scala210
 rh-thermostat16 EOL
 rh-varnish4
 rh-varnish5
+rh-varnish6
 ror40 EOL
 ruby193 EOL
 ruby200 EOL

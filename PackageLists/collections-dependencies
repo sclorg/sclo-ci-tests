@@ -39,6 +39,7 @@ rh-nginx110: httpd24 rh-perl524
 rh-nginx112: httpd24 rh-perl524
 rh-perl524: httpd24
 rh-git29: httpd24
+rh-git218: httpd24
 rh-eclipse46: rh-maven33 rh-java-common
 rh-php70: httpd24
 rh-php71: httpd24
