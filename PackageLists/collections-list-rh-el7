@@ -3,6 +3,7 @@ devtoolset-3 EOL
 devtoolset-4 EOL
 devtoolset-6 EOL
 devtoolset-7
+devtoolset-8
 git19 EOL
 go-toolset-7
 httpd24
