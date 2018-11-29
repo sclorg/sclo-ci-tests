@@ -1,7 +1,7 @@
 devassist09 EOL
 devtoolset-3 EOL
 devtoolset-4 EOL
-devtoolset-6
+devtoolset-6 EOL
 devtoolset-7
 git19 EOL
 go-toolset-7
@@ -20,8 +20,8 @@ php55 EOL
 postgresql92 EOL
 python27
 python33 EOL
-rh-eclipse46
-rh-git29
+rh-eclipse46 EOL
+rh-git29 EOL
 rh-git218
 rh-haproxy18
 rh-java-common
@@ -38,7 +38,7 @@ rh-mongodb36
 rh-mysql56 EOL
 rh-mysql57
 rh-mysql80
-rh-nginx18
+rh-nginx18 EOL
 rh-nginx110
 rh-nginx112
 rh-nginx114
@@ -71,7 +71,7 @@ rh-ruby24
 rh-ruby25
 rh-scala210
 rh-thermostat16 EOL
-rh-varnish4
+rh-varnish4 EOL
 rh-varnish5
 rh-varnish6
 ror40 EOL
