@@ -1,0 +1,12 @@
+install
+check-version
+service-start
+check-selinux
+basic-usage
+service-stop
+syspaths
+multiple-instances
+basic-galera
+install-all-pkgs
+uninstall
+validate-pkg-list

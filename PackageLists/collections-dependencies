@@ -19,6 +19,7 @@ rh-mongodb26: v8314 rh-java-common maven30 python27
 rh-mongodb30upg: v8314 rh-java-common rh-maven33 python27
 rh-mongodb32: rh-java-common rh-maven33 python27
 rh-mongodb34: rh-java-common rh-maven33 rh-maven35 python27 rh-python36 devtoolset-7
+rh-mongodb36: rh-java-common rh-maven35 python27 rh-python36 devtoolset-7
 rh-passenger40: httpd24 ruby193 ror40 ruby200 rh-ror41 rh-ruby22
 rh-perl520: httpd24
 rh-php56: httpd24
@@ -50,6 +51,7 @@ rh-nodejs4: devtoolset-4 devtoolset-6
 rh-nodejs6: devtoolset-4 devtoolset-6
 rh-nodejs8: devtoolset-7
 rh-mariadb102: devtoolset-7
+rh-mariadb103: rh-maven35
 rust-toolset-7: devtoolset-7 llvm-toolset-7
 llvm-toolset-7: devtoolset-7
 sclo-cassandra3: rh-maven33 rh-java-common
