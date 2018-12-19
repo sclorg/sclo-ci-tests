@@ -80,17 +80,18 @@ trap cleanup EXIT
 
 # wait till we can connect
 for i in `seq 20` ; do
-  echo 'SELECT 1' | mysql --socket ${SOCKET2} test &>/dev/null && break || :
+  echo 'SELECT 1' | mysql --socket ${SOCKET2} mysql &>/dev/null && break || :
   sleep 2
 done
 [ $i -eq 20 ] && echo "Error: Connection to new server #2 does not work"
-echo "CREATE TABLE t1 (i INT); INSERT INTO t1 VALUES (42);" | mysql test
+echo "CREATE DATABASE test1;" | mysql
+echo "CREATE TABLE t1 (i INT); INSERT INTO t1 VALUES (42);" | mysql test1
 sleep 3
 echo "SHOW GLOBAL STATUS LIKE 'wsrep_ready' \G" | mysql | grep 'Value: ON'
 echo "SHOW GLOBAL STATUS LIKE 'wsrep_cluster_size' \G" | mysql | grep 'Value: 2'
 echo "SHOW GLOBAL STATUS LIKE 'wsrep_ready' \G" | mysql --socket ${SOCKET2} | grep 'Value: ON'
 echo "SHOW GLOBAL STATUS LIKE 'wsrep_cluster_size' \G" | mysql --socket ${SOCKET2} | grep 'Value: 2'
-echo "SELECT * FROM t1 LIMIT 1 \G" | mysql --socket ${SOCKET2} test | grep 'i: 42'
+echo "SELECT * FROM t1 LIMIT 1 \G" | mysql --socket ${SOCKET2} test1 | grep 'i: 42'
 
 # run garbd
 cat >${GARBD_CONFIG} <<EOF
