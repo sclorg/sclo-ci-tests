@@ -30,7 +30,7 @@ cd validate-pkg-list
 ./run-all.sh 7
 ```
 
-##Structure of tests
+## Structure of tests
 ```
     ├── run.sh      -- main entrypoint to run the tests
     ├── common      -- contains files common for all tests
@@ -56,7 +56,7 @@ the test directory. Eg.
 When no expected stdout or stderr defined, it compares just return code.
 When no return code is specified, the test is successful when it returns 0.
 
-###Results
+### Results
 Simple results (passed/failed) are written to stdout. Actual results (stdout,
 stderr and return code) can be found in the directory under /tmp, that is printed
 to the stdout:
@@ -76,9 +76,9 @@ Logs are stored in /tmp/sclo-results-s6Fhun
 NOT ALL TESTS PASSED SUCCESSFULLY
 ```
 
-##Usage with remote machine
+## Usage with remote machine
 
-###Make a virtual machine
+### Make a virtual machine
 You may use the "mkvirt" script to create a virtual machine. If you run
 it from the specific test directory you just need to specify the tree.
 Configuration of the virtual machine is taken from the "machine.conf" file.
@@ -90,7 +90,7 @@ cd vm
 
 Of course you may create the virtual machine yourself.
 
-###Run tests
+### Run tests
 You may use the `run-remote-git.sh` script to run tests for the component
 on remote machine. This script connects to the remote machine, downloads this
 repository there and will execute the `run.sh` script in the same location.
@@ -109,11 +109,11 @@ export SSH_PASS=secret
 collections/rh-python34-rh/run-remote-git.sh
 ```
 
-##Required programs on guest machine
+## Required programs on guest machine
 ```
 scl-utils
 ```
-##Required programs on host machine
+## Required programs on host machine
 ```    
 libvirt
 sshpass
