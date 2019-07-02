@@ -1,0 +1,8 @@
+install
+check-version
+service-start
+store-load-data
+service-stop
+install-all-pkgs
+uninstall
+validate-pkg-list

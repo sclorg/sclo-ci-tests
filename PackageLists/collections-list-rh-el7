@@ -64,6 +64,7 @@ rh-python34 EOL
 rh-python35
 rh-python36
 rh-redis32
+rh-redis5
 rh-ror41 EOL
 rh-ror42
 rh-ror50
