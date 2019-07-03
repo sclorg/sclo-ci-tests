@@ -2,12 +2,12 @@ rh-ruby26
 rh-ruby26-ruby
 rh-ruby26-ruby-devel
 rh-ruby26-ruby-doc
-rh-ruby26-ruby-irb
 rh-ruby26-ruby-libs
 rh-ruby26-rubygem-bigdecimal
 rh-ruby26-rubygem-bundler
 rh-ruby26-rubygem-did_you_mean
 rh-ruby26-rubygem-io-console
+rh-ruby26-rubygem-irb
 rh-ruby26-rubygem-json
 rh-ruby26-rubygem-minitest
 rh-ruby26-rubygem-net-telnet
