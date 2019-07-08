@@ -8,7 +8,6 @@ rh-mariadb103-mariadb-backup-syspaths
 rh-mariadb103-mariadb-common
 rh-mariadb103-mariadb-config
 rh-mariadb103-mariadb-config-syspaths
-rh-mariadb103-mariadb-debuginfo
 rh-mariadb103-mariadb-devel
 rh-mariadb103-mariadb-errmsg
 rh-mariadb103-mariadb-gssapi-server
