@@ -1,0 +1,1 @@
+../common-scripts/run-remote-git.sh

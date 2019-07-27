@@ -1,0 +1,5 @@
+rh-postgresql12
+rh-postgresql12-postgresql
+rh-postgresql12-postgresql-libs
+rh-postgresql12-postgresql-server
+rh-postgresql12-runtime
