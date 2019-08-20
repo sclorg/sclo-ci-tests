@@ -1,0 +1,8 @@
+rh-nodejs12 rhel-7
+rh-nodejs12-nodejs rhel-7
+rh-nodejs12-nodejs-devel rhel-7
+rh-nodejs12-nodejs-docs rhel-7
+rh-nodejs12-nodejs-nodemon rhel-7
+rh-nodejs12-npm rhel-7
+rh-nodejs12-runtime rhel-7
+rh-nodejs12-scldevel rhel-7
