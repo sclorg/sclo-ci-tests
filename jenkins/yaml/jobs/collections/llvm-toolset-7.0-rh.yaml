@@ -1,0 +1,32 @@
+- project:
+    name: llvm-toolset-7.0
+    scl: llvm-toolset-7.0
+    namespace: rh
+    release: [ 7 ]
+    arch: x86_64
+    repotype:
+        - candidate
+        - testing
+        - release
+    jobs:
+        - 'SCLo-pkg-cbs'
+
+- project:
+    name: llvm-toolset-7.0-mirror
+    scl: llvm-toolset-7.0
+    namespace: rh
+    release: [ 7 ]
+    arch: x86_64
+    repotype: mirror
+    jobs:
+        - 'SCLo-pkg-mirror'
+
+- project:
+    name: llvm-toolset-7.0-buildlogs
+    scl: llvm-toolset-7.0
+    namespace: rh
+    release: [ 7 ]
+    arch: x86_64
+    repotype: buildlogs
+    jobs:
+        - 'SCLo-pkg-buildlogs'
