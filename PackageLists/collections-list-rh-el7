@@ -8,6 +8,7 @@ git19 EOL
 go-toolset-7
 httpd24
 llvm-toolset-7
+llvm-toolset-7.0
 mariadb55 EOL
 maven30 EOL
 mongodb24 EOL
