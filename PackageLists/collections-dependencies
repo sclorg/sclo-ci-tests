@@ -55,3 +55,4 @@ rh-mariadb103: rh-maven35
 rust-toolset-7: devtoolset-7 llvm-toolset-7
 llvm-toolset-7: devtoolset-7
 sclo-cassandra3: rh-maven33 rh-java-common
+llvm-toolset-7.0: devtoolset-8
