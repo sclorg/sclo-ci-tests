@@ -1,5 +1,6 @@
 install
 check-version
+hello-world-project
 install-all-pkgs
 uninstall
 validate-pkg-list
