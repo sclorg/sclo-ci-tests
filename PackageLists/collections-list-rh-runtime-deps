@@ -1,0 +1,93 @@
+# This is a list of runtime dependencies between SCLs
+devassist09: 
+devtoolset-3: maven30 rh-java-common
+devtoolset-4: maven30 rh-java-common
+devtoolset-6: 
+devtoolset-7: 
+devtoolset-8: 
+git19: 
+go-toolset-7: 
+httpd24: 
+llvm-toolset-7: devtoolset-7 devtoolset-8
+llvm-toolset-7.0: devtoolset-8
+mariadb55: 
+maven30: rh-java-common
+mongodb24: 
+mysql55: 
+nginx14: 
+nginx16: 
+nodejs010: v8314
+perl516: httpd24
+php54: 
+php55: httpd24
+postgresql92: 
+python27: httpd24
+python33: httpd24
+rh-eclipse46: rh-java-common rh-maven33
+rh-git218: httpd24
+rh-git29: httpd24
+rh-haproxy18: 
+rh-java-common: maven30
+rh-mariadb100: 
+rh-mariadb101: 
+rh-mariadb102: 
+rh-mariadb103: rh-maven35
+rh-maven33: rh-java-common
+rh-maven35: 
+rh-maven36: 
+rh-mongodb26: maven30 python27 rh-java-common v8314
+rh-mongodb30upg: v8314
+rh-mongodb32: python27 rh-java-common rh-maven33
+rh-mongodb34: rh-maven35 rh-python36
+rh-mongodb36: rh-maven35 rh-python36
+rh-mysql56: 
+rh-mysql57: 
+rh-mysql80: 
+rh-nginx110: rh-perl524
+rh-nginx112: rh-perl524
+rh-nginx114: rh-perl526
+rh-nginx116: rh-perl526
+rh-nginx18: 
+rh-nodejs10: 
+rh-nodejs12: 
+rh-nodejs4: 
+rh-nodejs6: 
+rh-nodejs8: 
+rh-passenger40: httpd24 rh-ruby22 ruby193 ruby200
+rh-perl520: httpd24
+rh-perl524: httpd24
+rh-perl526: httpd24
+rh-php56: httpd24
+rh-php70: httpd24
+rh-php71: httpd24
+rh-php72: httpd24
+rh-php73: httpd24
+rh-postgresql10: 
+rh-postgresql12: 
+rh-postgresql94: 
+rh-postgresql95: 
+rh-postgresql96: 
+rh-python34: httpd24
+rh-python35: httpd24
+rh-python36: httpd24
+rh-redis32: 
+rh-redis5: 
+rh-ror41: rh-ruby22 v8314
+rh-ror42: rh-nodejs4 rh-ruby23
+rh-ror50: rh-ruby24
+rh-ruby22: 
+rh-ruby23: 
+rh-ruby24: 
+rh-ruby25: 
+rh-ruby26: 
+rh-scala210: maven30 rh-java-common
+rh-thermostat16: rh-java-common rh-maven33 rh-mongodb32
+rh-varnish4: 
+rh-varnish5: 
+rh-varnish6: 
+ror40: ruby200 v8314
+ruby193: httpd24 v8314
+ruby200: 
+rust-toolset-7: devtoolset-7 llvm-toolset-7
+thermostat1: maven30 rh-java-common rh-mongodb26 v8314
+v8314: 
