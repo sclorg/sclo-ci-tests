@@ -1,0 +1,6 @@
+install
+check-version
+pkg-install
+install-all-pkgs
+uninstall
+validate-pkg-list
