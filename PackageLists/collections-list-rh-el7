@@ -33,6 +33,7 @@ rh-mariadb102
 rh-mariadb103
 rh-maven33
 rh-maven35
+rh-maven36
 rh-mongodb26 EOL
 rh-mongodb30upg EOL
 rh-mongodb32
@@ -45,10 +46,12 @@ rh-nginx18 EOL
 rh-nginx110
 rh-nginx112
 rh-nginx114
+rh-nginx116
 rh-nodejs4 EOL
 rh-nodejs6
 rh-nodejs8
 rh-nodejs10
+rh-nodejs12
 rh-passenger40 EOL
 rh-perl520 EOL
 rh-perl524
@@ -57,10 +60,12 @@ rh-php56 EOL
 rh-php70
 rh-php71
 rh-php72
+rh-php73
 rh-postgresql94 EOL
 rh-postgresql95
 rh-postgresql96
 rh-postgresql10
+rh-postgresql12
 rh-python34 EOL
 rh-python35
 rh-python36
