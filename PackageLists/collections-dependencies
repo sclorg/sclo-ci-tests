@@ -39,6 +39,7 @@ rh-nginx18: rh-passenger40 ruby193
 rh-nginx110: httpd24 rh-perl524
 rh-nginx112: httpd24 rh-perl524
 rh-nginx114: rh-perl526
+rh-nginx116: rh-perl526
 rh-perl524: httpd24
 rh-git29: httpd24
 rh-git218: httpd24
@@ -46,6 +47,7 @@ rh-eclipse46: rh-maven33 rh-java-common
 rh-php70: httpd24
 rh-php71: httpd24
 rh-php72: httpd24
+rh-php73: httpd24
 rh-thermostat16: rh-java-common rh-maven33 rh-mongodb32
 rh-nodejs4: devtoolset-4 devtoolset-6
 rh-nodejs6: devtoolset-4 devtoolset-6
