@@ -218,7 +218,6 @@ generate_repo_file() {
       local -a argv=("$repotype" "$c" "$el_version" "$basearch")
       local reponame; reponame="$(repo_name "${argv[@]}")"
 
-      make_local_repo "${argv[@]}"
       cat >> "$repofile" <<- EOM
 [${reponame}]
 name=${reponame}
