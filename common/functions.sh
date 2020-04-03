@@ -82,46 +82,6 @@ get_scl_namespace() {
   return 1
 }
 
-# generate a yum repo file for specified collection and write it to stdout
-# accepts these possitional arguments:
-# * collection
-# * el_version (6, 7, ...), optional
-# * arch (x86_64, ppc64, ...), optional
-# The following environment variables can be set to change default values:
-# * REPOTYPE, if not set, then candidate
-# * REPOFILE, if not set, then sclo-ci.repo
-# * SKIP_REPO_CREATE, if set to 1, then no repository is created
-generate_repo_file() {
-  [ "0$SKIP_REPO_CREATE" -eq 1 ] && return
-  repotype=${REPOTYPE-candidate}
-  if [ "$repotype" == "mirror" ] ; then
-    yum -y install centos-release-scl
-  elif [ "$repotype" == "buildlogs" ] ; then
-    yum -y install centos-release-scl
-    yum-config-manager --enable centos-sclo-rh-testing
-    yum-config-manager --enable centos-sclo-sclo-testing
-    export YUM_OPTS=--nogpgcheck
-  else
-    repofile=/etc/yum.repos.d/${REPOFILE-sclo-ci.repo}
-    collection="$1"
-    el_version="${2-`os_major_version`}"
-    arch="${3-\$basearch}"
-
-    rm -f "$repofile" ; touch "$repofile"
-    for c in `get_depended_collections $el_version $collection` ; do
-      namespace=$(get_scl_namespace "$c" "$el_version")
-      cat >> "$repofile" <<- EOM
-[sclo${el_version}-${c}-${namespace}-$repotype]
-name=sclo${el_version}-${c}-${namespace}-$repotype
-baseurl=http://cbs.centos.org/repos/sclo${el_version}-${c}-${namespace}-$repotype/${arch}/os/
-gpgcheck=0
-enabled=1
-
-EOM
-    done
-  fi
-}
-
 project_root() {
   readlink -f $(dirname `dirname ${BASH_SOURCE[0]}`)
 }
@@ -194,8 +154,80 @@ repo_baseurl() {
     none)
       ;;
     *)
-      echo "http://cbs.centos.org/repos/${reponame}/${arch}/os/" ;;
+      echo "file:///tmp/local-repos/${reponame}/${arch}/" ;;
   esac
+}
+
+# Download tagged packages to local directory and create a repo
+# The arguments are the same as for repo_name() and repo_baseurl()
+make_local_repo() {
+  test "${#@}" -ge 4 || {
+    echo "Not enough arguments for make_local_repo: ${#@}" >&2; exit 1
+  }
+
+  local -r basearch="$4"
+  local -r tag="$(repo_name "$@")"
+  local -r baseurl="$(repo_baseurl "$@")"
+  local -r root_dir="${baseurl##file://}"
+
+  mkdir -p "${root_dir}" && pushd "${_}" >/dev/null 2>&1 || return
+
+  cbs list-tagged --quiet --latest "${tag}" \
+    | awk '{print $1;}' \
+    | xargs -P5 -n1 -- cbs download-build --quiet --arch=noarch --arch="${basearch}" \
+    || {
+      echo "ERROR: Cannot download builds from ${tag}" >&2
+      return 1
+    }
+
+  createrepo_c --quiet --database "${PWD}" || {
+    echo "ERROR: Cannot create local metadata" >&2
+    return 1
+  }
+
+  popd >/dev/null 2>&1 || return
+}
+
+# generate a yum repo file for specified collection and write it to stdout
+# accepts these possitional arguments:
+# * collection
+# * el_version (6, 7, ...), optional
+# * arch (x86_64, ppc64, ...), optional
+# The following environment variables can be set to change default values:
+# * REPOTYPE, if not set, then candidate
+# * REPOFILE, if not set, then sclo-ci.repo
+# * SKIP_REPO_CREATE, if set to 1, then no repository is created
+generate_repo_file() {
+  [ "0$SKIP_REPO_CREATE" -eq 1 ] && return
+  repotype=${REPOTYPE-candidate}
+  if [ "$repotype" == "mirror" ] ; then
+    yum -y install centos-release-scl
+  elif [ "$repotype" == "buildlogs" ] ; then
+    yum -y install centos-release-scl
+    yum-config-manager --enable centos-sclo-rh-testing
+    yum-config-manager --enable centos-sclo-sclo-testing
+    export YUM_OPTS=--nogpgcheck
+  else
+    repofile=/etc/yum.repos.d/${REPOFILE-sclo-ci.repo}
+    collection="$1"
+    el_version="${2-`os_major_version`}"
+    basearch="${3:-$(uname -i|grep -v unknown||uname -m)}"
+
+    rm -f "$repofile" ; touch "$repofile"
+    for c in $(get_depended_collections "$el_version" "$collection") ; do
+      local -a argv=("$repotype" "$c" "$el_version" "$basearch")
+      local reponame; reponame="$(repo_name "${argv[@]}")"
+
+      cat >> "$repofile" <<- EOM
+[${reponame}]
+name=${reponame}
+baseurl=$(repo_baseurl "${argv[@]}")
+gpgcheck=0
+enabled=1
+
+EOM
+    done
+  fi
 }
 
 # vim: set ts=2 sw=2 tw=0 :

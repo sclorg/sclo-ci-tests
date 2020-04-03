@@ -50,6 +50,13 @@ readonly scl_el="$(os_major_version)"
 
 resDirAll=$(mktemp -d /tmp/sclo-results-XXXXXX)
 
+case "$REPOTYPE" in
+    candidate|testing|release)
+        echo "Making local repository for $REPOTYPE ..."
+        make_local_repo "$REPOTYPE" "$scl_name" "$scl_el" "$(uname -i|grep -v unknown||uname -m)"
+    ;;
+esac
+
 echo "Listing source packages for current ${scl_name} ..."
 
 readonly -a rq_params=(
