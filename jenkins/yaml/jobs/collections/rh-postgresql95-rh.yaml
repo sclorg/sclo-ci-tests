@@ -2,7 +2,7 @@
     name: rh-postgresql95
     scl: rh-postgresql95
     namespace: rh
-    release: [ 6, 7 ]
+    release: [ 7 ]
     arch: x86_64
     repotype:
         - candidate

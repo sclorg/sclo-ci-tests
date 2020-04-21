@@ -2,7 +2,7 @@
     name: %SCL%
     scl: %SCL%
     namespace: %NAMESPACE%
-    release: %RELEASES%
+    release: [ 7 ]
     arch: x86_64
     repotype:
         - candidate

@@ -2,7 +2,7 @@
     name: rh-python36
     scl: rh-python36
     namespace: rh
-    release: [ 6, 7 ]
+    release: [ 7 ]
     arch: x86_64
     repotype:
         - candidate
