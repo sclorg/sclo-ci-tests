@@ -2,7 +2,7 @@ devassist09 EOL
 devtoolset-3 EOL
 devtoolset-4 EOL
 devtoolset-6 EOL
-devtoolset-7
+devtoolset-7 EOL
 devtoolset-8
 devtoolset-9
 git19 EOL
@@ -23,36 +23,36 @@ python33 EOL
 rh-git29 EOL
 rh-java-common
 rh-mariadb100 EOL
-rh-mariadb101
+rh-mariadb101 EOL
 rh-mariadb102
-rh-maven33
+rh-maven33 EOL
 rh-mongodb26 EOL
 rh-mongodb30upg EOL
-rh-mongodb32
+rh-mongodb32 EOL
 rh-mongodb34
 rh-mysql56 EOL
-rh-mysql57
+rh-mysql57 EOL
 rh-nginx18 EOL
 rh-nginx110
 rh-nodejs4 EOL
-rh-nodejs6
+rh-nodejs6 EOL
 rh-passenger40 EOL
 rh-perl520 EOL
-rh-perl524
+rh-perl524 EOL
 rh-php56 EOL
-rh-php70
+rh-php70 EOL
 rh-postgresql94 EOL
-rh-postgresql95
+rh-postgresql95 EOL
 rh-postgresql96
 rh-python34 EOL
-rh-python35
+rh-python35 EOL
 rh-python36
-rh-redis32
+rh-redis32 EOL
 rh-ror41 EOL
-rh-ror42
+rh-ror42 EOL
 rh-ror50
 rh-ruby22 EOL
-rh-ruby23
+rh-ruby23 EOL
 rh-ruby24
 rh-scala210
 rh-thermostat16 EOL
