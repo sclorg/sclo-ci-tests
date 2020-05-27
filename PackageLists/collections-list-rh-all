@@ -56,6 +56,7 @@ rh-passenger40
 rh-perl520
 rh-perl524
 rh-perl526
+rh-perl530
 rh-php56
 rh-php70
 rh-php71
@@ -69,6 +70,7 @@ rh-postgresql96
 rh-python34
 rh-python35
 rh-python36
+rh-python38
 rh-redis32
 rh-redis5
 rh-ror41
@@ -79,6 +81,7 @@ rh-ruby23
 rh-ruby24
 rh-ruby25
 rh-ruby26
+rh-ruby27
 rh-scala210
 rh-thermostat16
 rh-varnish4
