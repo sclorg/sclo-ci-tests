@@ -1,0 +1,14 @@
+rh-ruby27
+rh-ruby27-ruby
+rh-ruby27-ruby-libs
+rh-ruby27-rubygem-bigdecimal
+rh-ruby27-rubygem-bundler
+rh-ruby27-rubygem-did_you_mean
+rh-ruby27-rubygem-io-console
+rh-ruby27-rubygem-irb
+rh-ruby27-rubygem-json
+rh-ruby27-rubygem-openssl
+rh-ruby27-rubygem-psych
+rh-ruby27-rubygem-rdoc
+rh-ruby27-rubygems
+rh-ruby27-runtime
