@@ -47,6 +47,7 @@ failed=0
 
 readonly scl_name="$(get_collection_name "$(basename "$(readlink -f "$THISDIR")")")"
 readonly scl_el="$(os_major_version)"
+readonly scl_basearch="$(uname -i|grep -v unknown||uname -m)"
 
 resDirAll=$(mktemp -d /tmp/sclo-results-XXXXXX)
 
@@ -54,8 +55,10 @@ case "$REPOTYPE" in
     candidate|testing|release)
         echo "Install necessary extra packages"
         yum -y --quiet install centos-packager || exit
-        echo "Making local repository for $REPOTYPE ..."
-        make_local_repo "$REPOTYPE" "$scl_name" "$scl_el" "$(uname -i|grep -v unknown||uname -m)"
+        echo "Making local repositories for $REPOTYPE ..."
+        for collection in $(get_depended_collections "$scl_el" "$scl_name"); do
+            make_local_repo "$REPOTYPE" "$collection" "$scl_el" "$scl_basearch"
+        done
     ;;
 esac
 
