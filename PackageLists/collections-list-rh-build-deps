@@ -57,6 +57,7 @@ rh-passenger40: httpd24 rh-ror41 rh-ruby22 ror40 ruby193 ruby200
 rh-perl520: httpd24
 rh-perl524: httpd24
 rh-perl526: httpd24
+rh-perl530: httpd24
 rh-php56: httpd24
 rh-php70: httpd24
 rh-php71: httpd24
@@ -70,6 +71,7 @@ rh-postgresql96:
 rh-python34: httpd24
 rh-python35: httpd24
 rh-python36: httpd24
+rh-python38: httpd24
 rh-redis32: 
 rh-redis5: 
 rh-ror41: rh-ruby22 v8314
@@ -80,6 +82,7 @@ rh-ruby23: rh-ruby22 rh-ruby24
 rh-ruby24: rh-ruby22 rh-ruby23
 rh-ruby25: 
 rh-ruby26: 
+rh-ruby27: 
 rh-scala210: rh-java-common rh-maven33
 rh-thermostat16: maven30 rh-java-common rh-maven33 rh-mongodb32
 rh-varnish4: 
