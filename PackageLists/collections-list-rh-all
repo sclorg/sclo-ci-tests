@@ -4,6 +4,8 @@ devtoolset-4
 devtoolset-6
 devtoolset-7
 devtoolset-8
+devtoolset-9
+devtoolset-10
 git19
 go-toolset-7
 httpd24
@@ -24,6 +26,7 @@ python27
 python33
 rh-eclipse46
 rh-git218
+rh-git227
 rh-git29
 rh-haproxy18
 rh-java-common
@@ -46,9 +49,11 @@ rh-nginx110
 rh-nginx112
 rh-nginx114
 rh-nginx116
+rh-nginx118
 rh-nginx18
 rh-nodejs10
-rh-nodejs112
+rh-nodejs12
+rh-nodejs14
 rh-nodejs4
 rh-nodejs6
 rh-nodejs8
