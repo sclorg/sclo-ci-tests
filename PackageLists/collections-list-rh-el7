@@ -5,6 +5,7 @@ devtoolset-6 EOL
 devtoolset-7 EOL
 devtoolset-8
 devtoolset-9
+devtoolset-10
 git19 EOL
 go-toolset-7
 httpd24
@@ -26,6 +27,7 @@ python33 EOL
 rh-eclipse46 EOL
 rh-git29 EOL
 rh-git218
+rh-git227
 rh-haproxy18
 rh-java-common
 rh-mariadb100 EOL
@@ -48,11 +50,13 @@ rh-nginx110
 rh-nginx112 EOL
 rh-nginx114
 rh-nginx116
+rh-nginx118
 rh-nodejs4 EOL
 rh-nodejs6 EOL
 rh-nodejs8 EOL
 rh-nodejs10
 rh-nodejs12
+rh-nodejs14
 rh-passenger40 EOL
 rh-perl520 EOL
 rh-perl524 EOL
