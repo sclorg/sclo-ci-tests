@@ -29,6 +29,8 @@ set +xe
 source scl_source enable ${ENABLE_SCLS}
 set -xe
 
+sed -i -e 's/wsrep_on=.*$/wsrep_on=1/' "${CONFIG_DIR}"/galera.cnf
+
 galera_new_cluster
 
 sleep 2
@@ -39,10 +41,6 @@ echo "SHOW GLOBAL STATUS LIKE 'wsrep_ready' \G" | mysql | grep ON
 DATA_DIR2=/var/lib/mysql2
 SOCKET2=${DATA_DIR2}/mysql.sock
 CONFIG_FILE2=/etc/my2.cnf
-
-# different ports require selinux re-settings, so far turning off selinux
-selinux_bak=$(getenforce)
-setenforce 0
 
 cat >${CONFIG_FILE2} <<EOF
 [mysqld]
@@ -56,14 +54,17 @@ wsrep_cluster_name="my_wsrep_cluster"
 
 wsrep_cluster_address='gcomm://${IP}:4567'
 wsrep_provider_options='base_port=14567;'
-wsrep_sst_receive_address=${IP}:2777
-wsrep_provider_options='ist.recv_addr=${IP}:2888;'
+wsrep_sst_receive_address=${IP}
+wsrep_provider_options='ist.recv_addr=${IP}:14568;'
 wsrep_node_address=${IP}:14567
 
 datadir=${DATA_DIR2}
 socket=${SOCKET2}
 port=3307
 EOF
+
+# The port to listen on for Incremental State Transfer (ist.recv_addr) must be allowed
+semanage port -a -t mysqld_port_t -p tcp 14568 || :
 
 [ -d "${DATA_DIR2}" ] && rm -rf "${DATA_DIR2}"/*
 mysql_install_db --rpm --datadir="${DATA_DIR2}" --user=mysql
@@ -73,7 +74,6 @@ pid=$!
 # make sure manually run daemon is killed on test end
 cleanup() {
   kill $pid
-  setenforce $selinux_bak
   service $SERVICE_NAME stop || :
 }
 trap cleanup EXIT
