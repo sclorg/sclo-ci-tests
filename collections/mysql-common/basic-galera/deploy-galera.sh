@@ -18,10 +18,11 @@ GARBD_CONFIG=${SYSCONF_DIR}/sysconfig/garb
 IPS=$(hostname -I)
 IP=${IPS%% *}
 
+# deliberately starting with no address, it caused troubles with 10.4 and further
 yum -y install ${SCL_GALERA_PKGS}
 cat >"${CONFIG_DIR}"/my-galera.cnf <<EOF
 [mysqld]
-wsrep_cluster_address="gcomm://${IP}"
+wsrep_cluster_address="gcomm://"
 EOF
 
 # scl_source returns non-zero return code from some reason
@@ -75,6 +76,7 @@ pid=$!
 cleanup() {
   kill $pid
   service $SERVICE_NAME stop || :
+  sed -i -e 's/wsrep_on=.*$/wsrep_on=0/' "${CONFIG_DIR}"/galera.cnf
 }
 trap cleanup EXIT
 
@@ -83,9 +85,10 @@ for i in `seq 20` ; do
   echo 'SELECT 1' | mysql --socket ${SOCKET2} mysql &>/dev/null && break || :
   sleep 2
 done
-[ $i -eq 20 ] && echo "Error: Connection to new server #2 does not work"
+[ $i -eq 20 ] && echo "Error: Connection to new server #2 does not work" && exit 1
 echo "CREATE DATABASE test1;" | mysql
 echo "CREATE TABLE t1 (i INT); INSERT INTO t1 VALUES (42);" | mysql test1
+# leave some time for sync
 sleep 3
 echo "SHOW GLOBAL STATUS LIKE 'wsrep_ready' \G" | mysql | grep 'Value: ON'
 echo "SHOW GLOBAL STATUS LIKE 'wsrep_cluster_size' \G" | mysql | grep 'Value: 2'
@@ -95,7 +98,7 @@ echo "SELECT * FROM t1 LIMIT 1 \G" | mysql --socket ${SOCKET2} test1 | grep 'i: 
 
 # run garbd
 cat >${GARBD_CONFIG} <<EOF
-GALERA_NODES="${IP}:4567,${IP}:14567"
+GALERA_NODES="${IP}:4567 ${IP}:14567"
 GALERA_GROUP="my_wsrep_cluster"
 GALERA_OPTIONS='base_port=24567;'
 EOF

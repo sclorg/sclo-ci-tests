@@ -29,7 +29,7 @@ rm -f ${CONFIG_DIR}/*.cnf
 for instance in 1 2 3 ; do
   # define separate files/dirs for every instance
   datadir=/var/lib/mysql-${instance}
-  socket=/var/lib/mysql/mysql-${instance}.sock
+  socket=${datadir}/mysql.sock
   log_error=/var/lib/mysql-${instance}/${SERVICE_NAME}.log
   pid_file=/var/lib/mysql-${instance}/${SERVICE_NAME}.pid
   port=$((3306+${instance}))
@@ -59,7 +59,7 @@ EOF
   systemctl start ${SERVICE_NAME}@server$instance.service
 
   # check that the max_connections is set as we expect just for this instance
-  echo 'select @@max_connections;' | scl enable ${ENABLE_SCLS} -- mysql --host 127.0.0.1 --port $port | grep $max_connections
+  echo 'select @@max_connections;' | scl enable ${ENABLE_SCLS} -- mysql --socket $socket --port $port | grep $max_connections
 done
 
 for instance in 1 2 3 ; do
