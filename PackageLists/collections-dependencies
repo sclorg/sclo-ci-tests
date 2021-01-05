@@ -57,6 +57,7 @@ rh-nodejs6: devtoolset-4 devtoolset-6
 rh-nodejs8: devtoolset-7
 rh-mariadb102: devtoolset-7
 rh-mariadb103: rh-maven35
+rh-mariadb105: rh-maven35
 rust-toolset-7: devtoolset-7 llvm-toolset-7
 llvm-toolset-7: devtoolset-7
 sclo-cassandra3: rh-maven33 rh-java-common

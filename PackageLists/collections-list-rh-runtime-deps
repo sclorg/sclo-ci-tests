@@ -35,6 +35,7 @@ rh-mariadb100:
 rh-mariadb101: 
 rh-mariadb102: 
 rh-mariadb103: rh-maven35
+rh-mariadb105: rh-maven35
 rh-maven33: rh-java-common
 rh-maven35: 
 rh-maven36: 
@@ -70,6 +71,7 @@ rh-php72: httpd24
 rh-php73: httpd24
 rh-postgresql10: 
 rh-postgresql12: 
+rh-postgresql13: 
 rh-postgresql94: 
 rh-postgresql95: 
 rh-postgresql96: 
@@ -88,6 +90,7 @@ rh-ruby24:
 rh-ruby25: 
 rh-ruby26: 
 rh-ruby27: 
+rh-ruby30: 
 rh-scala210: maven30 rh-java-common
 rh-thermostat16: rh-java-common rh-maven33 rh-mongodb32
 rh-varnish4: 

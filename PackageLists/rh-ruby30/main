@@ -1,0 +1,14 @@
+rh-ruby30
+rh-ruby30-ruby
+rh-ruby30-ruby-libs
+rh-ruby30-rubygem-bigdecimal
+rh-ruby30-rubygem-bundler
+rh-ruby30-rubygem-did_you_mean
+rh-ruby30-rubygem-io-console
+rh-ruby30-rubygem-irb
+rh-ruby30-rubygem-json
+rh-ruby30-rubygem-openssl
+rh-ruby30-rubygem-psych
+rh-ruby30-rubygem-rdoc
+rh-ruby30-rubygems
+rh-ruby30-runtime
