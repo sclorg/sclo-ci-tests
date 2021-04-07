@@ -1,0 +1,32 @@
+- project:
+    name: rh-git227
+    scl: rh-git227
+    namespace: rh
+    release: [ 7 ]
+    arch: x86_64
+    repotype:
+        - candidate
+        - testing
+        - release
+    jobs:
+        - 'SCLo-pkg-cbs'
+
+- project:
+    name: rh-git227-mirror
+    scl: rh-git227
+    namespace: rh
+    release: [ 7 ]
+    arch: x86_64
+    repotype: mirror
+    jobs:
+        - 'SCLo-pkg-mirror'
+
+- project:
+    name: rh-git227-buildlogs
+    scl: rh-git227
+    namespace: rh
+    release: [ 7 ]
+    arch: x86_64
+    repotype: buildlogs
+    jobs:
+        - 'SCLo-pkg-buildlogs'
