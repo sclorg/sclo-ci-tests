@@ -41,6 +41,7 @@ rh-nginx110: httpd24 rh-perl524
 rh-nginx112: httpd24 rh-perl524
 rh-nginx114: rh-perl526
 rh-nginx116: rh-perl526
+rh-nginx118: rh-perl530
 rh-perl524: httpd24
 rh-perl526: httpd24
 rh-perl530: httpd24
