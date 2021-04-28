@@ -1,5 +1,6 @@
 rh-ruby30
 rh-ruby30-ruby
+rh-ruby30-ruby-default-gems
 rh-ruby30-ruby-devel
 rh-ruby30-ruby-doc
 rh-ruby30-ruby-libs
@@ -11,14 +12,16 @@ rh-ruby30-rubygem-json
 rh-ruby30-rubygem-minitest
 rh-ruby30-rubygem-mysql2
 rh-ruby30-rubygem-mysql2-doc
-rh-ruby30-rubygem-openssl
 rh-ruby30-rubygem-pg
 rh-ruby30-rubygem-pg-doc
 rh-ruby30-rubygem-power_assert
 rh-ruby30-rubygem-psych
 rh-ruby30-rubygem-rake
-rh-ruby30-rubygem-rdoc
+rh-ruby30-rubygem-rbs
+rh-ruby30-rubygem-rexml
+rh-ruby30-rubygem-rss
 rh-ruby30-rubygem-test-unit
+rh-ruby30-rubygem-typeprof
 rh-ruby30-rubygems
 rh-ruby30-rubygems-devel
 rh-ruby30-runtime
