@@ -6,6 +6,7 @@ devtoolset-7 EOL
 devtoolset-8
 devtoolset-9
 devtoolset-10
+devtoolset-11
 git19 EOL
 go-toolset-7
 httpd24
@@ -52,6 +53,7 @@ rh-nginx112 EOL
 rh-nginx114
 rh-nginx116
 rh-nginx118
+rh-nginx120
 rh-nodejs4 EOL
 rh-nodejs6 EOL
 rh-nodejs8 EOL

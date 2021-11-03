@@ -1,0 +1,1 @@
+../../nginx-common/serve-content/run.sh

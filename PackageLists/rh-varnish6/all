@@ -7,3 +7,4 @@ rh-varnish6-varnish         rhel-7
 rh-varnish6-varnish-devel   rhel-7
 rh-varnish6-varnish-docs    rhel-7
 rh-varnish6-varnish-libs    rhel-7
+rh-varnish6-varnish-modules rhel-7

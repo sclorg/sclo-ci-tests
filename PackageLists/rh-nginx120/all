@@ -1,0 +1,9 @@
+rh-nginx120                              rhel-7
+rh-nginx120-nginx                        rhel-7
+rh-nginx120-nginx-mod-http-image-filter  rhel-7
+rh-nginx120-nginx-mod-http-perl          rhel-7
+rh-nginx120-nginx-mod-http-xslt-filter   rhel-7
+rh-nginx120-nginx-mod-mail               rhel-7
+rh-nginx120-nginx-mod-stream             rhel-7
+rh-nginx120-runtime                      rhel-7
+rh-nginx120-scldevel                     rhel-7
